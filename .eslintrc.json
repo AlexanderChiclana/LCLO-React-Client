@@ -1,0 +1,29 @@
+{
+  "extends": ["plugin:react/recommended", "standard"],
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+      "node": true,
+      "es6": true
+  },
+  "rules": {
+    "prefer-const": "error",
+    "no-var": "error",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "space-before-function-paren": "off",
+    "no-multiple-empty-lines": "off", 
+    "no-trailing-spaces":"off",
+    "indent": "off",
+    "react/prop-types": [0]
+  }
+}
