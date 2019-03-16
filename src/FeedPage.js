@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Blogpost from './Blogpost'
+import PopularPosts from './PopularPosts'
 
 class FeedPage extends Component {
     render() {
@@ -8,7 +10,7 @@ class FeedPage extends Component {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <h1>News</h1>
+                    <h1>{this.props.pageName}</h1>
                  </div>{/* .col */} 
             </div>{/* .row */}
         </div>{/* .container */}
@@ -19,95 +21,12 @@ class FeedPage extends Component {
             <div className="row">
                 <div className="col-12 col-lg-8">
                     
-                    <div className="news-content">
-                        <a href="#"><img src={'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'} alt="" /></a>
+                 
+                    <Blogpost />
+                    <Blogpost />
+                    <Blogpost />
 
-                        <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
-                            <div className="header-elements">
-                                <div className="posted-date">March 12, 2018</div>
-
-                                <h2 className="entry-title"><a href="#">Toys for Children Campaign</a></h2>
-
-                                <div className="post-metas d-flex flex-wrap align-items-center">
-                                    <span className="cat-links">in <a href="#">Causes</a></span>
-                                    <span className="post-author">by <a href="#">Tom Phillips</a></span>
-                                    <span className="post-comments"><a href="#">3 Comments</a></span>
-                                </div>
-                            </div>
-
-                            <div className="donate-icon">
-                                <a href="#"><img src={require('./images/donate-icon.png')} alt="" /></a>
-                            </div>
-                        </header>
-
-                        <div className="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamc.</p>
-                        </div>
-
-                        <footer className="entry-footer">
-                            <a href="#" className="btn gradient-bg">Read More</a>
-                        </footer>
-                    </div>
-
-                    <div className="news-content">
-                        <a href="#"><img src={require('./images/2.jpg')} alt="" /></a>
-
-                        <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
-                            <div className="header-elements">
-                                <div className="posted-date">March 12, 2018</div>
-
-                                <h2 className="entry-title"><a href="#">Toys for Children Campaign</a></h2>
-
-                                <div className="post-metas d-flex flex-wrap align-items-center">
-                                    <span className="cat-links">in <a href="#">Causes</a></span>
-                                    <span className="post-author">by <a href="#">Tom Phillips</a></span>
-                                    <span className="post-comments"><a href="#">3 Comments</a></span>
-                                </div>
-                            </div>
-
-                            <div className="donate-icon">
-                                <a href="#"><img src={require('./images/donate-icon.png')} alt="" /></a>
-                            </div>
-                        </header>
-
-                        <div className="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamc.</p>
-                        </div>
-
-                        <footer className="entry-footer">
-                            <a href="#" className="btn gradient-bg">Read More</a>
-                        </footer>
-                    </div>
-
-                    <div className="news-content">
-                        <a href="#"><img src={require('./images/3.jpg')} alt="" /></a>
-
-                        <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
-                            <div className="header-elements">
-                                <div className="posted-date">March 12, 2018</div>
-
-                                <h2 className="entry-title"><a href="#">Toys for Children Campaign</a></h2>
-
-                                <div className="post-metas d-flex flex-wrap align-items-center">
-                                    <span className="cat-links">in <a href="#">Causes</a></span>
-                                    <span className="post-author">by <a href="#">Tom Phillips</a></span>
-                                    <span className="post-comments"><a href="#">3 Comments</a></span>
-                                </div>
-                            </div>
-
-                            <div className="donate-icon">
-                                <a href="#"><img src={require('./images/donate-icon.png')} alt="" /></a>
-                            </div>
-                        </header>
-
-                        <div className="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamc.</p>
-                        </div>
-
-                        <footer className="entry-footer">
-                            <a href="#" className="btn gradient-bg">Read More</a>
-                        </footer>
-                    </div>
+                   
 
                     <ul className="pagination d-flex flex-wrap align-items-center p-0">
                         <li className="active"><a href="#">01</a></li>
@@ -125,41 +44,7 @@ class FeedPage extends Component {
                             </form>{/* .flex */}
                         </div>{/* .search-widget */}
 
-                        <div className="popular-posts">
-                            <h2>Popular Posts</h2>
-
-                            <ul className="p-0">
-                                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                                    <figure><a href="#"><img src={require('./images/p-1.jpg')} alt="" /></a></figure>
-
-                                    <div className="entry-content">
-                                        <h3 className="entry-title"><a href="#">A new cause to help</a></h3>
-
-                                        <div className="posted-date">MArch 12, 2018</div>
-                                    </div>
-                                </li>
-
-                                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                                    <figure><a href="#"><img src={require('./images/p-2.jpg')} alt="" /></a></figure>
-
-                                    <div className="entry-content">
-                                        <h3 className="entry-title"><a href="#">We love to help people</a></h3>
-
-                                        <div className="posted-date">MArch 10, 2018</div>
-                                    </div>
-                                </li>
-
-                                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                                    <figure><a href="#"><img src={require('./images/p-3.jpg')} alt="" /></a></figure>
-
-                                    <div className="entry-content">
-                                        <h3 className="entry-title"><a href="#">The new ideas for helping</a></h3>
-
-                                        <div className="posted-date">MArch 09, 2018</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>{/* .cat-links */}
+                  <PopularPosts />
 
                         <div className="upcoming-events">
                             <h2>Upcoming Events</h2>
