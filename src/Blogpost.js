@@ -10,7 +10,7 @@ class Blogpost extends Component {
                 <div className="header-elements">
                     <div className="posted-date">March 12, 2018</div>
 
-                    <h2 className="entry-title"><a href="#">Toys for Children Campaign</a></h2>
+                    <h2 className="entry-title"><a href="#">{this.props.heading}</a></h2>
 
                     <div className="post-metas d-flex flex-wrap align-items-center">
                         <span className="cat-links">in <a href="#">Causes</a></span>
@@ -25,7 +25,7 @@ class Blogpost extends Component {
             </header>
 
             <div className="entry-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamc.</p>
+                <p>{this.props.text}</p>
             </div>
 
             <footer className="entry-footer">

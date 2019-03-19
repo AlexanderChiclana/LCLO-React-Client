@@ -1,9 +1,37 @@
 import React, { Component } from 'react'
 import Blogpost from './Blogpost'
 import PopularPosts from './PopularPosts'
+import axios from 'axios'
+import apiUrl from './apiConfig'
 
 class FeedPage extends Component {
+    constructor () {
+        super()
+
+        this.state = {
+            blogposts: []
+        }
+      }
+
+      componentDidMount() {
+        this.getAllBlogPosts()
+      }
+
+      getAllBlogPosts = () => {
+        axios.get(`${apiUrl}/${this.props.page}`)
+  
+          .then(res => {
+            this.setState({ blogposts: res.data.blogposts })
+          })
+      }
+
     render() {
+        const BlogpostList = () => this.state.blogposts.map(blogpost => 
+            <div key={blogpost._id}>
+              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.createdAt} tags={blogpost.tags}/> 
+            </div>
+          ) 
+
         return (
             <div className="single-page news-page">
                 <div className="page-header">
@@ -22,9 +50,11 @@ class FeedPage extends Component {
                 <div className="col-12 col-lg-8">
                     
                  
+                    {/* <Blogpost />
                     <Blogpost />
-                    <Blogpost />
-                    <Blogpost />
+                    <Blogpost /> */}
+                     <BlogpostList />
+
 
                    
 
