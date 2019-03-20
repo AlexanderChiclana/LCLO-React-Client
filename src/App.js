@@ -7,7 +7,7 @@ import About from './About'
 import FeedPage from './FeedPage'
 import Footer from './Footer'
 import Home from './Home'
-
+import SinglePostPage from './SinglePostPage'
 // const Dashboard = () => (
 //   <div>
 //     <h3>Dashboard</h3>
@@ -28,6 +28,15 @@ const App = () => (
       <Route exact path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageName={'Points of Encounter'}/>)} /> 
       <Route exact path='/news' render={() => (<FeedPage page={'news'} pageName={'News'}/>)} /> 
       <Route exact path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'}/>)} /> 
+
+      <Route path='/posts/:id' render={({ match }) => (
+      <SinglePostPage
+        key={match.params.id}
+        id={match.params.id}
+        text={'dummy text'}
+        heading={'dummy heading'}
+        />
+        )} />
 
       < Footer />
   </body>

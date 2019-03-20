@@ -1,41 +1,54 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+import apiUrl from './apiConfig'
+import { Link } from 'react-router-dom'
+
 
 class PopularPosts extends Component {
+    constructor () {
+        super()
+
+        this.state = {
+            pinned: []
+        }
+      }
+
+      componentDidMount() {
+        this.getAllPinnedPosts()
+      }
+
+      getAllPinnedPosts = () => {
+        axios.get(`${apiUrl}/pinned`)
+          .then(res => {
+              console.log(res)
+            this.setState({ 
+                pinned: res.data.blogposts
+            })
+          })
+      }
+
     render() {
+        const PinnedList = () => this.state.pinned.map(pinned => 
+                <li key={pinned._id} className="d-flex flex-wrap justify-content-between align-items-center">
+                    <figure><a href="#"><img src={require('./images/p-1.jpg')} alt="" /></a></figure>
+
+                    <div className="entry-content">
+                        <h3 className="entry-title"><Link to={'/posts/' + pinned._id}>{pinned.heading}</Link></h3>
+
+                        <div className="posted-date">MArch 12, 2018</div>
+                    </div>
+                </li>
+          )  
+
         return (
             <div className="popular-posts">
             <h2>Popular Posts</h2>
 
             <ul className="p-0">
-                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                    <figure><a href="#"><img src={require('./images/p-1.jpg')} alt="" /></a></figure>
 
-                    <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">A new cause to help</a></h3>
 
-                        <div className="posted-date">MArch 12, 2018</div>
-                    </div>
-                </li>
+            <PinnedList />
 
-                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                    <figure><a href="#"><img src={require('./images/p-2.jpg')} alt="" /></a></figure>
-
-                    <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">We love to help people</a></h3>
-
-                        <div className="posted-date">MArch 10, 2018</div>
-                    </div>
-                </li>
-
-                <li className="d-flex flex-wrap justify-content-between align-items-center">
-                    <figure><a href="#"><img src={require('./images/p-3.jpg')} alt="" /></a></figure>
-
-                    <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">The new ideas for helping</a></h3>
-
-                        <div className="posted-date">MArch 09, 2018</div>
-                    </div>
-                </li>
             </ul>
         </div>
         )

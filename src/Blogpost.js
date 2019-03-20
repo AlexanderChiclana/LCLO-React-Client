@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import DOMPurify from 'dompurify'
+import { Link } from 'react-router-dom'
 
 class Blogpost extends Component {
     render() {
@@ -8,9 +10,17 @@ class Blogpost extends Component {
 
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
-                    <div className="posted-date">March 12, 2018</div>
 
-                    <h2 className="entry-title"><a href="#">{this.props.heading}</a></h2>
+                    <div className="posted-date">{this.props.date}</div>
+
+                    <h2 className="entry-title">
+                    <Link to={'/posts/' + this.props.id}>
+                         {this.props.heading}
+                    </Link>
+                    
+                    {/* <a href="#" dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.heading) }}></a> */}
+                    
+                    </h2>
 
                     <div className="post-metas d-flex flex-wrap align-items-center">
                         <span className="cat-links">in <a href="#">Causes</a></span>
@@ -25,7 +35,7 @@ class Blogpost extends Component {
             </header>
 
             <div className="entry-content">
-                <p>{this.props.text}</p>
+                <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} ></p>
             </div>
 
             <footer className="entry-footer">
