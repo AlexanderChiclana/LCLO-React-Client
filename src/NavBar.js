@@ -30,6 +30,7 @@ class NavBar extends Component {
                                    <li><Link to="/entrepreneurship">Entrepreneurship</Link></li>
                                    <li><Link to="/news">News</Link></li>
                                    <li><Link to="/resources">Resources</Link></li>
+                                   <li><Link to="/points_of_encounter">Points of Encounter</Link></li>
                                    <li><a href="contact.html">Contact</a></li>
                                </ul>
                            </nav>

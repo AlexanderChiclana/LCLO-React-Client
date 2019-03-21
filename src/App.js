@@ -8,17 +8,12 @@ import FeedPage from './FeedPage'
 import Footer from './Footer'
 import Home from './Home'
 import SinglePostPage from './SinglePostPage'
-// const Dashboard = () => (
-//   <div>
-//     <h3>Dashboard</h3>
-//     <p>This is separate route.</p>
-//   </div>
-// )
+import SearchPage from './SearchPage'
+
 
 const App = () => (
   <body>
-      < NavBar />
-      {/* <Route path="/dashboard" component={Dashboard}/> */}
+    <Route path='/' render={() => (< NavBar />)} />
       <Route exact path='/' render={() => (<Home />)} /> 
       <Route exact path='/about' render={() => (<About />)} /> 
 
@@ -29,16 +24,12 @@ const App = () => (
       <Route exact path='/news' render={() => (<FeedPage page={'news'} pageName={'News'}/>)} /> 
       <Route exact path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'}/>)} /> 
 
-      <Route path='/posts/:id' render={({ match }) => (
-      <SinglePostPage
-        key={match.params.id}
-        id={match.params.id}
-        text={'dummy text'}
-        heading={'dummy heading'}
-        />
-        )} />
+      <Route path='/posts/:id' render={({ match }) => (<SinglePostPage key={match.params.id} id={match.params.id} text={'dummy text'} heading={'dummy heading'} />)} />
 
-      < Footer />
+      <Route path='/search/:id' render={({ match }) => (<SearchPage key={match.params.id} id={match.params.id} />)} />
+
+      <Route path='/' render={() => (< Footer />)} />
+
   </body>
 )
 
