@@ -22,9 +22,7 @@ class NavBar extends Component {
                            <nav className="site-navigation d-flex justify-content-end align-items-center">
                                <ul className="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                    
-                                   {/* <li><Link to="/">Home</Link></li> */}
                                    <li><a href="causes.html">Causes</a></li>
-                                   {/* <li><a href="portfolio.html">Gallery</a></li> */}
                                    <li><Link to="/training">Training</Link></li>
                                    <li><Link to="/capacity_building">Capacity Building</Link></li>
                                    <li><Link to="/entrepreneurship">Entrepreneurship</Link></li>
@@ -35,7 +33,7 @@ class NavBar extends Component {
                                </ul>
                            </nav>
    
-                           <div classNameName="hamburger-menu d-lg-none">
+                           <div className="hamburger-menu d-lg-none">
                                <span></span>
                                <span></span>
                                <span></span>

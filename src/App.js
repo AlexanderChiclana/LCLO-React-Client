@@ -2,7 +2,7 @@ import React from 'react'
 // import { Route, Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 import About from './About'
 import FeedPage from './FeedPage'
 import Footer from './Footer'
@@ -10,11 +10,12 @@ import Home from './Home'
 import SinglePostPage from './SinglePostPage'
 import SearchPage from './SearchPage'
 import Contact from './Contact'
+import BootstrapNav from './BootstrapNav'
 
 
 const App = () => (
   <body>
-    <Route path='/' render={() => (< NavBar />)} />
+    <Route path='/' render={() => (< BootstrapNav />)} />
       <Route exact path='/' render={() => (<Home />)} /> 
       <Route exact path='/about' render={() => (<About />)} /> 
 

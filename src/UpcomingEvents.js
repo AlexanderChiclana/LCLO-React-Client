@@ -11,7 +11,7 @@ class UpcomingEvents extends Component {
                     <figure><a href="#"><img src={require('./images/u-1.jpg')} alt="" /></a></figure>
 
                     <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">Fundraiser for Kids</a></h3>
+                        <h3 className="entry-title"><a href="#">Fundraiser for Students</a></h3>
 
                         <div className="post-metas d-flex flex-wrap align-items-center">
                             <span className="posted-date"><a href="#">Aug 25, 2018</a></span>
@@ -26,7 +26,7 @@ class UpcomingEvents extends Component {
                     <figure><a href="#"><img src={require('./images/u-2.jpg')} alt="" /></a></figure>
 
                     <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">The childrens</a></h3>
+                        <h3 className="entry-title"><a href="#">Registration Deadline</a></h3>
 
                         <div className="post-metas d-flex flex-wrap align-items-center">
                             <span className="posted-date"><a href="#">Aug 25, 2018</a></span>
@@ -41,7 +41,7 @@ class UpcomingEvents extends Component {
                     <figure><a href="#"><img src={require('./images/u-3.jpg')} alt="" /></a></figure>
 
                     <div className="entry-content">
-                        <h3 className="entry-title"><a href="#">Bring water </a></h3>
+                        <h3 className="entry-title"><a href="#">LCLO Institute</a></h3>
 
                         <div className="post-metas d-flex flex-wrap align-items-center">
                             <span className="posted-date"><a href="#">Aug 25, 2018</a></span>
