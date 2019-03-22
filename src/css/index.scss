@@ -176,17 +176,25 @@ a:hover, a:active {
 --------------------------------*/
 .customNav {
     min-height: 96px;
-        font-size: 14px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    color: #262626;
+    color: rgb(38,38,38);
     text-decoration: none;
     transition: color .35s;
+    font-family: Montserrat, sans-serif;
 }
 
 .nav-link.current-menu-item {
     border-bottom: 3px solid #ff5a00;
     color: #ff5a00;
+}
+
+
+.nav-link.active {
+    color: #ff5a00 !important;
+    border-bottom: 3px solid #ff5a00 !important;
+
 }
 
 .site-navigation ul {
