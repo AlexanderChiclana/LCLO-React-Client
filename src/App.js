@@ -12,6 +12,13 @@ import SearchPage from './SearchPage'
 import Contact from './Contact'
 import BootstrapNav from './BootstrapNav'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faIgloo)
+
+
 
 const App = () => (
   <body>
@@ -21,7 +28,7 @@ const App = () => (
 
       <Route exact path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'}/>)} /> 
       <Route exact path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageName={'Capacity Building'}/>)} /> 
-      <Route exact path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'}/>)} /> 
+      <Route exact path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'} banner={'./images/business.png'}/>)} /> 
       <Route exact path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageName={'Points of Encounter'}/>)} /> 
       <Route exact path='/news' render={() => (<FeedPage page={'news'} pageName={'News'}/>)} /> 
       <Route exact path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'}/>)} /> 

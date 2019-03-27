@@ -25,7 +25,7 @@ class Home extends Component {
                                     </div>{/* .entry-content */}
     
                                     <footer className="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                        <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
+                                        <a href="#" className="btn gradient-bg mr-2">Contact Us</a>
                                         <a href="#" className="btn orange-border">Read More</a>
                                     </footer>{/* .entry-footer */}
                                 </div>{/* .col */}

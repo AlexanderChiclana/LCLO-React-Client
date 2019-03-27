@@ -37,7 +37,7 @@ class FeedPage extends Component {
 
         return (
             <div className="single-page news-page">
-                <div className="page-header">
+                <div className="page-header" >
         <div className="container">
             <div className="row">
                 <div className="col-12">
