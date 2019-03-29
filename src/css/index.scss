@@ -185,6 +185,10 @@ a:hover, a:active {
     font-family: Montserrat, sans-serif;
 }
 
+.nav-link:focus {
+    outline: none !important;
+}
+
 .nav-link.current-menu-item {
     border-bottom: 3px solid #ff5a00;
     color: #ff5a00;
@@ -1609,8 +1613,8 @@ ul.tabs-nav .tab-nav.active {
 # News
 --------------------------------------------------------------*/
 .news-page .page-header {
-    // background: url('../images/news-bg.jpg') no-repeat center;
-    background: url('http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg') no-repeat center;
+    background: url('https://i.imgur.com/Sig1OSk.png') no-repeat center;
+    // background: url('http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg') no-repeat center;
 
 }
 

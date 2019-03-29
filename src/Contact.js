@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 class Contact extends Component {
     render() {
@@ -33,9 +35,9 @@ class Contact extends Component {
                             </ul>
     
                             <ul className="contact-info p-0">
-                                <li><i className="fa fa-phone"></i><span>+45 677 8993000 223</span></li>
-                                <li><i className="fa fa-envelope"></i><span>office@template.com</span></li>
-                                <li><i className="fa fa-map-marker"></i><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                    <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" /><span>office@template.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" /><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
                             </ul>
                         </div>
                     </div>

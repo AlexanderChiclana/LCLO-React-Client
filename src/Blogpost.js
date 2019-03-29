@@ -23,7 +23,7 @@ class Blogpost extends Component {
                     </h2>
 
                     <div className="post-metas d-flex flex-wrap align-items-center">
-                        <span className="cat-links">in <a href="#">Causes</a></span>
+                        <span className="cat-links">in <a href="#">{this.props.page}</a></span>
                         <span className="post-author">by <a href="#">Tom Phillips</a></span>
                         <span className="post-comments"><a href="#">3 Comments</a></span>
                     </div>

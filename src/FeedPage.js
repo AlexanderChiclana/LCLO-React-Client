@@ -31,7 +31,7 @@ class FeedPage extends Component {
     render() {
         const BlogpostList = () => this.state.blogposts.map(blogpost => 
             <div key={blogpost._id}>
-              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.createdAt} tags={blogpost.tags}/> 
+              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.date} tags={blogpost.tags} page={blogpost.page}/> 
             </div>
           ) 
 

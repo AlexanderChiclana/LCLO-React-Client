@@ -1,7 +1,38 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
+import apiUrl from './apiConfig'
+import { Link } from 'react-router-dom'
 
 class Footer extends Component {
+    constructor () {
+        super()
+
+        this.state = {
+            newsPosts: []
+        }
+      }
+
+      componentDidMount() {
+        this.getAllNewsPosts()
+      }
+
+      getAllNewsPosts = () => {
+        axios.get(`${apiUrl}/news/recent`)
+  
+          .then(res => {
+            this.setState({ newsPosts: res.data.blogposts })
+          })
+      }
+
     render() {
+        const recentNews = this.state.newsPosts.map(newsPost => 
+                       <li key={newsPost._id}>
+                         <h3><Link to={'/posts/' + newsPost._id}>  {newsPost.heading}</Link> </h3> 
+                          <div className="posted-date">{newsPost.date}</div>
+                      </li>  
+                      ) 
+
         return (
             <footer className="site-footer">
             <div className="footer-widgets">
@@ -14,12 +45,12 @@ class Footer extends Component {
                                 <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p>
     
                                 <ul className="d-flex flex-wrap align-items-center">
-                                    <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-behance"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="pinterest-p" /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="facebook" /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="twitter" /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="dribbble" /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="behance" /></a></li>
+                                    <li><a href="#"><FontAwesomeIcon icon="linkedin" /></a></li>
                                 </ul>
                             </div>{/* .foot-about */}
                         </div>{/* .col */}
@@ -28,13 +59,12 @@ class Footer extends Component {
                             <h2>Useful Links</h2>
     
                             <ul>
-                                <li><a href="#">Privacy Polticy</a></li>
-                                <li><a href="#">Become  a Volunteer</a></li>
-                                <li><a href="#">Donate</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Causes</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">News</a></li>
+                            <Link to="/capacity_building"><li>Capacity Building</li></Link>
+                            <Link to="/training"><li>Training</li></Link>
+                            <Link to="/entrepreneurship"><li>Entrepreneurship</li></Link>
+                            <Link to="/news"><li>News</li></Link>
+                            <Link to="/resources"><li>Resources</li></Link>
+                            <Link to="/points_of_encounter"><li>Points of Encounter</li></Link>
                             </ul>
                         </div>{/* .col */}
     
@@ -43,20 +73,7 @@ class Footer extends Component {
                                 <h2>Latest News</h2>
     
                                 <ul>
-                                    <li>
-                                        <h3><a href="#">A new cause to help</a></h3>
-                                        <div className="posted-date">MArch 12, 2018</div>
-                                    </li>
-    
-                                    <li>
-                                        <h3><a href="#">We love to help people</a></h3>
-                                        <div className="posted-date">MArch 12, 2018</div>
-                                    </li>
-    
-                                    <li>
-                                        <h3><a href="#">The new ideas for helping</a></h3>
-                                        <div className="posted-date">MArch 12, 2018</div>
-                                    </li>
+                                        {recentNews }
                                 </ul>
                             </div>{/* .foot-latest-news */}
                         </div>{/* .col */}
@@ -66,9 +83,9 @@ class Footer extends Component {
                                 <h2>Contact</h2>
     
                                 <ul>
-                                    <li><i className="fa fa-phone"></i><span>+45 677 8993000 223</span></li>
-                                    <li><i className="fa fa-envelope"></i><span>office@template.com</span></li>
-                                    <li><i className="fa fa-map-marker"></i><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                    <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" /><span>office@template.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" /><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
                                 </ul>
                             </div>{/* .foot-contact */}
     
