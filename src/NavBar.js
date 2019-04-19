@@ -23,7 +23,7 @@ class NavBar extends Component {
                                <ul className="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                    
                                    <li><a href="causes.html">Causes</a></li>
-                                   <NavLink to="/training" activeStyle={{color:'red'}}><li>Training</li></NavLink>
+                                   <NavLink activeClassName="current" to="/training" ><li>Training</li></NavLink>
                                    <NavLink to="/capacity_building"><li>Capacity Building</li></NavLink>
                                    <NavLink to="/entrepreneurship"> <li>Entrepreneurship</li></NavLink>
                                    <NavLink to="/news"> <li>News</li></NavLink>
