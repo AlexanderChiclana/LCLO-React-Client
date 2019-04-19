@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavNavLink } from 'react-router-dom'
 
 class NavBar extends Component {
     render() {
@@ -12,24 +12,24 @@ class NavBar extends Component {
                <div className="container">
                    <div className="row">
                        <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                       <Link to="/">
+                       <NavLink to="/">
                            <div className="site-branding d-flex align-items-center">
       
                                    <a className="d-block"><img className="d-block small-image" src={require('./images/LCLO-Icon.png')} alt="logo" /> </a> 
                                    <div className="LCLO-Button">LCLO Group</div>                    
                             </div>
-                            </Link>
+                            </NavLink>
                            <nav className="site-navigation d-flex justify-content-end align-items-center">
                                <ul className="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                    
                                    <li><a href="causes.html">Causes</a></li>
-                                   <li><Link to="/training">Training</Link></li>
-                                   <li><Link to="/capacity_building">Capacity Building</Link></li>
-                                   <li><Link to="/entrepreneurship">Entrepreneurship</Link></li>
-                                   <li><Link to="/news">News</Link></li>
-                                   <li><Link to="/resources">Resources</Link></li>
-                                   <li><Link to="/points_of_encounter">Points of Encounter</Link></li>
-                                   <li><Link to="/contact">Contact</Link></li>
+                                   <NavLink to="/training" activeStyle={{color:'red'}}><li>Training</li></NavLink>
+                                   <NavLink to="/capacity_building"><li>Capacity Building</li></NavLink>
+                                   <NavLink to="/entrepreneurship"> <li>Entrepreneurship</li></NavLink>
+                                   <NavLink to="/news"> <li>News</li></NavLink>
+                                   <NavLink to="/resources"><li>Resources</li></NavLink>
+                                   <NavLink to="/points_of_encounter"><li>Points of Encounter</li></NavLink>
+                                   <NavLink to="/contact"><li>Contact</li></NavLink>
                                </ul>
                            </nav>
    

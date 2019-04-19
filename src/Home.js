@@ -117,11 +117,11 @@ class Home extends Component {
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
                         <div className="welcome-content">
                             <header className="entry-header">
-                                <h2 className="entry-title">Wellcome to our Charity</h2>
+                                <h2 className="entry-title">Welcome to the LCLO Group</h2>
                             </header>{/* .entry-header */}
     
                             <div className="entry-content mt-5">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus. Quisque molestie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum.</p>
+                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">

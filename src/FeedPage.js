@@ -44,6 +44,9 @@ class FeedPage extends Component {
                     <h1>{this.props.pageName}</h1>
                  </div>{/* .col */} 
             </div>{/* .row */}
+            <div>
+                <p className="text-white">{this.props.description}</p>
+            </div>
         </div>{/* .container */}
     </div>{/* .page-header */}
 
