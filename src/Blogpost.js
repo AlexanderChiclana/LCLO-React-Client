@@ -7,7 +7,7 @@ class Blogpost extends Component {
         return (
             <div className="news-content">
             <a href="#"><img src={'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'} alt="" /></a>
-
+            
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
 
