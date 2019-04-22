@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import MemberCard from './MemberCard'
-
+import Team from './Team'
 
 class About extends Component {
     render() {
@@ -24,15 +23,15 @@ class About extends Component {
                 <div className="col-12 col-lg-6 order-2 order-lg-1">
                     <div className="welcome-content">
                         <header className="entry-header">
-                            <h2 className="entry-title">Wellcome to our Charity</h2>
+                            <h2 className="entry-title">Who we are</h2>
                         </header>
 
                         <div className="entry-content mt-5">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus. Quisque molestie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum.</p>
+                            <p>The LCLO Group is a collection of industry leading professionals and academics aiming to grow the economy in southeast asia. We include members form harvard, yale, and brown university. </p>
                         </div>
 
                         <div className="entry-footer mt-5">
-                            <a href="#" className="btn gradient-bg mr-2">Read More</a>
+                            <a href="#" className="btn gradient-bg mr-2">Meet the Team</a>
                         </div>
                     </div>
                 </div>
@@ -90,6 +89,9 @@ class About extends Component {
         </div>
     </div>
 
+        <Team />
+
+
     <div className="about-testimonial">
         <div className="container">
             <div className="row">
@@ -136,7 +138,7 @@ class About extends Component {
         </div>
     </div>
 
-
+{/* 
     <section id="team" className="pb-5">
     <div className="container">
         <h5 className="section-title h1">Our Team</h5>
@@ -156,7 +158,7 @@ class About extends Component {
 
             </div>
 </div>
-</section>
+</section> */}
             </div>
         )
     }
