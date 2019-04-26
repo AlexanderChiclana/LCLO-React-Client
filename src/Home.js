@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import scrollToComponent from 'react-scroll-to-component'
 
 class Home extends Component {
     render() {
@@ -26,7 +28,9 @@ class Home extends Component {
     
                                     <footer className="entry-footer d-flex flex-wrap align-items-center mt-5">
                                         <a href="#" className="btn gradient-bg mr-2">Contact Us</a>
-                                        <a href="#" className="btn orange-border">Read More</a>
+                                        <button onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border">Our Mission</button>
+
+                                        {/* <a href="#" className="btn orange-border">Our Mission</a> */}
                                     </footer>{/* .entry-footer */}
                                 </div>{/* .col */}
                             </div>{/* .row */}
@@ -111,7 +115,13 @@ class Home extends Component {
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
     
-        <div className="home-page-welcome">
+{/* 
+        <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
+
+<Team />
+</section> */}
+
+        <div className="home-page-welcome" ref={(div) => { this.Mission = div }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -125,7 +135,7 @@ class Home extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">
-                                <a href="#" className="btn gradient-bg mr-2">Read More</a>
+                                <div className="btn gradient-bg mr-2"> <Link to="/about">About Us </Link></div>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
@@ -294,7 +304,7 @@ class Home extends Component {
         <div className="our-causes">
             <div className="container">
                 <div className="row">
-                    <div className="coL-12">
+                    <div className="col-12">
                         <div className="section-heading">
                             <h2 className="entry-title">Our Causes</h2>
                         </div>{/* .section-heading */}

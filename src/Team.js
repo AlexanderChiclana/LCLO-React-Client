@@ -4,7 +4,6 @@ import MemberCard from './MemberCard'
 class Team extends Component {
     render() {
         return (
-            <section id="team" className="pb-5">
              <div className="container">
         <h5 className="section-title h1">Our Team</h5>
         <div className="row">
@@ -22,7 +21,6 @@ class Team extends Component {
             <MemberCard name={'Arjun Ray'}/>
             </div>
         </div>
-</section>
         )
     }
 }

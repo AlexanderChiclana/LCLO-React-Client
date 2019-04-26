@@ -15,7 +15,7 @@ class NavBar extends Component {
                        <NavLink to="/">
                            <div className="site-branding d-flex align-items-center">
       
-                                   <a className="d-block"><img className="d-block small-image" src={require('./images/LCLO-Icon.png')} alt="logo" /> </a> 
+                                   {/* <a className="d-block"><img className="d-block small-image" src={require('./images/LCLO-Icon.png')} alt="logo" /> </a>  */}
                                    <div className="LCLO-Button">LCLO Group</div>                    
                             </div>
                             </NavLink>

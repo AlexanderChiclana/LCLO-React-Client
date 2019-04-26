@@ -18,7 +18,7 @@ class PopularPosts extends Component {
       }
 
       getAllPinnedPosts = () => {
-        axios.get(`${apiUrl}/pinned`)
+        axios.get(`${apiUrl}/pinned?page=${this.props.page}`)
           .then(res => {
               console.log(res)
             this.setState({ 
@@ -35,14 +35,14 @@ class PopularPosts extends Component {
                     <div className="entry-content">
                         <h3 className="entry-title"><Link to={'/posts/' + pinned._id}>{pinned.heading}</Link></h3>
 
-                        <div className="posted-date">MArch 12, 2018</div>
+                        <div className="posted-date">March 12, 2018</div>
                     </div>
                 </li>
           )  
 
         return (
             <div className="popular-posts">
-            <h2>Popular Posts</h2>
+            <h2>Popular</h2>
 
             <ul className="p-0">
 

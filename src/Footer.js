@@ -38,11 +38,11 @@ class Footer extends Component {
             <div className="footer-widgets">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 col-lg-3">
+                        <div className="col-12 col-md-6 col-lg-4">
                             <div className="foot-about">
-                                <h2><a className="foot-logo" href="#"><img src="images/foot-logo.png" alt="" /></a></h2>
-    
-                                <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p>
+                                <h2>Mision</h2>
+
+                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
     
                                 <ul className="d-flex flex-wrap align-items-center">
                                     <li><a href="#"><FontAwesomeIcon icon="pinterest-p" /></a></li>
@@ -55,7 +55,7 @@ class Footer extends Component {
                             </div>{/* .foot-about */}
                         </div>{/* .col */}
     
-                        <div className="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div className="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
                             <h2>Useful Links</h2>
     
                             <ul>
@@ -83,7 +83,7 @@ class Footer extends Component {
                                 <h2>Contact</h2>
     
                                 <ul>
-                                    <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
+                                <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
                                     <li> <FontAwesomeIcon icon="envelope" /><span>office@template.com</span></li>
                                     <li> <FontAwesomeIcon icon="marker" /><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
                                 </ul>

@@ -12,7 +12,7 @@ class BootstrapNav extends Component {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="nav-bar customNav">
                 <div className="container">
 
-            <Navbar.Brand href="#">LCLO Group</Navbar.Brand>
+            <Navbar.Brand href="#" style={{ fontSize: '36px' }} className="LCLO-Button">LCLO Group</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">

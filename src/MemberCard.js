@@ -38,6 +38,7 @@ class MemberCard extends Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
+                                       <button className="btn btn-default"> More About Liza </button>
                                         <a className="social-icon text-xs-center" target="_blank" href="#">
                                             <i className="fa fa-google"></i>
                                         </a>

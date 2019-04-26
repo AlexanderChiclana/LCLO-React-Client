@@ -1,6 +1,31 @@
 import React, { Component } from 'react'
+import apiUrl from './apiConfig'
+import axios from 'axios'
+import DOMPurify from 'dompurify'
 
 class FeaturedCause extends Component {
+    constructor () {
+        super()
+
+        this.state = {
+            featured: [{ heading: '' }]
+        }
+      }
+
+      componentDidMount() {
+        this.getAllPinnedPosts()
+      }
+
+      getAllPinnedPosts = () => {
+        axios.get(`${apiUrl}/featured?page=${this.props.page}`)
+          .then(res => {
+              console.log(res)
+            this.setState({ 
+                // is this the best way to do this? If the route returns nothing the page crashes
+                featured: res.data.blogposts[0]
+            })
+          })
+      }
     render() {
         return (
           
@@ -14,11 +39,15 @@ class FeaturedCause extends Component {
 
                 <div className="cause-content-wrap">
                     <header className="entry-header d-flex flex-wrap align-items-center">
-                        <h3 className="entry-title w-100 m-0"><a href="#">LCLO + PolyPodia Pilot Program</a></h3>
+                        <h3 className="entry-title w-100 m-0">{this.props.featured.heading}</h3>
                     </header>{/* .entry-header */}
 
                     <div className="entry-content">
-                        <p className="m-0">We will be launching a pilot program of our course to a select group of students in SE Asia. This will take advantage of the polyPodia LMS in a classroom setting</p>
+                    <p className="m-0"
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(this.props.featured.text)
+                      }}
+                    />
                     </div>{/* .entry-content */}
 
                     <div className="fund-raised w-100">

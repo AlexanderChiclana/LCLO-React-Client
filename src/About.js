@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Team from './Team'
+import scrollToComponent from 'react-scroll-to-component'
+
 
 class About extends Component {
     render() {
@@ -31,7 +33,7 @@ class About extends Component {
                         </div>
 
                         <div className="entry-footer mt-5">
-                            <a href="#" className="btn gradient-bg mr-2">Meet the Team</a>
+                            <button onClick={ () => scrollToComponent(this.Team, { offset: 0, align: 'top', duration: 1000 }) } className="btn gradient-bg mr-2">Meet the Team</button>
                         </div>
                     </div>
                 </div>
@@ -89,8 +91,10 @@ class About extends Component {
         </div>
     </div>
 
-        <Team />
+    <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
 
+        <Team />
+    </section>
 
     <div className="about-testimonial">
         <div className="container">
