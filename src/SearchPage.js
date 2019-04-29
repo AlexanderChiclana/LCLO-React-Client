@@ -3,9 +3,7 @@ import axios from 'axios'
 import apiUrl from './apiConfig'
 import Blogpost from './Blogpost'
 import SearchWidget from './SearchWidget'
-import PopularPosts from './PopularPosts'
 import UpcomingEvents from './UpcomingEvents'
-import FeaturedCause from './FeaturedCause'
 
 
 class SearchPage extends Component {
@@ -46,7 +44,7 @@ class SearchPage extends Component {
     <div className="container">
         <div className="row">
             <div className="col-12">
-                <h1>Search Results</h1>
+                <h1>Search Results: <i>{this.props.id}</i></h1>
              </div>{/* .col */} 
         </div>{/* .row */}
     </div>{/* .container */}
@@ -70,9 +68,7 @@ class SearchPage extends Component {
                 <div className="sidebar">
 
                 <SearchWidget />
-                <PopularPosts />
                 <UpcomingEvents />
-                <FeaturedCause />
                 
                 </div>{/* .sidebar */}
             </div>{/* .col */}

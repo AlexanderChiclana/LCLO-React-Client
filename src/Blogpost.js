@@ -3,6 +3,30 @@ import DOMPurify from 'dompurify'
 import { Link } from 'react-router-dom'
 
 class Blogpost extends Component {
+    constructor () {
+        super()
+        this.state = {
+            string: '',
+            length: 200,
+            trimmedString: ''
+        }
+      }
+
+    componentDidMount() {
+        // this.setState({ string: this.props.text })
+
+        // const trimmedString = this.state.string.length > this.state.length 
+        //             ? this.state.string.substring(0, length - 3) + '...' 
+        //             : this.state.string
+
+        const trimmedString = this.props.text.length > this.state.length 
+                    ? this.props.text.substring(0, this.state.length - 3) + '...' 
+                    : this.props.text
+
+        console.log(trimmedString)
+        this.setState({ trimmedString: trimmedString })
+    }
+    
     render() {
         return (
             <div className="news-content">
@@ -35,7 +59,7 @@ class Blogpost extends Component {
             </header>
 
             <div className="entry-content">
-                <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} ></p>
+                <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
             </div>
 
             <footer className="entry-footer">

@@ -8,15 +8,15 @@ class FeaturedCause extends Component {
         super()
 
         this.state = {
-            featured: [{ heading: '' }]
+            featured: {}
         }
       }
 
       componentDidMount() {
-        this.getAllPinnedPosts()
+        this.getFeaturedPost()
       }
 
-      getAllPinnedPosts = () => {
+      getFeaturedPost = () => {
         axios.get(`${apiUrl}/featured?page=${this.props.page}`)
           .then(res => {
               console.log(res)
@@ -39,13 +39,13 @@ class FeaturedCause extends Component {
 
                 <div className="cause-content-wrap">
                     <header className="entry-header d-flex flex-wrap align-items-center">
-                        <h3 className="entry-title w-100 m-0">{this.props.featured.heading}</h3>
+                        <h3 className="entry-title w-100 m-0">{this.state.featured.heading}</h3>
                     </header>{/* .entry-header */}
 
                     <div className="entry-content">
                     <p className="m-0"
                       dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(this.props.featured.text)
+                        __html: DOMPurify.sanitize(this.state.featured.text)
                       }}
                     />
                     </div>{/* .entry-content */}
