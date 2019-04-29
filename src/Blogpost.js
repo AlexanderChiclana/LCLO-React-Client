@@ -7,30 +7,31 @@ class Blogpost extends Component {
         super()
         this.state = {
             string: '',
-            length: 200,
-            trimmedString: ''
+            length: 1000,
+            trimmedString: '',
+            overflow: false
         }
       }
 
     componentDidMount() {
-        // this.setState({ string: this.props.text })
+        let trimmedString = ''
 
-        // const trimmedString = this.state.string.length > this.state.length 
-        //             ? this.state.string.substring(0, length - 3) + '...' 
-        //             : this.state.string
+        if (this.props.text.length > this.state.length) {
+            trimmedString = this.props.text.substring(0, this.state.length - 3) + '...' 
+            this.setState({ overflow: true })
+        } else {
+            trimmedString = this.props.text
+        }
 
-        const trimmedString = this.props.text.length > this.state.length 
-                    ? this.props.text.substring(0, this.state.length - 3) + '...' 
-                    : this.props.text
 
-        console.log(trimmedString)
+
         this.setState({ trimmedString: trimmedString })
     }
     
     render() {
         return (
             <div className="news-content">
-            <a href="#"><img src={'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'} alt="" /></a>
+            {/* <a href="#"><img src={'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'} alt="" /></a> */}
             
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
@@ -63,7 +64,7 @@ class Blogpost extends Component {
             </div>
 
             <footer className="entry-footer">
-                <a href="#" className="btn gradient-bg">Read More</a>
+                { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg">Read More</div></Link> : null }
             </footer>
         </div>
         )

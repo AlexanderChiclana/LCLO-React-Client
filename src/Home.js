@@ -28,7 +28,7 @@ class Home extends Component {
     
                                     <footer className="entry-footer d-flex flex-wrap align-items-center mt-5">
                                         <a href="#" className="btn gradient-bg mr-2">Contact Us</a>
-                                        <button onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border">Our Mission</button>
+                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border text-white">Our Mission</div>
 
                                         {/* <a href="#" className="btn orange-border">Our Mission</a> */}
                                     </footer>{/* .entry-footer */}
@@ -135,7 +135,7 @@ class Home extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">
-                                <div className="btn gradient-bg mr-2"> <Link to="/about">About Us </Link></div>
+                              <Link to="/about">    <div className="btn gradient-bg mr-2">About Us</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}

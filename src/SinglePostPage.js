@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import SearchWidget from './SearchWidget'
-import PopularPosts from './PopularPosts'
-import UpcomingEvents from './UpcomingEvents'
-import FeaturedCause from './FeaturedCause'
+// import PopularPosts from './PopularPosts'
+// import UpcomingEvents from './UpcomingEvents'
+// import FeaturedCause from './FeaturedCause'
 import DOMPurify from 'dompurify'
 import apiUrl from './apiConfig'
 import axios from 'axios'
@@ -122,9 +122,9 @@ class SinglePostPage extends Component {
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>
                   <SearchWidget />
-                  <PopularPosts />
+                  {/* <PopularPosts />
                   <UpcomingEvents />
-                  <FeaturedCause />
+                  <FeaturedCause /> */}
                 </div>
                 {/* .sidebar */}
               </div>
