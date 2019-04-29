@@ -54,16 +54,16 @@ class Blogpost extends Component {
                     </div>
                 </div>
 
-                <div className="donate-icon">
+                {/* <div className="donate-icon">
                     <a href="#"><img src={require('./images/donate-icon.png')} alt="" /></a>
-                </div>
+                </div> */}
             </header>
 
             <div className="entry-content">
                 <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
             </div>
 
-            <footer className="entry-footer">
+            <footer className=" d-flex justify-content-start">
                 { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg">Read More</div></Link> : null }
             </footer>
         </div>

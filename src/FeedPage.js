@@ -12,7 +12,8 @@ class FeedPage extends Component {
         super()
 
         this.state = {
-            blogposts: []
+            blogposts: [],
+            visible: 4
         }
       }
 
@@ -39,8 +40,14 @@ class FeedPage extends Component {
         })
       }
 
+      loadMore = () => {
+        this.setState((prev) => {
+          return { visible: prev.visible + 4 }
+        })
+       }
+
     render() {
-        const BlogpostList = () => this.state.blogposts.map(blogpost => 
+        const BlogpostList = () => this.state.blogposts.slice(0, this.state.visible).map(blogpost => 
             <div key={blogpost._id}>
               <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.date} tags={blogpost.tags} page={blogpost.page}/> 
             </div>
@@ -70,11 +77,14 @@ class FeedPage extends Component {
 
                      <BlogpostList />
 
-                    <ul className="pagination d-flex flex-wrap align-items-center p-0">
+                    {/* <ul className="pagination d-flex flex-wrap align-items-center p-0">
                         <li className="active"><a href="#">01</a></li>
                         <li><a href="#">02</a></li>
                         <li><a href="#">03</a></li>
-                    </ul>
+                    </ul> */}
+                    <br />
+                   { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" onClick={this.loadMore}> Load More Articles... </div> : null}
+
                 </div>
 
                 <div className="col-12 col-lg-4">
