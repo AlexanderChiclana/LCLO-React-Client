@@ -25,7 +25,7 @@ class About extends Component {
                 <div className="col-12 col-lg-6 order-2 order-lg-1">
                     <div className="welcome-content">
                         <header className="entry-header">
-                            <h2 className="entry-title">Who we are</h2>
+                            <h2 className="entry-title">Who We Are</h2>
                         </header>
 
                         <div className="entry-content mt-5">
@@ -39,7 +39,7 @@ class About extends Component {
                 </div>
 
                 <div className="col-12 col-lg-6 order-1 order-lg-2">
-                    <img src={require('./images/welcome.jpg')} alt="welcome" />
+                    <img src={require('./images/bridge.JPG')} alt="welcome" />
                 </div>
             </div>
         </div>

@@ -10,6 +10,8 @@ class Home extends Component {
             <div className="swiper-wrapper">
                 <div className="swiper-slide hero-content-wrap">
                     <img src='https://et-website.s3.amazonaws.com/uploads/2015/04/Bhutan-Paro-TigersNest.jpg' alt="" />
+                    {/* <img src={require('./images/skyscrapers.JPG')} alt="welcome" /> */}
+
     
                     <div className="hero-content-overlay position-absolute w-100 h-100">
                         <div className="container h-100">
@@ -58,7 +60,7 @@ class Home extends Component {
             </div> */}
         </div> {/* .hero-slider */}
     
-        <div className="home-page-icon-boxes">
+        {/* <div className="home-page-icon-boxes">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
@@ -112,8 +114,8 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>{/* .row */}
-            </div>{/* .container */}
-        </div>{/* .home-page-icon-boxes */}
+            {/* </div>
+        </div> */}
     
 {/* 
         <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
@@ -141,12 +143,87 @@ class Home extends Component {
                     </div>{/* .col */}
     
                     <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
-                        <img src={require('./images/welcome.jpg')} alt="welcome" />
+                        <img src={require('./images/cityscape.JPG')} alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
     
+        {/* section for next intro, reverse  */}
+
+        <div className="home-page-welcome" id="home-page-alt">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                    <img src={require('./images/cityscape.JPG')} alt="welcome" />
+
+                    </div>{/* .col */}
+    
+                    <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+
+                        <div className="welcome-content">
+                            <header className="entry-header ">
+                                <h2 className="entry-title" id="entry-title-alt">Training the Workforce of Tomorrow</h2>
+                            </header>{/* .entry-header */}
+    
+                            <div className="entry-content mt-5">
+                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
+                            </div>{/* .entry-content */}
+    
+                            <div className="entry-footer mt-5 d-flex justify-content-end">
+                              <Link to="/training"><div className="btn gradient-bg mr-2">Our Training</div> </Link>
+                            </div>{/* .entry-footer */}
+                        </div>{/* .welcome-content */}
+                    </div>{/* .col */}
+                </div>{/* .row */}
+            </div>{/* .container */}
+        </div>{/* .home-page-icon-boxes */}
+
+
+        {/* third section */}
+
+        <div className="home-page-welcome">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                        <div className="welcome-content">
+                            <header className="entry-header">
+                                <h2 className="entry-title">Capcity Building for Entrepreneurs</h2>
+                            </header>{/* .entry-header */}
+    
+                            <div className="entry-content mt-5">
+                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
+                            </div>{/* .entry-content */}
+    
+                            <div className="entry-footer mt-5">
+                              <Link to="/capacity_building">    <div className="btn gradient-bg mr-2">Capacity Building</div> </Link>
+                            </div>{/* .entry-footer */}
+                        </div>{/* .welcome-content */}
+                    </div>{/* .col */}
+    
+                    <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                        <img src={require('./images/skyscrapers.JPG')} alt="welcome" />
+                    </div>{/* .col */}
+                </div>{/* .row */}
+            </div>{/* .container */}
+        </div>{/* .home-page-icon-boxes */}
+
+        {/* end section  */}
+
+{/* mailing list */}
+        <div className="help-us">
+        <div className="container">
+            <div className="row">
+                <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                    <h2>Joing Mailing List</h2>
+
+                    <a className="btn orange-border" href="#">Donate now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{/* end mailing */}
+
         <div className="home-page-events">
             <div className="container">
                 <div className="row">
@@ -301,287 +378,6 @@ class Home extends Component {
             </div>{/* .container */}
         </div>{/* .home-page-events */}
     
-        <div className="our-causes">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="section-heading">
-                            <h2 className="entry-title">Our Causes</h2>
-                        </div>{/* .section-heading */}
-                    </div>{/* .col */}
-                </div>{/* .row */}
-    
-                <div className="row">
-                    <div className="col-12">
-                        <div className="swiper-container causes-slider">
-                            <div className="swiper-wrapper">
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-1.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-1 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="83"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-    
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-2.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-2 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="70"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-    
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-3.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-3 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="83"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-    
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-1.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-4 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="83"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-    
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-2.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-5 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="70"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-    
-                                <div className="swiper-slide">
-                                    <div className="cause-wrap">
-                                        <figure className="m-0">
-                                            <img src={require('./images/cause-3.jpg')} alt="" />
-    
-                                            <div className="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                                <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                            </div>{/* .figure-overlay */}
-                                        </figure>
-    
-                                        <div className="cause-content-wrap">
-                                            <header className="entry-header d-flex flex-wrap align-items-center">
-                                                <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-                                            </header>{/* .entry-header */}
-    
-                                            <div className="entry-content">
-                                                <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                            </div>{/* .entry-content */}
-    
-                                            <div className="fund-raised w-100">
-                                                <div className="fund-raised-bar-6 barfiller">
-                                                    <div className="tipWrap">
-                                                        <span className="tip"></span>
-                                                    </div>{/* .tipWrap */}
-    
-                                                    <span className="fill" data-percentage="83"></span>
-                                                </div>{/* .fund-raised-bar */}
-    
-                                                <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div className="fund-raised-total mt-4">
-                                                        Raised: $56 880
-                                                    </div>{/* .fund-raised-total */}
-    
-                                                    <div className="fund-raised-goal mt-4">
-                                                        Goal: $70 000
-                                                    </div>{/* .fund-raised-goal */}
-                                                </div>{/* .fund-raised-details */}
-                                            </div>{/* .fund-raised */}
-                                        </div>{/* .cause-content-wrap */}
-                                    </div>{/* .cause-wrap */}
-                                </div>{/* .swiper-slide */}
-                            </div>{/* .swiper-wrapper */}
-    
-                        </div>{/* .swiper-container */}
-    
-                        {/* Add Arrows */}
-                        <div className="swiper-button-next flex justify-content-center align-items-center">
-                            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
-                        </div>
-    
-                        <div className="swiper-button-prev flex justify-content-center align-items-center">
-                            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
-                        </div>
-                    </div>{/* .col */}
-                </div>{/* .row */}
-            </div>{/* .container */}
-        </div>{/* .our-causes */}
     
         <div className="home-page-limestone">
             <div className="container">
@@ -604,10 +400,10 @@ class Home extends Component {
     
                                     <div className="d-flex justify-content-center align-items-baseline">
                                         <div className="start-counter" data-to="120" data-speed="2000"></div>
-                                        <div className="counter-k">K</div>
+                                        <div className="counter-k"></div>
                                     </div>
     
-                                    <h3 className="entry-title">Children helped</h3>{/* entry-title */}
+                                    <h3 className="entry-title">Points Of Encounter</h3>{/* entry-title */}
                                 </div>{/* counter-box */}
                             </div>{/* .col */}
     
@@ -621,7 +417,7 @@ class Home extends Component {
                                         <div className="start-counter" data-to="79" data-speed="2000"></div>
                                     </div>
     
-                                    <h3 className="entry-title">Water wells</h3>{/* entry-title */}
+                                    <h3 className="entry-title">Capacity Building</h3>{/* entry-title */}
                                 </div>{/* counter-box */}
                             </div>{/* .col */}
     
