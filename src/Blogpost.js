@@ -63,7 +63,7 @@ class Blogpost extends Component {
                 <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
             </div>
 
-            <footer className=" d-flex justify-content-start">
+            <footer className=" d-flex justify-content-end">
                 { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg roundButton">Read More</div></Link> : null }
             </footer>
             <br />

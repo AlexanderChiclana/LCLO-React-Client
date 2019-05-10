@@ -3,7 +3,7 @@ import Blogpost from './Blogpost'
 import PopularPosts from './PopularPosts'
 import axios from 'axios'
 import apiUrl from './apiConfig'
-import SearchWidget from './SearchWidget'
+// import SearchWidget from './SearchWidget'
 import UpcomingEvents from './UpcomingEvents'
 import FeaturedCause from './FeaturedCause'
 
@@ -72,6 +72,17 @@ class FeedPage extends Component {
     <div className="news-wrap">
         <div className="container">
             <div className="row">
+            
+            <div className="col-12 col-lg-4">
+                    <div className="sidebar">
+
+                    {/* <SearchWidget /> */}
+                    <FeaturedCause page={this.props.page} featured={this.state.featured}/>
+                    <PopularPosts page={this.props.page}/>
+                    <UpcomingEvents />
+                    
+                    </div>{/* .sidebar */}
+                </div>{/* .col */}
                 <div className="col-12 col-lg-8">
 
 
@@ -87,16 +98,6 @@ class FeedPage extends Component {
 
                 </div>
 
-                <div className="col-12 col-lg-4">
-                    <div className="sidebar">
-
-                    <SearchWidget />
-                    <FeaturedCause page={this.props.page} featured={this.state.featured}/>
-                    <PopularPosts page={this.props.page}/>
-                    <UpcomingEvents />
-                    
-                    </div>{/* .sidebar */}
-                </div>{/* .col */}
             </div>
         </div>
     </div>

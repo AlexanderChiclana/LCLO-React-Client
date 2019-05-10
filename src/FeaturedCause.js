@@ -30,7 +30,7 @@ class FeaturedCause extends Component {
         return (
           
             <div className="featured-cause">
-            <h2>Featured Article</h2>
+            {/* <h2>Featured Article</h2> */}
 
             <div className="cause-wrap">
                 <figure className="m-0 position-relative">
