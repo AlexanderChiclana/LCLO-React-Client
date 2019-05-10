@@ -91,9 +91,9 @@ class FeedPage extends Component {
                     <div className="sidebar">
 
                     <SearchWidget />
+                    <FeaturedCause page={this.props.page} featured={this.state.featured}/>
                     <PopularPosts page={this.props.page}/>
                     <UpcomingEvents />
-                    <FeaturedCause page={this.props.page} featured={this.state.featured}/>
                     
                     </div>{/* .sidebar */}
                 </div>{/* .col */}

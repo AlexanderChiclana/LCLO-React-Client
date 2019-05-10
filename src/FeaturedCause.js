@@ -30,7 +30,7 @@ class FeaturedCause extends Component {
         return (
           
             <div className="featured-cause">
-            <h2>Featured Causes</h2>
+            <h2>Featured Article</h2>
 
             <div className="cause-wrap">
                 <figure className="m-0 position-relative">
@@ -60,13 +60,7 @@ class FeaturedCause extends Component {
                         </div>{/* .fund-raised-bar */}
 
                         <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                            <div className="fund-raised-total mt-4">
-                                Raised: $56 880
-                            </div>{/* .fund-raised-total */}
-
-                            <div className="fund-raised-goal mt-4">
-                                Goal: $70 000
-                            </div>{/* .fund-raised-goal */}
+                    
                         </div>{/* .fund-raised-details */}
                     </div>{/* .fund-raised */}
                 </div>{/* .cause-content-wrap */}

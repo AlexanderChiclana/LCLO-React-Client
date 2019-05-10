@@ -29,8 +29,8 @@ class Home extends Component {
                                     </div>{/* .entry-content */}
     
                                     <footer className="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                        <a href="#" className="btn gradient-bg mr-2">Contact Us</a>
-                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border text-white">Our Mission</div>
+                                        <a href="#" className="btn gradient-bg mr-2 roundButton">Contact Us</a>
+                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border text-white roundButton">Our Mission</div>
 
                                         {/* <a href="#" className="btn orange-border">Our Mission</a> */}
                                     </footer>{/* .entry-footer */}
@@ -137,7 +137,7 @@ class Home extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">
-                              <Link to="/about">    <div className="btn gradient-bg mr-2">About Us</div> </Link>
+                              <Link to="/about">    <div className="btn gradient-bg mr-2 roundButton">About Us</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
@@ -171,7 +171,7 @@ class Home extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5 d-flex justify-content-end">
-                              <Link to="/training"><div className="btn gradient-bg mr-2">Our Training</div> </Link>
+                              <Link to="/training"><div className="btn gradient-bg mr-2 roundButton">Our Training</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
@@ -196,7 +196,7 @@ class Home extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">
-                              <Link to="/capacity_building">    <div className="btn gradient-bg mr-2">Capacity Building</div> </Link>
+                              <Link to="/capacity_building">    <div className="btn gradient-bg mr-2 roundButton" >Capacity Building</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
@@ -217,7 +217,7 @@ class Home extends Component {
                 <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
                     <h2>Joing Mailing List</h2>
 
-                    <a className="btn orange-border" href="#">Donate now</a>
+                    <a className="btn orange-border roundButton" href="#">Donate now</a>
                 </div>
             </div>
         </div>

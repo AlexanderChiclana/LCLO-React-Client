@@ -64,8 +64,12 @@ class Blogpost extends Component {
             </div>
 
             <footer className=" d-flex justify-content-start">
-                { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg">Read More</div></Link> : null }
+                { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg roundButton">Read More</div></Link> : null }
             </footer>
+            <br />
+            <br />
+            <br />
+
         </div>
         )
     }
