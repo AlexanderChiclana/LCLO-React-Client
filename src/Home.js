@@ -142,7 +142,7 @@ class Home extends Component {
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                    <div className="col-12 col-lg-6 order-1 order-lg-2">
                         <img src={require('./images/cityscape.JPG')} alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
@@ -159,14 +159,14 @@ class Home extends Component {
 
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                    <div className="col-12 col-lg-6 order-1 order-lg-2">
 
                         <div className="welcome-content">
                             <header className="entry-header ">
-                                <h2 className="entry-title" id="entry-title-alt">Training the Workforce of Tomorrow</h2>
+                                <h2 className="entry-title dark-font">Training the Workforce of Tomorrow</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-5">
+                            <div className="entry-content mt-5 dark-font">
                                 <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
@@ -201,7 +201,7 @@ class Home extends Component {
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                    <div className="col-12 col-lg-6 order-1 order-lg-2">
                         <img src={require('./images/skyscrapers.JPG')} alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
@@ -215,9 +215,9 @@ class Home extends Component {
         <div className="container">
             <div className="row">
                 <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                    <h2>Joing Mailing List</h2>
+                    <h2>Stay up to date with the latest from LCLO</h2>
 
-                    <a className="btn orange-border roundButton" href="#">Donate now</a>
+                    <a className="btn orange-border roundButton" href="#">Join Mailing List</a>
                 </div>
             </div>
         </div>

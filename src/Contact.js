@@ -35,9 +35,9 @@ class Contact extends Component {
                             </ul>
     
                             <ul className="contact-info p-0">
-                                    <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
-                                    <li> <FontAwesomeIcon icon="envelope" /><span>office@template.com</span></li>
-                                    <li> <FontAwesomeIcon icon="marker" /><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                    <li> <FontAwesomeIcon icon="phone" className="footer-icon"/><span>+45 677 8993000 223</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>office@template.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
                             </ul>
                         </div>
                     </div>

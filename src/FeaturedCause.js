@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import apiUrl from './apiConfig'
 import axios from 'axios'
-import DOMPurify from 'dompurify'
+// import DOMPurify from 'dompurify'
 
 class FeaturedCause extends Component {
     constructor () {
@@ -39,15 +39,19 @@ class FeaturedCause extends Component {
 
                 <div className="cause-content-wrap">
                     <header className="entry-header d-flex flex-wrap align-items-center">
-                        <h3 className="entry-title w-100 m-0">{this.state.featured.heading}</h3>
+                        {/* <h3 className="entry-title w-100 m-0">{this.state.featured.heading}</h3> */}
+                        <h3 className="entry-title w-100 m-0">{this.props.page}</h3>
+
                     </header>{/* .entry-header */}
 
                     <div className="entry-content">
                     <p className="m-0"
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(this.state.featured.text)
-                      }}
+                    //   dangerouslySetInnerHTML={{
+                    //     __html: DOMPurify.sanitize(this.state.featured.text)
+                    //   }}
                     />
+                                        {this.props.description}
+
                     </div>{/* .entry-content */}
 
                     <div className="fund-raised w-100">

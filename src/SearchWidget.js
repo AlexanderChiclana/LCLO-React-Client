@@ -25,7 +25,7 @@ class SearchWidget extends Component {
             <form className="flex flex-wrap align-items-center" onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.searchValue} onChange={this.handleChange} className="customInput"/>
                     <Link to={'/search/' + this.state.searchValue}>
-                     <button type="submit" className="flex justify-content-center align-items-center">GO</button>
+                     <button type="submit" className="flex justify-content-center align-items-center">Search</button>
                     </Link>
                     
             </form>{/* .flex */}

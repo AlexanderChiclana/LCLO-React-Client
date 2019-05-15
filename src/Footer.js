@@ -56,7 +56,7 @@ class Footer extends Component {
                         </div>{/* .col */}
     
                         <div className="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
-                            <h2>Useful Links</h2>
+                            <h2>Site Links</h2>
     
                             <ul>
                             <Link to="/capacity_building"><li>Capacity Building</li></Link>
@@ -83,9 +83,9 @@ class Footer extends Component {
                                 <h2>Contact</h2>
     
                                 <ul>
-                                <li> <FontAwesomeIcon icon="phone" /><span>+45 677 8993000 223</span></li>
-                                    <li> <FontAwesomeIcon icon="envelope" /><span>office@template.com</span></li>
-                                    <li> <FontAwesomeIcon icon="marker" /><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                <li> <FontAwesomeIcon icon="phone"className="footer-icon"/><span>+45 677 8993000 223</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>office@template.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
                                 </ul>
                             </div>{/* .foot-contact */}
     

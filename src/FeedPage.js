@@ -6,6 +6,7 @@ import apiUrl from './apiConfig'
 // import SearchWidget from './SearchWidget'
 import UpcomingEvents from './UpcomingEvents'
 import FeaturedCause from './FeaturedCause'
+import FeedHero from './FeedHero'
 
 class FeedPage extends Component {
     constructor () {
@@ -55,19 +56,22 @@ class FeedPage extends Component {
 
         return (
             <div className="single-page news-page">
-                <div className="page-header" >
+                {/* <div className="page-header" >
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <h1>{this.props.pageName}</h1>
-                 </div>{/* .col */} 
-            </div>{/* .row */}
-            <div>
-                <p className="text-white"> {this.props.description}
-</p>
+                    <h1>Our Mission: {this.props.pageName}</h1>
+                 </div>
             </div>
-        </div>{/* .container */}
-    </div>{/* .page-header */}
+            <div>
+                <p className="text-white"> 
+       
+                </p>
+            </div>
+        </div>
+    </div> */}
+
+            <FeedHero pageName={this.props.pageName} description={this.props.description}/>
 
     <div className="news-wrap">
         <div className="container">
@@ -77,7 +81,7 @@ class FeedPage extends Component {
                     <div className="sidebar">
 
                     {/* <SearchWidget /> */}
-                    <FeaturedCause page={this.props.page} featured={this.state.featured}/>
+                    <FeaturedCause page={this.props.page} description={this.props.description} featured={this.state.featured}/>
                     <PopularPosts page={this.props.page}/>
                     <UpcomingEvents />
                     
