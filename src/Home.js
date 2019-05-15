@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import scrollToComponent from 'react-scroll-to-component'
+import UpcomingEvents from './UpcomingEvents'
 
 class Home extends Component {
     render() {
@@ -227,97 +228,7 @@ class Home extends Component {
         <div className="home-page-events">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-lg-6">
-                        <div className="upcoming-events">
-                            <div className="section-heading">
-                                <h2 className="entry-title">Upcoming Events</h2>
-                            </div>{/* .section-heading */}
-    
-                            <div className="event-wrap d-flex flex-wrap justify-content-between">
-                                <figure className="m-0">
-                                    <img src={require('./images/event-1.jpg')} alt="" />
-                                </figure>
-    
-                                <div className="event-content-wrap">
-                                    <header className="entry-header d-flex flex-wrap align-items-center">
-                                        <h3 className="entry-title w-100 m-0"><a href="#">Fundraiser for Kids</a></h3>
-    
-                                        <div className="posted-date">
-                                            <a href="#">Aug 25, 2018 </a>
-                                        </div>{/* .posted-date */}
-    
-                                        <div className="cats-links">
-                                            <a href="#">Ball Room New York</a>
-                                        </div>{/* .cats-links */}
-                                    </header>{/* .entry-header */}
-    
-                                    <div className="entry-content">
-                                        <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                    </div>{/* .entry-content */}
-    
-                                    <div className="entry-footer">
-                                        <a href="#">Read More</a>
-                                    </div>{/* .entry-footer */}
-                                </div>{/* .event-content-wrap */}
-                            </div>{/* .event-wrap */}
-    
-                            <div className="event-wrap d-flex flex-wrap justify-content-between">
-                                <figure className="m-0">
-                                    <img src={require('./images/event-2.jpg')} alt="" />
-                                </figure>
-    
-                                <div className="event-content-wrap">
-                                    <header className="entry-header d-flex flex-wrap align-items-center">
-                                        <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-    
-                                        <div className="posted-date">
-                                            <a href="#">Aug 25, 2018 </a>
-                                        </div>{/* .posted-date */}
-    
-                                        <div className="cats-links">
-                                            <a href="#">Ball Room New York</a>
-                                        </div>{/* .cats-links */}
-                                    </header>{/* .entry-header */}
-    
-                                    <div className="entry-content">
-                                        <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                    </div>{/* .entry-content */}
-    
-                                    <div className="entry-footer">
-                                        <a href="#">Read More</a>
-                                    </div>{/* .entry-footer */}
-                                </div>{/* .event-content-wrap */}
-                            </div>{/* .event-wrap */}
-    
-                            <div className="event-wrap d-flex flex-wrap justify-content-between">
-                                <figure className="m-0">
-                                    <img src={require('./images/event-3.jpg')} alt="" />
-                                </figure>
-    
-                                <div className="event-content-wrap">
-                                    <header className="entry-header d-flex flex-wrap align-items-center">
-                                        <h3 className="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-    
-                                        <div className="posted-date">
-                                            <a href="#">Aug 25, 2018 </a>
-                                        </div>{/* .posted-date */}
-    
-                                        <div className="cats-links">
-                                            <a href="#">Ball Room New York</a>
-                                        </div>{/* .cats-links */}
-                                    </header>{/* .entry-header */}
-    
-                                    <div className="entry-content">
-                                        <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                    </div>{/* .entry-content */}
-    
-                                    <div className="entry-footer">
-                                        <a href="#">Read More</a>
-                                    </div>{/* .entry-footer */}
-                                </div>{/* .event-content-wrap */}
-                            </div>{/* .event-wrap */}
-                        </div>{/* .upcoming-events */}
-                    </div>{/* .col */}
+                  
     
                     <div className="col-12 col-lg-6">
                         <div className="featured-cause">
@@ -373,6 +284,10 @@ class Home extends Component {
                                 </div>{/* .fund-raised */}
                             </div>{/* .cause-wrap */}
                         </div>{/* .featured-cause */}
+                    </div>{/* .col */}
+
+                    <div className="col-12 col-lg-6">
+                       < UpcomingEvents />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}
