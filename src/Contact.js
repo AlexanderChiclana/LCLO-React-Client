@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import MailingListForm from './MailingListForm'
 
 class Contact extends Component {
     render() {
         return (
+            <div>
             <div className="single-page news-page">
             <div className="page-header">
             <div className="container">
@@ -62,6 +63,8 @@ class Contact extends Component {
                 </div>
             </div>
         </div>
+    </div>
+            <MailingListForm />
     </div>
         )
     }
