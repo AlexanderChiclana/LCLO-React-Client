@@ -9,7 +9,7 @@ class About extends Component {
             <div className="single-page about-page">
             
                 
-    <div className="page-header">
+    {/* <div className="page-header">
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -17,6 +17,9 @@ class About extends Component {
                 </div>
             </div>
         </div>
+    </div> */}
+
+    <div className='home-page-divider'>
     </div>
 
     <div className="welcome-wrap">
@@ -25,7 +28,7 @@ class About extends Component {
                 <div className="col-12 col-lg-6 order-2 order-lg-1">
                     <div className="welcome-content">
                         <header className="entry-header">
-                            <h2 className="entry-title">Who We Are</h2>
+                            <h2 className="entry-title">About our Team</h2>
                         </header>
 
                         <div className="entry-content mt-5">
@@ -44,6 +47,13 @@ class About extends Component {
             </div>
         </div>
     </div>
+
+
+    <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
+
+        <Team />
+    </section>
+
 
     <div className="about-stats">
         <div className="container">
@@ -85,45 +95,6 @@ class About extends Component {
                         </div>
 
                         <h3 className="entry-title">Good Decisions</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
-
-        <Team />
-    </section>
-
-    <div className="about-testimonial">
-        <div className="container">
-            <div className="row">
-                <div className="col-12 col-md-6 col-lg-5">
-                    <div className="testimonial-cont">
-                        <div className="entry-content">
-                            <p>We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</p>
-                        </div>
-
-                        <div className="entry-footer d-flex flex-wrap align-items-center mt-5">
-                            <img src={require('./images/testimonial-1.jpg')} alt="" />
-
-                            <h4>Maria Williams, <span>Volunteer</span></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-12 col-md-6 offset-lg-2 col-lg-5">
-                    <div className="testimonial-cont">
-                        <div className="entry-content">
-                            <p>We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</p>
-                        </div>
-
-                        <div className="entry-footer d-flex flex-wrap align-items-center mt-5">
-                            <img src={require('./images/testimonial-2.jpg')} alt="" />
-
-                            <h4>Cristian James, <span>Volunteer</span></h4>
-                        </div>
                     </div>
                 </div>
             </div>

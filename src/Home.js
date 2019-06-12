@@ -10,7 +10,14 @@ class Home extends Component {
             <div className="swiper-container hero-slider">
             <div className="swiper-wrapper">
                 <div className="swiper-slide hero-content-wrap">
-                    <img src='https://et-website.s3.amazonaws.com/uploads/2015/04/Bhutan-Paro-TigersNest.jpg' alt="" />
+
+                {/* <img src={require('./images/temple.jpg')} /> */}
+                
+                <img src='https://images.unsplash.com/photo-1516264665768-5525834929bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80' alt="" />
+
+                {/* <img src='https://images.unsplash.com/photo-1546955121-d0ba64964e34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80' alt="" /> */}
+
+                    {/* <img src='https://images.unsplash.com/photo-1433704334812-6c45b0b8784d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80' alt="" /> */}
                     {/* <img src={require('./images/skyscrapers.JPG')} alt="welcome" /> */}
 
     
@@ -123,6 +130,7 @@ class Home extends Component {
 
 <Team />
 </section> */}
+        <div className="home-page-divider"></div>
 
         <div className="home-page-welcome" ref={(div) => { this.Mission = div }}>
             <div className="container">
@@ -152,6 +160,9 @@ class Home extends Component {
     
         {/* section for next intro, reverse  */}
 
+
+        <div className="home-page-divider"></div>
+
         <div className="home-page-welcome" id="home-page-alt">
             <div className="container">
                 <div className="row">
@@ -180,6 +191,7 @@ class Home extends Component {
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
 
+        <div className="home-page-divider"></div>
 
         {/* third section */}
 
@@ -230,62 +242,7 @@ class Home extends Component {
                 <div className="row">
                   
     
-                    <div className="col-12 col-lg-6">
-                        <div className="featured-cause">
-                            <div className="section-heading">
-                                <h2 className="entry-title">Featured Cause</h2>
-                            </div>{/* .section-heading */}
-    
-                            <div className="cause-wrap d-flex flex-wrap justify-content-between">
-                                <figure className="m-0">
-                                    <img src={require('./images/featured-causes.jpg')} alt="" />
-                                </figure>
-    
-                                <div className="cause-content-wrap">
-                                    <header className="entry-header d-flex flex-wrap align-items-center">
-                                        <h3 className="entry-title w-100 m-0"><a href="#">Fundraiser for Kids</a></h3>
-    
-                                        <div className="posted-date">
-                                            <a href="#">Aug 25, 2018 </a>
-                                        </div>{/* .posted-date */}
-    
-                                        <div className="cats-links">
-                                            <a href="#">Ball Room New York</a>
-                                        </div>{/* .cats-links */}
-                                    </header>{/* .entry-header */}
-    
-                                    <div className="entry-content">
-                                        <p className="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
-                                    </div>{/* .entry-content */}
-    
-                                    <div className="entry-footer mt-5">
-                                        <a href="#" className="btn gradient-bg mr-2">Donate Now</a>
-                                    </div>{/* .entry-footer */}
-                                </div>{/* .cause-content-wrap */}
-    
-                                <div className="fund-raised w-100">
-                                    <div className="featured-fund-raised-bar barfiller">
-                                        <div className="tipWrap">
-                                            <span className="tip"></span>
-                                        </div>{/* .tipWrap */}
-    
-                                        <span className="fill" data-percentage="83"></span>
-                                    </div>{/* .fund-raised-bar */}
-    
-                                    <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                        <div className="fund-raised-total mt-4">
-                                            Raised: $56 880
-                                        </div>{/* .fund-raised-total */}
-    
-                                        <div className="fund-raised-goal mt-4">
-                                            Goal: $70 000
-                                        </div>{/* .fund-raised-goal */}
-                                    </div>{/* .fund-raised-details */}
-                                </div>{/* .fund-raised */}
-                            </div>{/* .cause-wrap */}
-                        </div>{/* .featured-cause */}
-                    </div>{/* .col */}
-
+                
                     <div className="col-12 col-lg-6">
                        < UpcomingEvents />
                     </div>{/* .col */}
@@ -294,66 +251,7 @@ class Home extends Component {
         </div>{/* .home-page-events */}
     
     
-        <div className="home-page-limestone">
-            <div className="container">
-                <div className="row align-items-end">
-                    <div className="coL-12 col-lg-6">
-                        <div className="section-heading">
-                            <h2 className="entry-title">We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</h2>
-    
-                            <p className="mt-5">Dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet.</p>
-                        </div>{/* .section-heading */}
-                    </div>{/* .col */}
-    
-                    <div className="col-12 col-lg-6">
-                        <div className="milestones d-flex flex-wrap justify-content-between">
-                            <div className="col-12 col-sm-4 mt-5 mt-lg-0">
-                                <div className="counter-box">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <img src={require('./images/teamwork.png')} alt="" />
-                                    </div>
-    
-                                    <div className="d-flex justify-content-center align-items-baseline">
-                                        <div className="start-counter" data-to="120" data-speed="2000"></div>
-                                        <div className="counter-k"></div>
-                                    </div>
-    
-                                    <h3 className="entry-title">Points Of Encounter</h3>{/* entry-title */}
-                                </div>{/* counter-box */}
-                            </div>{/* .col */}
-    
-                            <div className="col-12 col-sm-4 mt-5 mt-lg-0">
-                                <div className="counter-box">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <img src={require('./images/donation.png')} alt="" />
-                                    </div>
-    
-                                    <div className="d-flex justify-content-center align-items-baseline">
-                                        <div className="start-counter" data-to="79" data-speed="2000"></div>
-                                    </div>
-    
-                                    <h3 className="entry-title">Capacity Building</h3>{/* entry-title */}
-                                </div>{/* counter-box */}
-                            </div>{/* .col */}
-    
-                            <div className="col-12 col-sm-4 mt-5 mt-lg-0">
-                                <div className="counter-box">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <img src={require('./images/dove.png')} alt="" />
-                                    </div>
-    
-                                    <div className="d-flex justify-content-center align-items-baseline">
-                                        <div className="start-counter" data-to="253" data-speed="2000"></div>
-                                    </div>
-    
-                                    <h3 className="entry-title">Volunteeres</h3>{/* entry-title */}
-                                </div>{/* counter-box */}
-                            </div>{/* .col */}
-                        </div>{/* .milestones */}
-                    </div>{/* .col */}
-                </div>{/* .row */}
-            </div>{/* .container */}
-        </div>{/* .our-causes */}
+      
             </div>
         )
     }

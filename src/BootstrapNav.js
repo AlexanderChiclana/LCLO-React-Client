@@ -9,10 +9,21 @@ class BootstrapNav extends Component {
         return (
             <header className="site-header">
 
-            <Navbar collapseOnSelect expand="lg" className="nav-bar customNav">
+            <Navbar collapseOnSelect expand="lg" className="nav-bar customNav" 
+            
+            // style={{
+            //     width: '100%',
+            //     position: 'absolute',
+            //     zIndex: '3',
+            //     backgroundColor: 'rgba(0, 0, 0, 0)',
+            //     color: '#fff !important'
+            // }}
+            
+            >
+            
                 <div className="container">
 
-            <Navbar.Brand href="#" style={{ fontSize: '36px' }}className="LCLO-Button">LCLO Group</Navbar.Brand>
+            <Navbar.Brand href="#" style={{ fontSize: '24px' }}className="LCLO-Button">LCLO Group</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
