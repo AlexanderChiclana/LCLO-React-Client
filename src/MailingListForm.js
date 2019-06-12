@@ -16,50 +16,65 @@ const CustomForm = ({ status, message, onValidated }) => {
   
     return (
       <div
-        style={{
-          background: '#efefef',
-          borderRadius: 2,
-          padding: 10,
-          display: 'inline-block'
-        }}
+    
       >
-        {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
-        {status === 'error' && (
-          <div
-            style={{ color: 'red' }}
-            dangerouslySetInnerHTML={{ __html: message }}
-          />
-        )}
-        {status === 'success' && (
-          <div
-            style={{ color: 'green' }}
-            dangerouslySetInnerHTML={{ __html: message }}
-          />
-        )}
+     
+           <input
+          ref={node => (email = node)}
+          type='email'
+          placeholder='Email address'
+        />
+        <br />
         <input
-          style={{ fontSize: '2em', padding: 5 }}
           ref={node => (fname = node)}
           type='text'
           placeholder='First name'
         />
         <br />
         <input
-          style={{ fontSize: '2em', padding: 5 }}
           ref={node => (lname = node)}
           type='text'
           placeholder='Last name'
         />
         <br />
-        <input
-          style={{ fontSize: '2em', padding: 5 }}
-          ref={node => (email = node)}
-          type='email'
-          placeholder='Your email'
-        />
-        <br />
-        <button style={{ fontSize: '2em', padding: 5 }} onClick={submit}>
-          Submit
+
+        {status === 'sending' && 
+            <div style={{ 
+             width: '200px', 
+             display: 'block', 
+             margin: '0px auto',
+            color: '#262626' }}>
+            </div>}
+
+        {status === 'error' && (
+          <div
+            style={{ 
+                width: '200px', 
+                display: 'block', 
+                margin: '0px auto',
+                fontWeight: '600', 
+                color: 'red' }}
+            dangerouslySetInnerHTML={{ __html: message }}
+          />
+        )}
+        {status === 'success' && (
+          <div
+            style={{ 
+                width: '200px', 
+                display: 'block', 
+                margin: '0px auto',
+                fontWeight: '600', 
+                color: '#ff5a00' }}
+            dangerouslySetInnerHTML={{ __html: message }}
+          />
+        )}
+
+        {status !== 'success' && 
+        <button className="btn roundButton gradient-bg" style={{ width: '200px', display: 'block', margin: '0px auto' }} onClick={submit}>
+          Join Mailing List
         </button>
+        }
+
       </div>
     )
   }
@@ -69,10 +84,9 @@ const CustomForm = ({ status, message, onValidated }) => {
       const url =
         'https://brown.us20.list-manage.com/subscribe/post?u=e36efe5b4e1fe2ce16c1fd9c5&amp;id=afbdd9577d'
       return (
-        <div>
-          <h2>Default Form</h2>
-          <MailchimpSubscribe url={url} />
-          <h2>Custom Form</h2>
+        <div className="col-12 col-lg-7">
+
+        <div className="contact-form">
           <MailchimpSubscribe
             url={url}
             render={({ subscribe, status, message }) => (
@@ -83,6 +97,8 @@ const CustomForm = ({ status, message, onValidated }) => {
               />
             )}
           />
+        </div>
+
         </div>
       )
     }

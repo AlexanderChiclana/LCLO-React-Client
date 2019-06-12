@@ -26,14 +26,14 @@ class Contact extends Component {
     
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, conse ctetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accu msan sodales odio, id tempus velit ullamc.</p>
     
-                            <ul className="contact-social d-flex flex-wrap align-items-center">
+                            {/* <ul className="contact-social d-flex flex-wrap align-items-center">
                                 <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
                                 <li><a href="#"><i className="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i className="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i className="fa fa-behance"></i></a></li>
                                 <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            </ul> */}
     
                             <ul className="contact-info p-0">
                                     <li> <FontAwesomeIcon icon="phone" className="footer-icon"/><span>+45 677 8993000 223</span></li>
@@ -43,7 +43,7 @@ class Contact extends Component {
                         </div>
                     </div>
     
-                    <div className="col-12 col-lg-7">
+                    {/* <div className="col-12 col-lg-7">
                         <form className="contact-form">
                             <input type="text" placeholder="Name" />
                             <input type="email" placeholder="Email" />
@@ -54,8 +54,9 @@ class Contact extends Component {
                             </span>
                         </form>
     
-                    </div>
-    
+                    </div> */}
+                <MailingListForm />
+
                     <div className="col-12">
                         <div className="contact-gmap">
                         </div>
@@ -64,7 +65,6 @@ class Contact extends Component {
             </div>
         </div>
     </div>
-            <MailingListForm />
     </div>
         )
     }
