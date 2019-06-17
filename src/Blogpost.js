@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import DOMPurify from 'dompurify'
 import { Link } from 'react-router-dom'
+import YouTube from 'react-youtube'
+
+
 
 class Blogpost extends Component {
     constructor () {
@@ -27,12 +30,32 @@ class Blogpost extends Component {
 
         this.setState({ trimmedString: trimmedString })
     }
+
+    _onReady(event) {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo()
+      }
     
     render() {
+        const opts = {
+            height: '410',
+            width: '100%',
+            playerVars: { // https://developers.google.com/youtube/player_parameters
+              autoplay: 0,
+              rel: 0
+            }
+          }
+
         return (
             <div className="news-content">
-            <a href="#"><img src={'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'} alt="" /></a>
+            <a href="#"><img src={this.props.image} alt="" /></a>
             
+            <YouTube
+                videoId="jrTMMG0zJyI"
+                opts={opts}
+                onReady={this._onReady}
+            />
+
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
 
