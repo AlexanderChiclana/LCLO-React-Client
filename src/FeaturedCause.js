@@ -8,7 +8,10 @@ class FeaturedCause extends Component {
         super()
 
         this.state = {
-            featured: {}
+            featured: {
+                heading: '',
+                text: ''
+            }
         }
       }
 

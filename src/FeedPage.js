@@ -50,7 +50,7 @@ class FeedPage extends Component {
     render() {
         const BlogpostList = () => this.state.blogposts.slice(0, this.state.visible).map((blogpost, index) => 
             <div key={blogpost._id}>
-              <Blogpost heading={blogpost.heading} text={blogpost.text} image={blogpost.image} id={blogpost._id} date={blogpost.date} tags={blogpost.tags} page={blogpost.page}
+              <Blogpost video={blogpost.video} heading={blogpost.heading} text={blogpost.text} image={blogpost.image} id={blogpost._id} date={blogpost.date} tags={blogpost.tags} page={blogpost.page}
               prevBlogpost={this.state.blogposts[index - 1]} nextBlogpost={this.state.blogposts[index + 1]}/> 
             </div>
           ) 

@@ -320,6 +320,7 @@ a.dropdown-item:focus {
 --------------------------------------------------------------*/
 .hero-slider {
     // max-height: 820px;
+    // height: 100vh;
 }
 
 
@@ -856,6 +857,7 @@ ul.tabs-nav .tab-nav.active {
 
 }
 // 
+
 .home-page-welcome {
     position: relative;
     // padding: 96px 0;
@@ -2147,13 +2149,13 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .footer-widgets ul {
-    padding: 12px 0 0;
+    padding: 0px 0 12px 0px;
     margin: 0;
     list-style: none;
 }
 
 .footer-widgets ul li {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     font-size: 14px;
 }
 
@@ -2168,7 +2170,7 @@ ul.tabs-nav .tab-nav.active {
 
 .foot-about p {
     font-size: 14px;
-    line-height: 2;
+    line-height: 1.5;
     color: #929191;
 }
 
@@ -2197,7 +2199,7 @@ ul.tabs-nav .tab-nav.active {
 .foot-contact ul li {
     display: flex;
     align-items: baseline;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .foot-contact ul li .fa {

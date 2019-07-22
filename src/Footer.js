@@ -58,13 +58,13 @@ class Footer extends Component {
                         <div className="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
                             <h2>Site Links</h2>
     
-                            <ul>
-                            <Link to="/capacity_building"><li>Capacity Building</li></Link>
-                            <Link to="/training"><li>Training</li></Link>
-                            <Link to="/entrepreneurship"><li>Entrepreneurship</li></Link>
-                            <Link to="/news"><li>News</li></Link>
-                            <Link to="/resources"><li>Resources</li></Link>
-                            <Link to="/points_of_encounter"><li>Points of Encounter</li></Link>
+                            <ul className="foot-site-links"> 
+                           <h3> <li><Link to="/capacity_building">Capacity Building</Link> </li></h3>
+                             <h3> <li><Link to="/training">Training</Link></li></h3>
+                             <h3> <li><Link to="/entrepreneurship">Entrepreneurship</Link></li></h3>
+                             <h3> <li><Link to="/news">News</Link></li></h3>
+                             <h3> <li><Link to="/resources">Resources</Link></li></h3>
+                             <h3> <li><Link to="/points_of_encounter">Points of Encounter</Link></li></h3>
                             </ul>
                         </div>{/* .col */}
     
@@ -83,9 +83,9 @@ class Footer extends Component {
                                 <h2>Contact</h2>
     
                                 <ul>
-                                <li> <FontAwesomeIcon icon="phone"className="footer-icon"/><span>+45 677 8993000 223</span></li>
-                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>office@template.com</span></li>
-                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                <li> <FontAwesomeIcon icon="phone"className="footer-icon"/><span>1-617-770-6583</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>lclogroup@lclo.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span> 772 Hope St, Providence, RI</span></li>
                                 </ul>
                             </div>{/* .foot-contact */}
     

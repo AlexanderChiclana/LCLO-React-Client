@@ -50,11 +50,13 @@ class Blogpost extends Component {
             <div className="news-content">
             <a href="#"><img src={this.props.image} alt="" /></a>
             
+            { this.props.video &&
             <YouTube
-                videoId="jrTMMG0zJyI"
+                videoId={this.props.video.split('https://youtu.be/').pop()}
                 opts={opts}
                 onReady={this._onReady}
             />
+            }
 
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
