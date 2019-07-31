@@ -7,18 +7,18 @@ class Team extends Component {
              <div className="container">
         <h5 className="section-title h1">Our Team</h5>
         <div className="row">
-            <MemberCard name={'Liza Cariaga-Lo'}/>
-            <MemberCard name={'Lynn Hernandez'}/>
-            <MemberCard name={'Jennifer Nazareno'}/>
-            <MemberCard name={'Yen Tran'}/>
-            <MemberCard name={'Jahnvi SINGH'}/>
-            <MemberCard name={'Julie Lee'}/>
-            <MemberCard name={'Teresa Malonzo'}/>
-            <MemberCard name={'Don Operario'}/>
-            <MemberCard name={'Myra Liwang'}/>
-            <MemberCard name={'Maria Paula Garcia Mosquera'}/>
-            <MemberCard name={'Alexander Chiclana'}/>
-            <MemberCard name={'Arjun Ray'}/>
+            <MemberCard name={'Liza Cariaga-Lo'} member={'liza'}/>
+            <MemberCard name={'Lynn Hernandez'} member={'lynn'}/>
+            <MemberCard name={'Jennifer Nazareno'} member={'jennifer'}/>
+            <MemberCard name={'Yen Tran'} member={'yen'}/>
+            <MemberCard name={'Jahnvi SINGH'} member={'jahnvi'}/>
+            <MemberCard name={'Julie Lee'} member={'julie'}/>
+            <MemberCard name={'Teresa Malonzo'} member={'teresa'}/>
+            <MemberCard name={'Don Operario'} member={'don'}/>
+            <MemberCard name={'Myra Liwang'} member={'myra'}/>
+            <MemberCard name={'Maria Paula Garcia Mosquera'} member={'maria'}/>
+            <MemberCard name={'Alexander Chiclana'} member={'alexander'}/>
+            <MemberCard name={'Arjun Ray'} member={'arjun'}/>
             </div>
         </div>
         )

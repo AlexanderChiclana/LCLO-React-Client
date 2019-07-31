@@ -6,6 +6,9 @@ import SearchWidget from './SearchWidget'
 import DOMPurify from 'dompurify'
 import apiUrl from './apiConfig'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
+
 
 class SinglePostPage extends Component {
   constructor() {
@@ -30,7 +33,10 @@ class SinglePostPage extends Component {
         console.log(res)
         this.setState({
           text: res.data.blogpost.text,
-          heading: res.data.blogpost.heading
+          heading: res.data.blogpost.heading,
+          image: res.data.blogpost.image,
+          page: res.data.blogpost.page,
+          video: res.data.blogpost.video
         })
       })
   }
@@ -60,9 +66,7 @@ class SinglePostPage extends Component {
 
                   <a href='#'>
                     <img
-                      src={
-                        'http://www.diycollegerankings.com/wp-content/uploads/2014/01/Colleges-for-Asian-Students-fb.jpg'
-                      }
+                      src={this.state.image}
                       alt=''
                     />
                   </a>
@@ -107,15 +111,16 @@ class SinglePostPage extends Component {
                 </div>
 
                 <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+
+
                   <li className='active'>
-                    <a href='#'>01</a>
+                  <Link to={'/' + this.state.page}>
+
+                  <FontAwesomeIcon icon="arrow-left" className="footer-icon"/>
+                    <a href='#'> Back to {this.state.page}</a>
+                    </Link>
                   </li>
-                  <li>
-                    <a href='#'>02</a>
-                  </li>
-                  <li>
-                    <a href='#'>03</a>
-                  </li>
+ 
                 </ul>
               </div>
 

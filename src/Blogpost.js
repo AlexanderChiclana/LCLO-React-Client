@@ -48,15 +48,7 @@ class Blogpost extends Component {
 
         return (
             <div className="news-content">
-            <a href="#"><img src={this.props.image} alt="" /></a>
-            
-            { this.props.video &&
-            <YouTube
-                videoId={this.props.video.split('https://youtu.be/').pop()}
-                opts={opts}
-                onReady={this._onReady}
-            />
-            }
+         
 
             <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
                 <div className="header-elements">
@@ -72,6 +64,7 @@ class Blogpost extends Component {
                     
                     </h2>
 
+                    
                     <div className="post-metas d-flex flex-wrap align-items-center">
                         <span className="cat-links">in <a href="#">{this.props.page}</a></span>
                         <span className="post-author">by <a href="#">Tom Phillips</a></span>
@@ -79,10 +72,23 @@ class Blogpost extends Component {
                     </div>
                 </div>
 
+
                 {/* <div className="donate-icon">
                     <a href="#"><img src={require('./images/donate-icon.png')} alt="" /></a>
                 </div> */}
             </header>
+
+            <div className="blogpost-media" style={{ marginTop: '20px' }}>
+            <a href="#"><img src={this.props.image} alt="" /></a>
+            
+            { this.props.video &&
+            <YouTube
+                videoId={this.props.video.split('https://youtu.be/').pop()}
+                opts={opts}
+                onReady={this._onReady}
+            />
+            }
+            </div>
 
             <div className="entry-content">
                 <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         

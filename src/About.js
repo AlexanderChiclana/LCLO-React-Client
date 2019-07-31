@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Team from './Team'
 import scrollToComponent from 'react-scroll-to-component'
 
-
 class About extends Component {
     render() {
         return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class MemberCard extends Component {
     render() {
@@ -38,7 +39,11 @@ class MemberCard extends Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
-                                       <button className="btn btn-default"> More About Liza </button>
+
+                                    <Link to={'/about/' + this.props.member}>
+                                         <button className="btn btn-default"> More About Liza </button>
+                                    </Link>
+
                                         <a className="social-icon text-xs-center" target="_blank" href="#">
                                             <i className="fa fa-google"></i>
                                         </a>

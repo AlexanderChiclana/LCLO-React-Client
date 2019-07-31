@@ -99,7 +99,7 @@ class FeedPage extends Component {
                         <li><a href="#">03</a></li>
                     </ul> */}
                     <br />
-                   { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" onClick={this.loadMore}> Load More Articles... </div> : null}
+                   { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" style={{ cursor: 'pointer' }} onClick={this.loadMore}> Load More Articles... </div> : null}
 
                 </div>
 
