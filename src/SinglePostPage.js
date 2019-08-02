@@ -22,10 +22,11 @@ class SinglePostPage extends Component {
   }
 
   componentDidMount() {
-    this.getAllBlogPosts()
+    this.getBlogPost()
+    this.getNextBlogPost()
   }
 
-  getAllBlogPosts = () => {
+  getBlogPost = () => {
     axios
       .get(`${apiUrl}/blogposts/${this.props.id}`)
 
@@ -39,6 +40,17 @@ class SinglePostPage extends Component {
           video: res.data.blogpost.video
         })
       })
+  }
+
+  getNextBlogPost = () => {
+    axios
+    .get(`${apiUrl}/blogposts/${this.props.id}/next`)
+    .then(res => {
+      this.setState({
+        nextHeading: res.data.blogpost.heading,
+        nextId: res.data.blogpost._id
+      })
+    })
   }
 
   render() {
@@ -122,6 +134,21 @@ class SinglePostPage extends Component {
                   </li>
  
                 </ul>
+
+{ this.state.nextId &&
+                <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+
+                  
+                  <li className='active'>
+                  <Link to={'/posts/' + this.state.nextId}>
+
+                  <FontAwesomeIcon icon="arrow-right" className="footer-icon"/>
+                    <a href='#'> Next: {this.state.nextHeading}</a>
+                  </Link>
+                  </li>
+
+                  </ul>
+}
               </div>
 
               <div className='col-12 col-lg-4'>
