@@ -9,7 +9,6 @@ import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
-
 class SinglePostPage extends Component {
   constructor() {
     super()
@@ -17,6 +16,8 @@ class SinglePostPage extends Component {
     this.state = {
       anything: '',
       text: '',
+      nextHeading: '',
+      nextId: '',
       heading: ''
     }
   }
@@ -43,13 +44,12 @@ class SinglePostPage extends Component {
   }
 
   getNextBlogPost = () => {
-    axios
-    .get(`${apiUrl}/blogposts/${this.props.id}/next`)
-    .then(res => {
-      this.setState({
-        nextHeading: res.data.blogpost.heading,
-        nextId: res.data.blogpost._id
-      })
+    axios.get(`${apiUrl}/blogposts/${this.props.id}/next`).then(res => {
+      res.data.blogpost &&
+        this.setState({
+          nextHeading: res.data.blogpost.heading,
+          nextId: res.data.blogpost._id
+        })
     })
   }
 
@@ -60,110 +60,98 @@ class SinglePostPage extends Component {
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
-                <h1>{this.state.heading}</h1>
-              </div>
-              {/* .col */}
-            </div>
-            {/* .row */}
-          </div>
-          {/* .container */}
-        </div>
+                <h1> {this.state.heading} </h1>{' '}
+              </div>{' '}
+              {/* .col */}{' '}
+            </div>{' '}
+            {/* .row */}{' '}
+          </div>{' '}
+          {/* .container */}{' '}
+        </div>{' '}
         {/* .page-header */}
-
         <div className='news-wrap'>
           <div className='container'>
             <div className='row'>
               <div className='col-12 col-lg-8'>
                 <div className='news-content'>
-
                   <a href='#'>
-                    <img
-                      src={this.state.image}
-                      alt=''
-                    />
+                    <img src={this.state.image} alt='' />
                   </a>
-
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
-                    <div className='header-elements'>
-                      <div className='posted-date'>March 12, 2018</div>
+                            <div className='header-elements'>
+                              <div className='posted-date'>March 12, 2018</div>
 
-                      <h2 className='entry-title'>{this.state.heading}</h2>
+                              <h2 className='entry-title'>{this.state.heading}</h2>
 
-                      <div className='post-metas d-flex flex-wrap align-items-center'>
-                        <span className='cat-links'>
-                          in <a href='#'>Causes</a>
-                        </span>
-                        <span className='post-author'>
-                          by <a href='#'>Tom Phillips</a>
-                        </span>
-                        <span className='post-comments'>
-                          <a href='#'>3 Comments</a>
-                        </span>
-                      </div>
-                    </div>
+                              <div className='post-metas d-flex flex-wrap align-items-center'>
+                                <span className='cat-links'>
+                                  in <a href='#'>Causes</a>
+                                </span>
+                                <span className='post-author'>
+                                  by <a href='#'>Tom Phillips</a>
+                                </span>
+                                <span className='post-comments'>
+                                  <a href='#'>3 Comments</a>
+                                </span>
+                              </div>
+                            </div>
 
-                    <div className='donate-icon'>
-                      <a href='#'>
-                        <img src={require('./images/donate-icon.png')} alt='' />
-                      </a>
-                    </div>
-                  </header> */}
-
+                            <div className='donate-icon'>
+                              <a href='#'>
+                                <img src={require('./images/donate-icon.png')} alt='' />
+                              </a>
+                            </div>
+                          </header> */}
                   <div className='entry-content'>
                     <p
                       dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(this.state.text)
                       }}
-                    />
+                    />{' '}
                   </div>
-
                   <footer className='entry-footer'>
-                    {/* <a href='#' className='btn gradient-bg'>Read More</a> */}
-                  </footer>
+                    {' '}
+                    {/* <a href='#' className='btn gradient-bg'>Read More</a> */}{' '}
+                  </footer>{' '}
                 </div>
-
                 <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-
-
                   <li className='active'>
-                  <Link to={'/' + this.state.page}>
-
-                  <FontAwesomeIcon icon="arrow-left" className="footer-icon"/>
-                    <a href='#'> Back to {this.state.page}</a>
-                    </Link>
+                    <Link to={'/' + this.state.page}>
+                      <FontAwesomeIcon
+                        icon='arrow-left'
+                        className='footer-icon'
+                      />
+                      <a href='#'> Back to {this.state.page} </a>{' '}
+                    </Link>{' '}
                   </li>
- 
                 </ul>
-
-{ this.state.nextId &&
-                <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-
-                  
-                  <li className='active'>
-                  <Link to={'/posts/' + this.state.nextId}>
-
-                  <FontAwesomeIcon icon="arrow-right" className="footer-icon"/>
-                    <a href='#'> Next: {this.state.nextHeading}</a>
-                  </Link>
-                  </li>
-
+                {this.state.nextId ? (
+                  <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+                    <li className='active'>
+                      <Link to={'/posts/' + this.state.nextId}>
+                        <FontAwesomeIcon
+                          icon='arrow-right'
+                          className='footer-icon'
+                        />
+                        <a href='#'> Next: {this.state.nextHeading} </a>{' '}
+                      </Link>{' '}
+                    </li>{' '}
                   </ul>
-}
+                ) : null}{' '}
               </div>
-
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>
-                  <SearchWidget />
+                  <SearchWidget />{' '}
                   {/* <PopularPosts />
-                  <UpcomingEvents />
-                  <FeaturedCause /> */}
-                </div>
-                {/* .sidebar */}
-              </div>
-              {/* .col */}
-            </div>
-          </div>
-        </div>
+                          <UpcomingEvents />
+                          <FeaturedCause /> */}{' '}
+                </div>{' '}
+                {/* .sidebar */}{' '}
+              </div>{' '}
+              {/* .col */}{' '}
+            </div>{' '}
+          </div>{' '}
+        </div>{' '}
       </div>
     )
   }
