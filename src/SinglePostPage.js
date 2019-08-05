@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchWidget from './SearchWidget'
-// import PopularPosts from './PopularPosts'
+import PopularPosts from './PopularPosts'
 // import UpcomingEvents from './UpcomingEvents'
 // import FeaturedCause from './FeaturedCause'
 import DOMPurify from 'dompurify'
@@ -74,9 +74,8 @@ class SinglePostPage extends Component {
             <div className='row'>
               <div className='col-12 col-lg-8'>
                 <div className='news-content'>
-                  <a href='#'>
-                    <img src={this.state.image} alt='' />
-                  </a>
+                    <img src={this.state.image} alt='' className='single-post-image'/>
+                
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
                             <div className='header-elements'>
                               <div className='posted-date'>March 12, 2018</div>
@@ -104,6 +103,7 @@ class SinglePostPage extends Component {
                           </header> */}
                   <div className='entry-content'>
                     <p
+                      className='single-post-text'
                       dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(this.state.text)
                       }}
@@ -142,9 +142,9 @@ class SinglePostPage extends Component {
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>
                   <SearchWidget />{' '}
-                  {/* <PopularPosts />
-                          <UpcomingEvents />
-                          <FeaturedCause /> */}{' '}
+                  <PopularPosts page='training' />
+                          {/* <UpcomingEvents />
+                          <FeaturedCause />{' '} */}
                 </div>{' '}
                 {/* .sidebar */}{' '}
               </div>{' '}

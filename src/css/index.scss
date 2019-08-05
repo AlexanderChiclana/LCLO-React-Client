@@ -1482,6 +1482,7 @@ ul.tabs-nav .tab-nav.active {
 /*--------------------------------------------------------------
 # Single Cause
 --------------------------------------------------------------*/
+
 .single-cause .page-header {
     background: url('../images/single-cause-bg.jpg') no-repeat center;
 }
@@ -1765,7 +1766,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .news-content .entry-content {
-    margin-top: 32px;
+    // margin-top: 32px;
     font-size: 14px;
     color: #929191;
 }
@@ -2403,3 +2404,25 @@ section .section-title {
 
 }
 
+// single post override
+.single-post-text * {
+    color: #575757 !important;
+}
+
+.single-post-text a {
+    color: $base-orange !important;
+}
+
+.single-post-text h1, .single-post-text h2,.single-post-text h3,.single-post-text h4,.single-post-text h5,.single-post-text h6  {
+    color: #212529 !important;
+}
+
+.single-post-image {
+   max-height: 600px !important;
+   width: auto !important;
+   max-width: 100% !important;
+   display: block;
+   margin: auto !important;
+}
+
+//

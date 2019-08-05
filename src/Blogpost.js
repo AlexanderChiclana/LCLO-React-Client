@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import DOMPurify from 'dompurify'
 import { Link } from 'react-router-dom'
 import YouTube from 'react-youtube'
+import TagBar from './TagBar'
 
 
 
@@ -64,12 +65,8 @@ class Blogpost extends Component {
                     
                     </h2>
 
-                    
-                    <div className="post-metas d-flex flex-wrap align-items-center">
-                        <span className="cat-links">in <a href="#">{this.props.page}</a></span>
-                        <span className="post-author">by <a href="#">Tom Phillips</a></span>
-                        <span className="post-comments"><a href="#">3 Comments</a></span>
-                    </div>
+                    <TagBar tags={this.props.tags}/>
+           
                 </div>
 
 
@@ -79,7 +76,7 @@ class Blogpost extends Component {
             </header>
 
             <div className="blogpost-media" style={{ marginTop: '20px' }}>
-            <a href="#"><img src={this.props.image} alt="" /></a>
+            <a href="#"><img src={this.props.image} alt="" className="single-post-image"/></a>
             
             { this.props.video &&
             <YouTube
@@ -90,8 +87,8 @@ class Blogpost extends Component {
             }
             </div>
 
-            <div className="entry-content">
-                <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
+            <div className="entry-content" >
+                <p className="single-post-text" style={{ color: 'red' }} dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
             </div>
 
             <footer className=" d-flex justify-content-end">

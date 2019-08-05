@@ -23,7 +23,8 @@ class SearchPage extends Component {
     
       getSearchResults = () => {
         axios
-          .get(`${apiUrl}/blogposts?tags=${this.props.id}`)
+        //   .get(`${apiUrl}/blogposts?tags=${this.props.id}`)
+        .get(`${apiUrl}/search/${this.props.id}`)
     
           .then(res => {
             console.log(res)
