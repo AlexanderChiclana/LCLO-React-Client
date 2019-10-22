@@ -12,7 +12,11 @@ class TagBar extends Component {
                  <Link to={'/search/' + tag} key={index}>  
                  <Badge variant="light" 
                     style={{ 
-                        padding: '5.4px' }}>
+                        fontFamily: 'Montserrat',
+                        color: '#575757',
+                        border: '.5px solid #cccccc', 
+                        borderRadius: '3px',
+                        padding: '7px' }}>
                         {tag}
                 </Badge>
                  </Link>

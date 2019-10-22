@@ -29,11 +29,13 @@ const pageDecriptions = {
 
 
 const App = () => (
-  <body>
+  <React.Fragment>
     <Route path='/' render={() => (< BootstrapNav />)} />
       <Route exact path='/' render={() => (<Home />)} /> 
       <Route exact path='/about' render={() => (<About />)} /> 
       <Route exact path='/about/:member' render={() => (<MemberPage />)} /> 
+      {/* <Route exact path='/about/:member' render={({ match }) => (<SinglePostPage key={match.params.id} id={match.params.id} teamMember={true} />)} />  */}
+
       
       <Route exact path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} />)} /> 
       <Route exact path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding}/>)} /> 
@@ -50,7 +52,7 @@ const App = () => (
 
       <Route path='/' render={() => (< Footer />)} />
 
-  </body>
+  </React.Fragment>
 )
 
 export default App

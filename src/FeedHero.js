@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import scrollToComponent from 'react-scroll-to-component'
 
 class FeedHero extends Component {
     render() {
         return (
-            <div className="home-page-welcome" ref={(div) => { this.Mission = div }}>
+            <div className="home-page-welcome" 
+            // ref={(div) => { this.Mission = div }}
+            >
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -18,7 +20,13 @@ class FeedHero extends Component {
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer mt-5">
-                              <Link to="/about">    <div className="btn gradient-bg mr-2 roundButton">About Us</div> </Link>
+
+                                <div onClick={this.props.scrollToBlogpostList } 
+                                className="btn gradient-bg mr-2 roundButton"
+                                style={{ cursor: 'pointer' }}
+                                >New In {this.props.pageName}
+                                </div> 
+
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}

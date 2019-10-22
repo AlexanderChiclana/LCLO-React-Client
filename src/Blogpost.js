@@ -57,6 +57,7 @@ class Blogpost extends Component {
                     <div className="posted-date">{this.props.date}</div>
 
                     <h2 className="entry-title">
+                        
                     <Link to={'/posts/' + this.props.id}>
                          {this.props.heading}
                     </Link>
@@ -88,11 +89,11 @@ class Blogpost extends Component {
             </div>
 
             <div className="entry-content" >
-                <p className="single-post-text" style={{ color: 'red' }} dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
+                <p className="single-post-text single-post-preview" dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.state.trimmedString) }} ></p>         
             </div>
 
             <footer className=" d-flex justify-content-end">
-                { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg roundButton">Read More</div></Link> : null }
+                { this.state.overflow ? <Link to={'/posts/' + this.props.id}><div className="btn gradient-bg roundButtonSmall">Read More</div></Link> : null }
             </footer>
             <br />
             <br />

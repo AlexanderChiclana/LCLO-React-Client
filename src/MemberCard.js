@@ -39,10 +39,15 @@ class MemberCard extends Component {
                                         </a>
                                     </li>
                                     <li className="list-inline-item">
-
+{/* 
+                                    <Link to={'/about/' + this.props.member}>
+                                         <button className="btn btn-default"> More About Liza </button>
+                                    </Link> */}
+                                    
                                     <Link to={'/about/' + this.props.member}>
                                          <button className="btn btn-default"> More About Liza </button>
                                     </Link>
+
 
                                         <a className="social-icon text-xs-center" target="_blank" href="#">
                                             <i className="fa fa-google"></i>

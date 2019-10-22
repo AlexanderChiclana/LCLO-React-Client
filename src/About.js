@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Team from './Team'
 import scrollToComponent from 'react-scroll-to-component'
+import { Link } from 'react-router-dom'
 
 class About extends Component {
     render() {
@@ -18,8 +19,6 @@ class About extends Component {
         </div>
     </div> */}
 
-    <div className='home-page-divider'>
-    </div>
 
     <div className="welcome-wrap">
         <div className="container">
@@ -47,8 +46,12 @@ class About extends Component {
         </div>
     </div>
 
+    {/* <div className='home-page-divider' /> */}
 
-    <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
+
+    <section id="team" className="pb-5 Team" 
+            
+    ref={(section) => { this.Team = section }}>
 
         <Team />
     </section>
@@ -100,13 +103,15 @@ class About extends Component {
         </div>
     </div>
 
-    <div className="help-us">
+  <div className="help-us">
         <div className="container">
             <div className="row">
                 <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                    <h2>Help us so we can help others</h2>
+                    <h2>Stay up to date with the latest from LCLO</h2>
 
-                    <a className="btn orange-border" href="#">Donate now</a>
+                    <Link to={'/contact'}>
+                     <a className="btn orange-border roundButton" href="#">Join Mailing List</a>
+                    </Link>
                 </div>
             </div>
         </div>

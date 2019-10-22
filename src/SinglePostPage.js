@@ -74,7 +74,7 @@ class SinglePostPage extends Component {
             <div className='row'>
               <div className='col-12 col-lg-8'>
                 <div className='news-content'>
-                    <img src={this.state.image} alt='' className='single-post-image'/>
+                    <img src={this.state.image} alt='' className='single-post-image' />
                 
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
                             <div className='header-elements'>
@@ -114,18 +114,54 @@ class SinglePostPage extends Component {
                     {/* <a href='#' className='btn gradient-bg'>Read More</a> */}{' '}
                   </footer>{' '}
                 </div>
-                <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+
+                <div className="d-flex flex-wrap justify-content-between">
+                       
+                      <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+                        <li className='active'>
+                          <Link to={'/' + this.state.page}>
+                            <FontAwesomeIcon
+                              icon='arrow-left'
+                              className='footer-icon'
+                            />
+                            Back to {this.state.page}
+                          </Link>
+                        </li>
+                      </ul>
+                
+                    <div> 
+                    {this.state.nextId ? (
+
+                      <ul className='pagination d-flex flex-wrap align-items-center p-0'>
+                        <li className='active'>
+                          <Link to={'/posts/' + this.state.nextId}>
+                      
+                            Next: {this.state.nextHeading + ' '} 
+                            <FontAwesomeIcon
+                              icon='arrow-right'
+                              className='footer-icon'
+                            />
+                          </Link>
+                        </li>
+                      </ul>
+                      ) : null}
+                      </div>
+                  </div>
+
+                {/* <ul className='pagination d-flex flex-wrap align-items-center p-0'>
                   <li className='active'>
                     <Link to={'/' + this.state.page}>
                       <FontAwesomeIcon
                         icon='arrow-left'
                         className='footer-icon'
                       />
-                      <a href='#'> Back to {this.state.page} </a>{' '}
-                    </Link>{' '}
+                      Back to {this.state.page}
+                    </Link>
                   </li>
-                </ul>
-                {this.state.nextId ? (
+                </ul> */}
+
+                {/* {this.state.nextId ? (
+
                   <ul className='pagination d-flex flex-wrap align-items-center p-0'>
                     <li className='active'>
                       <Link to={'/posts/' + this.state.nextId}>
@@ -133,11 +169,15 @@ class SinglePostPage extends Component {
                           icon='arrow-right'
                           className='footer-icon'
                         />
-                        <a href='#'> Next: {this.state.nextHeading} </a>{' '}
-                      </Link>{' '}
-                    </li>{' '}
+                        Next: {this.state.nextHeading} 
+                      </Link>
+                    </li>
                   </ul>
-                ) : null}{' '}
+            
+
+
+                ) : null} */}
+
               </div>
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>

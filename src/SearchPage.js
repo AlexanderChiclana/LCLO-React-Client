@@ -35,7 +35,7 @@ class SearchPage extends Component {
     render() {
         const BlogpostList = () => this.state.blogposts.map(blogpost => 
             <div key={blogpost._id}>
-              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.createdAt} tags={blogpost.tags}/> 
+              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.date} tags={blogpost.tags}/> 
             </div>
           ) 
 
@@ -58,11 +58,11 @@ class SearchPage extends Component {
 
                  <BlogpostList />
 
-                <ul className="pagination d-flex flex-wrap align-items-center p-0">
+                {/* <ul className="pagination d-flex flex-wrap align-items-center p-0">
                     <li className="active"><a href="#">01</a></li>
                     <li><a href="#">02</a></li>
                     <li><a href="#">03</a></li>
-                </ul>
+                </ul> */}
             </div>
 
             <div className="col-12 col-lg-4">

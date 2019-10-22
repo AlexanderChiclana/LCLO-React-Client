@@ -48,7 +48,7 @@ class FeaturedCause extends Component {
                     </header>{/* .entry-header */}
 
                     <div className="entry-content">
-                    <p className="m-0"
+                    <p className="m-0 single-post-text single-post-preview"
                       dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(this.state.featured.text)
                       }}

@@ -36,9 +36,9 @@ class Home extends Component {
                                         </p>
                                     </div>{/* .entry-content */}
     
-                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                        <a href="#" className="btn gradient-bg mr-2 roundButton">Contact Us</a>
-                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'top', duration: 1000 }) } className="btn orange-border text-white roundButton">Our Mission</div>
+                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5" style={{ zIndex: 20 }}>
+                                        <Link to={'/contact'} href="#" className="btn gradient-bg mr-2 roundButton">Contact Us</Link>
+                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'middle', duration: 500 }) } className="btn orange-border text-white roundButton" style={{ cursor: 'pointer', zIndex: 20 }}>Our Mission</div>
 
                                         {/* <a href="#" className="btn orange-border">Our Mission</a> */}
                                     </footer>{/* .entry-footer */}
@@ -160,7 +160,6 @@ class Home extends Component {
     
         {/* section for next intro, reverse  */}
 
-
         <div className="home-page-divider"></div>
 
         <div className="home-page-welcome" id="home-page-alt">
@@ -192,7 +191,6 @@ class Home extends Component {
         </div>{/* .home-page-icon-boxes */}
 
         <div className="home-page-divider"></div>
-
         {/* third section */}
 
         <div className="home-page-welcome">
@@ -230,7 +228,9 @@ class Home extends Component {
                 <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
                     <h2>Stay up to date with the latest from LCLO</h2>
 
-                    <a className="btn orange-border roundButton" href="#">Join Mailing List</a>
+                    <Link to={'/contact'} className="btn orange-border roundButton">
+                     Join Mailing List
+                    </Link>
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@ class Home extends Component {
                   
     
                 
-                    <div className="col-12 col-lg-6">
+                    <div className="col-12">
                        < UpcomingEvents />
                     </div>{/* .col */}
                 </div>{/* .row */}

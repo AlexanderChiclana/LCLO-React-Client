@@ -7,6 +7,7 @@ import apiUrl from './apiConfig'
 import UpcomingEvents from './UpcomingEvents'
 import FeaturedCause from './FeaturedCause'
 import FeedHero from './FeedHero'
+import scrollToComponent from 'react-scroll-to-component'
 
 class FeedPage extends Component {
     constructor () {
@@ -47,6 +48,8 @@ class FeedPage extends Component {
         })
        }
 
+       scrollToBlogpostList = () => scrollToComponent(this.BlogpostList, { offset: -40, align: 'top', duration: 500 })
+
     render() {
         const BlogpostList = () => this.state.blogposts.slice(0, this.state.visible).map((blogpost, index) => 
             <div key={blogpost._id}>
@@ -72,7 +75,8 @@ class FeedPage extends Component {
         </div>
     </div> */}
 
-            <FeedHero pageName={this.props.pageName} description={this.props.description}/>
+            <FeedHero pageName={this.props.pageName} description={this.props.description} scrollToBlogpostList={this.scrollToBlogpostList}/>
+
 
     <div className="news-wrap">
         <div className="container">
@@ -88,7 +92,7 @@ class FeedPage extends Component {
                     
                     </div>{/* .sidebar */}
                 </div>{/* .col */}
-                <div className="col-12 col-lg-8">
+                <div className="col-12 col-lg-8" ref={(div) => { this.BlogpostList = div }}>
 
 
                      <BlogpostList />

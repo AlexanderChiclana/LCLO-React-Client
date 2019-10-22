@@ -70,7 +70,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         )}
 
         {status !== 'success' && 
-        <button className="btn roundButton gradient-bg" style={{ width: '200px', display: 'block', margin: '0px auto' }} onClick={submit}>
+        <button className="btn roundButton gradient-bg" style={{ width: '200px', display: 'block', margin: '0px auto', cursor: 'pointer' }} onClick={submit}>
           Join Mailing List
         </button>
         }

@@ -44,14 +44,7 @@ class Footer extends Component {
 
                                 <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
     
-                                <ul className="d-flex flex-wrap align-items-center">
-                                    <li><a href="#"><FontAwesomeIcon icon="pinterest-p" /></a></li>
-                                    <li><a href="#"><FontAwesomeIcon icon="facebook" /></a></li>
-                                    <li><a href="#"><FontAwesomeIcon icon="twitter" /></a></li>
-                                    <li><a href="#"><FontAwesomeIcon icon="dribbble" /></a></li>
-                                    <li><a href="#"><FontAwesomeIcon icon="behance" /></a></li>
-                                    <li><a href="#"><FontAwesomeIcon icon="linkedin" /></a></li>
-                                </ul>
+ 
                             </div>{/* .foot-about */}
                         </div>{/* .col */}
     
