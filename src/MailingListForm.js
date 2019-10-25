@@ -86,7 +86,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       return (
         <div className="col-12 col-lg-7">
 
-        <div className="contact-form">
+        <div className="contact-form mobile-margin-top-medium">
           <MailchimpSubscribe
             url={url}
             render={({ subscribe, status, message }) => (

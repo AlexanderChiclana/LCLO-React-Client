@@ -2478,3 +2478,51 @@ section .section-title {
     cursor: pointer;
     text-decoration: underline;
 }
+
+
+// mediq queries
+
+$padding-small: 10px;
+
+$heading-size: 25px;
+
+$line-height-medium: 1.7;
+
+@media (max-width: 767.98px) {
+
+.mobile-none {
+    display: none;
+}    
+
+.mobile-padding-small{
+    padding: $padding-small !important;
+}
+
+.mobile-padding-bottom-small{
+    padding-bottom: 20px !important;
+}
+.mobile-margin-medium{
+    margin: 24px;
+}
+
+.mobile-margin-none{
+    margin: 0px !important;
+}
+
+.mobile-margin-top-medium{
+    margin-top: 30px !important;
+}
+
+.mobile-heading{
+    font-size: $heading-size !important;
+}
+
+.mobile-line-medium{
+   line-height: $line-height-medium !important; 
+}
+
+.roundButton{
+    padding: 10px 20px !important; 
+    border-radius: 24px !important;
+}
+}

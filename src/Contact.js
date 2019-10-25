@@ -7,7 +7,7 @@ class Contact extends Component {
         return (
             <div>
             <div className="single-page news-page">
-            <div className="page-header">
+            <div className="page-header mobile-none">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -17,11 +17,11 @@ class Contact extends Component {
             </div>
         </div>
 
-            <div className="contact-page-wrap">
+            <div className="contact-page-wrap mobile-padding-bottom-small">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-5">
-                        <div className="entry-content">
+                        <div className="entry-content mobile-margin-top-medium">
                             <h2>Get In touch with us</h2>
     
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, conse ctetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accu msan sodales odio, id tempus velit ullamc.</p>

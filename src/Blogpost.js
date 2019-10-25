@@ -56,7 +56,7 @@ class Blogpost extends Component {
 
                     <div className="posted-date">{this.props.date}</div>
 
-                    <h2 className="entry-title">
+                    <h2 className="entry-title mobile-heading">
                         
                     <Link to={'/posts/' + this.props.id}>
                          {this.props.heading}

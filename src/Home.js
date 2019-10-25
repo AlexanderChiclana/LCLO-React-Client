@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-            <div className="swiper-container hero-slider">
+            <div className="swiper-container hero-slider mobile-none">
             <div className="swiper-wrapper">
                 <div className="swiper-slide hero-content-wrap">
 
@@ -130,29 +130,29 @@ class Home extends Component {
 
 <Team />
 </section> */}
-        <div className="home-page-divider"></div>
+        <div className="home-page-divider mobile-none"></div>
 
-        <div className="home-page-welcome" ref={(div) => { this.Mission = div }}>
+        <div className="home-page-welcome mobile-padding-small" ref={(div) => { this.Mission = div }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
                         <div className="welcome-content">
                             <header className="entry-header">
-                                <h2 className="entry-title">Welcome to the LCLO Group</h2>
+                                <h2 className="entry-title mobile-heading">Welcome to the LCLO Group</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-5">
+                            <div className="entry-content mt-4 mt-md-5 mobile-line-medium">
                                 <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
-                            <div className="entry-footer mt-5">
+                            <div className="entry-footer my-4 mt-md-5 ">
                               <Link to="/about">    <div className="btn gradient-bg mr-2 roundButton">About Us</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 order-1 order-lg-2">
-                        <img src={require('./images/cityscape.JPG')} alt="welcome" />
+                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
+                        <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}
@@ -160,13 +160,13 @@ class Home extends Component {
     
         {/* section for next intro, reverse  */}
 
-        <div className="home-page-divider"></div>
+        <div className="home-page-divider mobile-none"></div>
 
-        <div className="home-page-welcome" id="home-page-alt">
+        <div className="home-page-welcome mobile-padding-small" id="home-page-alt">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-lg-6 order-2 order-lg-1">
-                    <img src={require('./images/cityscape.JPG')} alt="welcome" />
+                    <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
+                    <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
 
                     </div>{/* .col */}
     
@@ -174,14 +174,14 @@ class Home extends Component {
 
                         <div className="welcome-content">
                             <header className="entry-header ">
-                                <h2 className="entry-title dark-font">Training the Workforce of Tomorrow</h2>
+                                <h2 className="entry-title dark-font mobile-heading">Training the Workforce of Tomorrow</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-5 dark-font">
-                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
+                            <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium">
+                                <p className="mobile-margin-none">The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
-                            <div className="entry-footer mt-5 d-flex justify-content-end">
+                            <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
                               <Link to="/training"><div className="btn gradient-bg mr-2 roundButton">Our Training</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
@@ -190,30 +190,30 @@ class Home extends Component {
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
 
-        <div className="home-page-divider"></div>
+        <div className="home-page-divider mobile-none"></div>
         {/* third section */}
 
-        <div className="home-page-welcome">
+        <div className="home-page-welcome mobile-padding-small">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
                         <div className="welcome-content">
                             <header className="entry-header">
-                                <h2 className="entry-title">Capcity Building for Entrepreneurs</h2>
+                                <h2 className="entry-title mobile-heading">Capcity Building for Entrepreneurs</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-5">
+                            <div className="entry-content mt-4 mt-md-5  mobile-line-medium">
                                 <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
-                            <div className="entry-footer mt-5">
+                            <div className="entry-footer my-4 mt-md-5">
                               <Link to="/capacity_building">    <div className="btn gradient-bg mr-2 roundButton" >Capacity Building</div> </Link>
                             </div>{/* .entry-footer */}
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 order-1 order-lg-2">
-                        <img src={require('./images/skyscrapers.JPG')} alt="welcome" />
+                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
+                        <img src={require('./images/skyscrapers.JPG')} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}

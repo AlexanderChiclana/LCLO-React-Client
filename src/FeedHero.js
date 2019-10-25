@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 class FeedHero extends Component {
     render() {
         return (
-            <div className="home-page-welcome" 
+            <div className="home-page-welcome mobile-padding-small" 
             // ref={(div) => { this.Mission = div }}
             >
             <div className="container">
@@ -12,14 +12,14 @@ class FeedHero extends Component {
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
                         <div className="welcome-content">
                             <header className="entry-header">
-                                <h2 className="entry-title">{this.props.pageName}</h2>
+                                <h2 className="entry-title mobile-heading">{this.props.pageName}</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-5">
-                                <p>{this.props.description}</p>
+                            <div className="entry-content mt-sm-5">
+                                <p className="mobile-margin-none">{this.props.description}</p>
                             </div>{/* .entry-content */}
     
-                            <div className="entry-footer mt-5">
+                            <div className="entry-footer m-2 mt-sm-5">
 
                                 <div onClick={this.props.scrollToBlogpostList } 
                                 className="btn gradient-bg mr-2 roundButton"
@@ -31,9 +31,9 @@ class FeedHero extends Component {
                         </div>{/* .welcome-content */}
                     </div>{/* .col */}
     
-                    <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex align-items-center">
+                    <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex align-items-center mobile-padding-small">
                     {/* <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2 "> */}
-                        <img src={require('./images/cityscape.JPG')} alt="welcome" />
+                        <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}

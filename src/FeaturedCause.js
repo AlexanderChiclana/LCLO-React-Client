@@ -40,9 +40,9 @@ class FeaturedCause extends Component {
                     <a href="#"><img src={require('./images/classroom.jpg')} alt="" /></a>
                 </figure>
 
-                <div className="cause-content-wrap">
+                <div className="cause-content-wrap mobile-padding-small">
                     <header className="entry-header d-flex flex-wrap align-items-center">
-                        <h3 className="entry-title w-100 m-0">{this.state.featured.heading}</h3>
+                        <h3 className="entry-title w-100 m-0 mobile-heading">{this.state.featured.heading}</h3>
                         {/* <h3 className="entry-title w-100 m-0">{this.props.page}</h3> */}
 
                     </header>{/* .entry-header */}
