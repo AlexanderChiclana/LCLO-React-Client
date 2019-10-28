@@ -16,7 +16,7 @@ class FeedHero extends Component {
                             </header>{/* .entry-header */}
     
                             <div className="entry-content mt-sm-5">
-                                <p className="mobile-margin-none">{this.props.description}</p>
+                                <p className="mobile-margin-none mobile-line-medium">{this.props.description}</p>
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer m-2 mt-sm-5">
