@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Team from './Team'
 import scrollToComponent from 'react-scroll-to-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 class About extends Component {
@@ -60,37 +61,41 @@ class About extends Component {
     <div className="about-stats">
         <div className="container">
             <div className="row">
-                <div className="col-12 col-sm-6 col-lg-3">
+                <div className="col-12 col-sm-4 col-lg-4">
                     <div className="circular-progress-bar">
                         <div className="circle" id="loader_1">
-                            <strong className="d-flex justify-content-center"></strong>
+                            <strong className="d-flex justify-content-center">
+                            <FontAwesomeIcon icon={'mail'} />
+
+                            </strong>
+                            
                         </div>
 
-                        <h3 className="entry-title">Hard Work</h3>
+                        <h3 className="entry-title">Capacity Building</h3>
                     </div>
                 </div>
 
-                <div className="col-12 col-sm-6 col-lg-3">
+                <div className="col-12 col-sm-4 col-lg-4">
                     <div className="circular-progress-bar">
                         <div className="circle" id="loader_2">
                             <strong className="d-flex justify-content-center"></strong>
                         </div>
 
-                        <h3 className="entry-title">Pure Love</h3>
+                        <h3 className="entry-title">Training</h3>
                     </div>
                 </div>
 
-                <div className="col-12 col-sm-6 col-lg-3">
+                <div className="col-12 col-sm-4 col-lg-4">
                     <div className="circular-progress-bar">
                         <div className="circle" id="loader_3">
                             <strong className="d-flex justify-content-center"></strong>
                         </div>
 
-                        <h3 className="entry-title">Smart Ideas</h3>
+                        <h3 className="entry-title">Entrepreneurship</h3>
                     </div>
                 </div>
 
-                <div className="col-12 col-sm-6 col-lg-3">
+                {/* <div className="col-12 col-sm-6 col-lg-3">
                     <div className="circular-progress-bar">
                         <div className="circle" id="loader_4">
                             <strong className="d-flex justify-content-center"></strong>
@@ -98,7 +103,7 @@ class About extends Component {
 
                         <h3 className="entry-title">Good Decisions</h3>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

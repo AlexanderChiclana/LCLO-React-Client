@@ -118,7 +118,7 @@ class SinglePostPage extends Component {
                 <div className="d-flex flex-wrap justify-content-between">
                        
                       <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-                        <li className='active'>
+                        <li className='active next-button'>
                           <Link to={'/' + this.state.page}>
                             <FontAwesomeIcon
                               icon='arrow-left'
@@ -133,7 +133,7 @@ class SinglePostPage extends Component {
                     {this.state.nextId ? (
 
                       <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-                        <li className='active'>
+                        <li className='active next-button'>
                           <Link to={'/posts/' + this.state.nextId}>
                       
                             Next: {this.state.nextHeading + ' '} 
@@ -181,7 +181,7 @@ class SinglePostPage extends Component {
               </div>
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>
-                  <SearchWidget />{' '}
+                  <SearchWidget mobileNone={true}/>{' '}
                   <PopularPosts page='training' />
                           {/* <UpcomingEvents />
                           <FeaturedCause />{' '} */}

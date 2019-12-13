@@ -19,7 +19,7 @@ class FeedHero extends Component {
                                 <p className="mobile-margin-none mobile-line-medium">{this.props.description}</p>
                             </div>{/* .entry-content */}
     
-                            <div className="entry-footer m-2 mt-sm-5">
+                            <div className="entry-footer my-4 mt-sm-5">
 
                                 <div onClick={this.props.scrollToBlogpostList } 
                                 className="btn gradient-bg mr-2 roundButton"

@@ -53,8 +53,8 @@ class SearchPage extends Component {
 
 <div className="news-wrap">
     <div className="container">
-        <div className="row">
-            <div className="col-12 col-lg-8">
+        <div className="row tablet-col-reverse">
+            <div className="col-12 col-lg-8 ">
 
                  <BlogpostList />
 

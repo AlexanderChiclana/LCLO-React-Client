@@ -76,9 +76,20 @@ class Footer extends Component {
                                 <h2>Contact</h2>
     
                                 <ul>
-                                <li> <FontAwesomeIcon icon="phone"className="footer-icon"/><span>1-617-770-6583</span></li>
-                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>lclogroup@lclo.com</span></li>
-                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span> 772 Hope St, Providence, RI</span></li>
+                                <li> 
+                                    <a href="tel:1-617-770-6583">
+                                    <FontAwesomeIcon icon="phone"className="footer-icon"/><span>1-617-770-6583</span>
+                                    </a>
+                                </li>
+                                    <li> 
+                                    <a href="mailto:lclogroup@lclo.com">                                        
+                                    <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>lclogroup@lclo.com</span>
+                                    </a>  
+
+                                    </li>
+                                    <li> 
+                                        <FontAwesomeIcon icon="marker" className="footer-icon"/><span> 772 Hope St, Providence, RI</span>
+                                    </li>
                                 </ul>
                             </div>{/* .foot-contact */}
     

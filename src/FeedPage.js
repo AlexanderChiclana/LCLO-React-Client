@@ -83,28 +83,28 @@ class FeedPage extends Component {
             <div className="row">
             
             <div className="col-12 col-lg-4">
-                    <div className="sidebar">
-
-                    {/* <SearchWidget /> */}
-                    <FeaturedCause page={this.props.page} description={this.props.description} featured={this.state.featured}/>
-                    <PopularPosts page={this.props.page}/>
-                    <UpcomingEvents />
-                    
-                    </div>{/* .sidebar */}
+                    <div className="sidebar tablet-none">
+                      {/* <SearchWidget /> */}
+                      <FeaturedCause page={this.props.page} description={this.props.description} featured={this.state.featured}/>
+                      <PopularPosts page={this.props.page}/>
+                      <UpcomingEvents />
+                    </div>
                 </div>{/* .col */}
                 <div className="col-12 col-lg-8" ref={(div) => { this.BlogpostList = div }}>
+                <div className="sidebar desktop-none">
 
-
+                <FeaturedCause page={this.props.page} description={this.props.description} featured={this.state.featured}/>
+</div>
                      <BlogpostList />
 
-                    {/* <ul className="pagination d-flex flex-wrap align-items-center p-0">
-                        <li className="active"><a href="#">01</a></li>
-                        <li><a href="#">02</a></li>
-                        <li><a href="#">03</a></li>
-                    </ul> */}
                     <br />
                    { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" style={{ cursor: 'pointer' }} onClick={this.loadMore}> Load More Articles... </div> : null}
-
+                   <div className="sidebar desktop-none">
+                      {/* <SearchWidget /> */}
+                      
+                      <PopularPosts page={this.props.page}/>
+                      <UpcomingEvents />
+                    </div>
                 </div>
 
             </div>

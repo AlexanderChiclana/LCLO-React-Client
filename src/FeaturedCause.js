@@ -42,7 +42,7 @@ class FeaturedCause extends Component {
 
                 <div className="cause-content-wrap mobile-padding-small">
                     <header className="entry-header d-flex flex-wrap align-items-center">
-                        <h3 className="entry-title w-100 m-0 mobile-heading">{this.state.featured.heading}</h3>
+                        <h3 className="entry-title w-100 m-0 mobile-heading" style={{ fontSize: '24px' }}>{this.state.featured && this.state.featured.heading }</h3>
                         {/* <h3 className="entry-title w-100 m-0">{this.props.page}</h3> */}
 
                     </header>{/* .entry-header */}
@@ -50,26 +50,27 @@ class FeaturedCause extends Component {
                     <div className="entry-content">
                     <p className="m-0 single-post-text single-post-preview"
                       dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(this.state.featured.text)
+                        __html: DOMPurify.sanitize(this.state.featured && this.state.featured.text)
                       }}
                     />
                                         {/* {this.props.description} */}
 
                     </div>{/* .entry-content */}
 
-                    <div className="fund-raised w-100">
+                    {/* <div className="fund-raised w-100">
                         <div className="fund-raised-bar-3 barfiller">
                             <div className="tipWrap">
                                 <span className="tip"></span>
-                            </div>{/* .tipWrap */}
+                            </div>
 
                             <span className="fill" data-percentage="83"></span>
-                        </div>{/* .fund-raised-bar */}
+                        </div>
 
                         <div className="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                     
-                        </div>{/* .fund-raised-details */}
-                    </div>{/* .fund-raised */}
+                        </div>
+                    </div> */}
+
                 </div>{/* .cause-content-wrap */}
             </div>{/* .cause-wrap */}
         </div>

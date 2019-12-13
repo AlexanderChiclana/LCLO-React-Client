@@ -2,6 +2,42 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import scrollToComponent from 'react-scroll-to-component'
 import UpcomingEvents from './UpcomingEvents'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const FeedPageTile = (props) => (
+    <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+    <div className="icon-box">
+        <figure className="d-flex justify-content-center">
+        <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }}/>
+
+            {/* <img src={require('./images/hands-gray.png')} alt="" /> */}
+            {/* <img src={require('./images/hands-white.png')} alt="" /> */}
+        </figure>
+
+        <header className="entry-header">
+            <h3 className="entry-title">{props.title}</h3>
+        </header>
+
+        <div className="entry-content">
+            <p>{props.description} </p>
+        </div>
+    </div>
+</div>
+)
+
+const TileSection = () => (
+    <div className="home-page-icon-boxes">
+    <div className="container">
+        <div className="row">
+
+            <FeedPageTile title={'News'} link={'/news'} icon={'newspaper'} description={'this is the description'}/>
+            <FeedPageTile title={'Resources'} link={'/news'} icon={'book'} description={'this is the description'}/>
+            <FeedPageTile title={'Points of Encounter'} link={'/news'} icon={'map-marked'} description={'this is the description'}/>
+
+        </div>{/* .row */}
+    </div>
+</div>
+)
 
 class Home extends Component {
     render() {
@@ -68,62 +104,6 @@ class Home extends Component {
             </div> */}
         </div> {/* .hero-slider */}
     
-        {/* <div className="home-page-icon-boxes">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
-                        <div className="icon-box active">
-                            <figure className="d-flex justify-content-center">
-                                <img src={require('./images/hands-gray.png')} alt="" />
-                                <img src={require('./images/hands-white.png')} alt="" />
-                            </figure>
-    
-                            <header className="entry-header">
-                                <h3 className="entry-title">Become a Volunteer</h3>
-                            </header>
-    
-                            <div className="entry-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
-                        <div className="icon-box">
-                            <figure className="d-flex justify-content-center">
-                                <img src={require('./images/donation-gray.png')} alt="" />
-                                <img src={require('./images/donation-white.png')} alt="" />
-                            </figure>
-    
-                            <header className="entry-header">
-                                <h3 className="entry-title">Dance & Music</h3>
-                            </header>
-    
-                            <div className="entry-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
-                        <div className="icon-box">
-                            <figure className="d-flex justify-content-center">
-                                <img src={require('./images/charity-gray.png')} alt="" />
-                                <img src={require('./images/charity-white.png')} alt="" />
-                            </figure>
-    
-                            <header className="entry-header">
-                                <h3 className="entry-title">Online Conference</h3>
-                            </header>
-    
-                            <div className="entry-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>{/* .row */}
-            {/* </div>
-        </div> */}
     
 {/* 
         <section id="team" className="pb-5 Team" ref={(section) => { this.Team = section }}>
@@ -164,7 +144,7 @@ class Home extends Component {
 
         <div className="home-page-welcome mobile-padding-small" id="home-page-alt">
             <div className="container">
-                <div className="row">
+                <div className="row tablet-col-reverse">
                     <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
                     <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
 
@@ -173,6 +153,7 @@ class Home extends Component {
                     <div className="col-12 col-lg-6 order-1 order-lg-2">
 
                         <div className="welcome-content">
+                            
                             <header className="entry-header ">
                                 <h2 className="entry-title dark-font mobile-heading">Training the Workforce of Tomorrow</h2>
                             </header>{/* .entry-header */}
@@ -220,6 +201,7 @@ class Home extends Component {
         </div>{/* .home-page-icon-boxes */}
 
         {/* end section  */}
+        <TileSection />
 
 {/* mailing list */}
         <div className="help-us">

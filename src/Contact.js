@@ -24,7 +24,7 @@ class Contact extends Component {
                         <div className="entry-content mobile-margin-top-medium">
                             <h2>Get In touch with us</h2>
     
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, conse ctetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Integer accu msan sodales odio, id tempus velit ullamc.</p>
+                            <p>We want you to stay connected and be engaged in our work to help impact equitable talent development in the Future of Work initiatives in Southeast Asia. We would welcome the opportunity to speak with you further about our programs and initiatives.</p>
     
                             {/* <ul className="contact-social d-flex flex-wrap align-items-center">
                                 <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
@@ -37,8 +37,8 @@ class Contact extends Component {
     
                             <ul className="contact-info p-0">
                                     <li> <FontAwesomeIcon icon="phone" className="footer-icon"/><span>+45 677 8993000 223</span></li>
-                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>office@template.com</span></li>
-                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                    <li> <FontAwesomeIcon icon="envelope" className="footer-icon"/><span>lclogroup@lclogroup.com</span></li>
+                                    <li> <FontAwesomeIcon icon="marker" className="footer-icon"/><span>208 Narragansett Pkwy Warwick, RI 02888</span></li>
                             </ul>
                         </div>
                     </div>

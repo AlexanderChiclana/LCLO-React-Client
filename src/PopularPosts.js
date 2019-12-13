@@ -42,7 +42,7 @@ class PopularPosts extends Component {
 
         return (
             <div className="popular-posts">
-            <h2>Popular</h2>
+            <h2>Trending Ideas</h2>
 
             <ul className="p-0">
 

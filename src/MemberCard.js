@@ -12,7 +12,7 @@ class MemberCard extends Component {
                             <div className="card-body text-center">
                                 <p><img className=" img-fluid" src="https://www.wiareport.com/wordpress/wp-content/uploads/2017/04/Liza-Cariaga-Lo_0.jpg" alt="card image" /></p>
                                 <h4 className="card-title">{this.props.name.toLowerCase()}</h4>
-                                <p className="card-text">CEO, and Founder of LCLO Group</p>
+                                <p className="card-text">{this.props.description}</p>
                                 <a href="#" className="btn btn-primary btn-sm templateOrange" style={{ border: 'none' }}><i className="fa fa-plus"></i></a>
                             </div>
                         </div>
@@ -21,7 +21,7 @@ class MemberCard extends Component {
                         <div className="card">
                             <div className="card-body text-center mt-4">
                                 <h4 className="card-title">{this.props.name}</h4>
-                                <p className="card-text"> CEO, and Founder of LCLO Group CEO, and Founder of LCLO Group</p>
+                                <p className="card-text"> {this.props.description} </p>
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <a className="social-icon text-xs-center" target="_blank" href="#">
