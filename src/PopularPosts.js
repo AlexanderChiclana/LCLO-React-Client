@@ -29,13 +29,13 @@ class PopularPosts extends Component {
 
     render() {
         const PinnedList = () => this.state.pinned.map(pinned => 
-                <li key={pinned._id} className="d-flex flex-wrap justify-content-between align-items-center">
-                    <figure><a href="#"><img src={require('./images/p-1.jpg')} alt="" /></a></figure>
+                <li key={pinned._id} className="d-flex flex-wrap align-items-center">
+                    <figure className="d-flex justify-content-center"><img src={require('./images/LCLO-Icon.png')} style={{ width: '60%' }} alt="" /></figure>
 
                     <div className="entry-content">
                         <h3 className="entry-title"><Link to={'/posts/' + pinned._id}>{pinned.heading}</Link></h3>
 
-                        <div className="posted-date">March 12, 2018</div>
+                        {/* <div className="posted-date">March 12, 2018</div> */}
                     </div>
                 </li>
           )  
