@@ -34,7 +34,7 @@ class FeaturedCause extends Component {
           
             <div className="featured-cause">
             {/* <h2>Featured Article</h2> */}
-
+            { this.state.featured &&
             <div className="cause-wrap">
                 <figure className="m-0 position-relative">
                     <a href="#"><img src={require('./images/classroom.jpg')} alt="" /></a>
@@ -72,7 +72,7 @@ class FeaturedCause extends Component {
                     </div> */}
 
                 </div>{/* .cause-content-wrap */}
-            </div>{/* .cause-wrap */}
+            </div>}
         </div>
         )
     }

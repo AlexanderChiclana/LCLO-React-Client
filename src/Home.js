@@ -132,7 +132,7 @@ class Home extends Component {
                     </div>{/* .col */}
     
                     <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
-                        <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
+                        <img src={require('./images/train.jpg')} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}

@@ -66,7 +66,7 @@ class Blogpost extends Component {
                     
                     </h2>
 
-                    <TagBar tags={this.props.tags}/>
+                     {this.props.tags && <TagBar tags={this.props.tags}/> }
            
                 </div>
 
@@ -76,16 +76,21 @@ class Blogpost extends Component {
                 </div> */}
             </header>
 
-            <div className="blogpost-media" style={{ marginTop: '20px' }}>
-            <a href="#"><img src={this.props.image} alt="" className="single-post-image"/></a>
+            <div className="blogpost-media">
             
             { this.props.video &&
+            <div style={{ marginBottom: '30px' }}
+            >
             <YouTube
                 videoId={this.props.video.split('https://youtu.be/').pop()}
                 opts={opts}
                 onReady={this._onReady}
             />
+            </div>
             }
+
+{ this.props.image && <img src={this.props.image} alt="" className="single-post-image" style={{ paddingBottom: '30px' }}/>}
+
             </div>
 
             <div className="entry-content" >

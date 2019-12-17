@@ -44,13 +44,8 @@ class BootstrapNav extends Component {
           expand='lg'
           className='nav-bar fixed-top customNav'
 
-          // style={{
-          //     width: '100%',
-          //     position: 'absolute',
-          //     zIndex: '3',
-          //     backgroundColor: 'rgba(0, 0, 0, 0)',
-          //     color: '#fff !important'
-          // }}
+          style={{ borderBottom: '1px solid #E0E0E0'
+          }}
         >
           <div className='container'>
             <Navbar.Brand

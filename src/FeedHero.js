@@ -2,7 +2,21 @@ import React, { Component } from 'react'
 // import scrollToComponent from 'react-scroll-to-component'
 
 class FeedHero extends Component {
+    state = {
+        image: ''
+    }
+
+    componentDidMount() {
+        this.props.image && 
+        
+        this.setState({
+            image: this.props.image
+        })
+    }
+
     render() {
+        // const { image } = this.props
+
         return (
             <div className="home-page-welcome mobile-padding-small" 
             // ref={(div) => { this.Mission = div }}
@@ -33,7 +47,7 @@ class FeedHero extends Component {
     
                     <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex align-items-center mobile-padding-small">
                     {/* <div className="col-12 col-lg-6 mt-4 order-1 order-lg-2 "> */}
-                        <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
+                        <img src={this.props.image} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
             </div>{/* .container */}

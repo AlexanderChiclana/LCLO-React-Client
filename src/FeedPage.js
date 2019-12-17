@@ -75,7 +75,7 @@ class FeedPage extends Component {
         </div>
     </div> */}
 
-            <FeedHero pageName={this.props.pageName} description={this.props.description} scrollToBlogpostList={this.scrollToBlogpostList}/>
+            <FeedHero image={this.props.heroImage} pageName={this.props.pageName} description={this.props.description} scrollToBlogpostList={this.scrollToBlogpostList}/>
 
 
     <div className="news-wrap mobile-padding-small">

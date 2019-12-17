@@ -8,6 +8,7 @@ import apiUrl from './apiConfig'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
+import YouTube from 'react-youtube'
 
 class SinglePostPage extends Component {
   constructor() {
@@ -54,6 +55,16 @@ class SinglePostPage extends Component {
   }
 
   render() {
+    const opts = {
+      height: '410',
+      width: '100%',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,
+        rel: 0
+      }
+    }
+
+
     return (
       <div className='single-page news-page'>
         <div className='page-header'>
@@ -74,7 +85,18 @@ class SinglePostPage extends Component {
             <div className='row'>
               <div className='col-12 col-lg-8'>
                 <div className='news-content'>
-                    <img src={this.state.image} alt='' className='single-post-image' />
+    { this.state.video &&
+                <div style={{ paddingBottom: '30px' }}>
+                <YouTube
+                videoId={this.state.video.split('https://youtu.be/').pop()}
+                opts={opts}
+                onReady={this._onReady}
+            /> 
+            </div>
+            }
+
+{ this.state.image && <img src={this.state.image} alt='' className='single-post-image' style={{ paddingBottom: '30px' }}/> }
+
                 
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
                             <div className='header-elements'>

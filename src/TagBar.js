@@ -25,7 +25,7 @@ class TagBar extends Component {
           ) 
 
         return (
-            <div className="post-metas d-flex flex-wrap align-items-center">
+            <div className="post-metas d-flex flex-wrap align-items-center" style={{ marginBottom: '15px' }}>
                 <TagList />
  
 
