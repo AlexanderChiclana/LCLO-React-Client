@@ -98,7 +98,7 @@ class FeedPage extends Component {
                      <BlogpostList />
 
                     <br />
-                   { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" style={{ cursor: 'pointer' }} onClick={this.loadMore}> Load More Articles... </div> : null}
+                   { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" style={{ cursor: 'pointer', borderRadius: '15px' }} onClick={this.loadMore}> Load More Articles... </div> : null}
                    <div className="sidebar desktop-none">
                       {/* <SearchWidget /> */}
                       

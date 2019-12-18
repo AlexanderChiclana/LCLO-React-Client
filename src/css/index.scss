@@ -39,7 +39,7 @@ $base-angle-top: polygon(
 }
 
 .LCLO-Button{
-    border-bottom: 2px solid $base-orange !important;
+    // border-bottom: 1px solid $secondary-orange !important;
     font-size: '36px' !important;
 }
 
@@ -73,6 +73,26 @@ a:hover, a:focus, a:active {
     color: #262626;
 }
 
+.navbar-nav a.activeNavLink {
+    // color: white !important;
+    // background-color: $secondary-orange !important;
+    // border-radius: 15px;
+    
+    color: black !important;
+    font-weight: 600;
+    border-bottom: 3px solid $base-orange; 
+}
+
+.activeMobileNavLink {
+    color: $base-orange !important;
+    background-color: #007b5e;
+}
+
+.nav-link.active{
+    color:rgb(117, 118, 134) !important;
+    outline-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 a:focus {
     outline: thin dotted;
 }
@@ -81,6 +101,9 @@ a:hover, a:active {
     outline: 0;
     list-style: none;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Site Header
@@ -609,6 +632,7 @@ a.dropdown-item:focus {
 /*
 # Tabs
 ----------------------------------*/
+
 ul.tabs-nav {
     margin: 0;
     padding: 0;

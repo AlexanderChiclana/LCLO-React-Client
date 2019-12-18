@@ -103,7 +103,9 @@ class Footer extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <p className="m-0">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                            <p className="m-0">
+                            Made by LCLO Group 2019
+                            {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
     {/* Copyright &copy<script>document.write(new Date().getFullYear())</script> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> */}
     {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</p>
                         </div>{/* .col-12 */}

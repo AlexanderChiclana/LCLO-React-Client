@@ -6,10 +6,12 @@ import Nav from 'react-bootstrap/Nav'
 // import SearchWidget from './SearchWidget'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import NavLink from 'react-bootstrap/NavLink'
+import { withRouter } from 'react-router'
+
 
 const NavIcon = props => (
   <div className='col-4 p-0 d-flex justify-content-center'>
-    <div>
+    <div >
       <div className='mobile-icon'>
         <FontAwesomeIcon icon={props.icon} />
       </div>
@@ -37,8 +39,15 @@ const NavIcon = props => (
 
 class BootstrapNav extends Component {
   render() {
+    const { location } = this.props
+
+    const isCurrentRoute = (currentLocation, route) => {
+      return currentLocation.includes(route) 
+    }
+
     return (
       <header className='site-header'>
+        {console.log(location)}
         <Navbar
           collapseOnSelect
           expand='lg'
@@ -50,10 +59,11 @@ class BootstrapNav extends Component {
           <div className='container'>
             <Navbar.Brand
               href='#'
-              style={{ fontSize: '24px' }}
+              style={{ fontSize: '24px', display: 'flex' }}
               className='LCLO-Button'
             >
-              LCLO Group
+              <img src={require('./images/LCLO-Icon.png')} style={{ width: '20px', marginRight: '10px' }}></img>
+              <div>LCLO Group</div>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
@@ -61,14 +71,16 @@ class BootstrapNav extends Component {
               <Nav className='mr-auto'></Nav>
               <Nav className='site-navigation'>
 
-                <Nav.Link className='desktop-nav' href='#capacity_building'>Capacity Building</Nav.Link>
-                <Nav.Link className='desktop-nav' href='#training'>Training</Nav.Link>
-                <Nav.Link className='desktop-nav' href='#entrepreneurship'>Entrepreneurship</Nav.Link>
-                <Nav.Link className='desktop-nav' href='#news'>News</Nav.Link>
-                <Nav.Link className='desktop-nav' href='#resources'>Resources</Nav.Link>
-                <Nav.Link className='desktop-nav' href='#points_of_encounter'>Points Of Encounter</Nav.Link>
-                <Nav.Link className='desktop-nav nav-link' href='#about'>Team</Nav.Link>
-                <Nav.Link className='desktop-nav nav-link' href='#contact'>Contact</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/capacity_building') && 'activeNavLink'}`} href='#capacity_building'>Capacity Building</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/training') && 'activeNavLink'}` } href='#training'>Training</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/entrepreneurship') && 'activeNavLink'}` } href='#entrepreneurship'>Entrepreneurship</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/news') && 'activeNavLink'}`} href='#news'>News</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/resources') && 'activeNavLink'}` } href='#resources'>Resources</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/points_of_encounter') && 'activeNavLink'}` } href='#points_of_encounter' style={{ marginRight: '8px' }}>Points Of Encounter</Nav.Link>
+                <div className='d-flex' style={{ borderLeft: '1px solid #D3D3D3', paddingLeft: '8px' }}>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/about') && 'activeNavLink'}` } href='#about' >Team</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/contact') && 'activeNavLink'}` } href='#contact' >Contact</Nav.Link>
+                </div>
 
                 <div className='mobile-nav container-fluid' >
                   <div className='row'>
@@ -153,4 +165,4 @@ class BootstrapNav extends Component {
   }
 }
 
-export default BootstrapNav
+export default withRouter(BootstrapNav)

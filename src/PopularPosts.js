@@ -32,7 +32,7 @@ class PopularPosts extends Component {
                 <li key={pinned._id} className="d-flex flex-wrap align-items-center">
                     <figure className="d-flex justify-content-center"><img src={require('./images/LCLO-Icon.png')} style={{ width: '60%' }} alt="" /></figure>
 
-                    <div className="entry-content">
+                    <div className="entry-content d-flex align-items-center">
                         <h3 className="entry-title"><Link to={'/posts/' + pinned._id}>{pinned.heading}</Link></h3>
 
                         {/* <div className="posted-date">March 12, 2018</div> */}

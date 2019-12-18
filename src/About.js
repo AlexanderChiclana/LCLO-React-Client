@@ -27,7 +27,7 @@ class About extends Component {
                 <div className="col-12 col-lg-6 order-2 order-lg-1">
                     <div className="welcome-content">
                         <header className="entry-header">
-                            <h2 className="entry-title">About our Team</h2>
+                            <h2 className="entry-title">Who We Are</h2>
                         </header>
 
                         <div className="entry-content mt-5">
@@ -50,7 +50,7 @@ class About extends Component {
     {/* <div className='home-page-divider' /> */}
 
 
-    <section id="team" className="pb-5 Team" 
+    <section id="team" className="Team" style={{ paddingTop: '100px', paddingBottom: '100px' }}
             
     ref={(section) => { this.Team = section }}>
 

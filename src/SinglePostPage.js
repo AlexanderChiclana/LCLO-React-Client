@@ -204,7 +204,7 @@ class SinglePostPage extends Component {
               <div className='col-12 col-lg-4'>
                 <div className='sidebar'>
                   <SearchWidget mobileNone={true}/>{' '}
-                  <PopularPosts page='training' />
+                  { this.state.page && <PopularPosts page={this.state.page} />}
                           {/* <UpcomingEvents />
                           <FeaturedCause />{' '} */}
                 </div>{' '}
