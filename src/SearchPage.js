@@ -35,7 +35,9 @@ class SearchPage extends Component {
     render() {
         const BlogpostList = () => this.state.blogposts.map(blogpost => 
             <div key={blogpost._id}>
-              <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.date} tags={blogpost.tags}/> 
+              {
+                  this.state.blogposts.length !== 0 ? <Blogpost heading={blogpost.heading} text={blogpost.text} id={blogpost._id} date={blogpost.date} tags={blogpost.tags}/> : <h2>No Results</h2>
+            } 
             </div>
           ) 
 
@@ -45,30 +47,28 @@ class SearchPage extends Component {
     <div className="container">
         <div className="row">
             <div className="col-12">
-                <h1>Search Results: <i>{this.props.id}</i></h1>
+
+        { this.props.empty ? <h1>Search LCLO Site</h1> : <h1>Search Results: <i>{this.props.id}</i></h1> }
              </div>{/* .col */} 
         </div>{/* .row */}
     </div>{/* .container */}
 </div>{/* .page-header */}
 
-<div className="news-wrap">
+<div className="news-wrap ">
     <div className="container">
         <div className="row tablet-col-reverse">
-            <div className="col-12 col-lg-8 ">
 
-                 <BlogpostList />
+            { 
+                !this.props.empty && 
+                <div className="col-12 col-lg-8 ">
+                    <BlogpostList />
+                </div>
+            }
 
-                {/* <ul className="pagination d-flex flex-wrap align-items-center p-0">
-                    <li className="active"><a href="#">01</a></li>
-                    <li><a href="#">02</a></li>
-                    <li><a href="#">03</a></li>
-                </ul> */}
-            </div>
-
-            <div className="col-12 col-lg-4">
+            <div className={ this.props.empty ? 'col-12' : 'col-12 col-lg-4'} >
                 <div className="sidebar">
 
-                <SearchWidget />
+                <SearchWidget wide={this.props.empty}/>
                 <UpcomingEvents />
                 
                 </div>{/* .sidebar */}

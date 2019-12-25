@@ -3,10 +3,11 @@ import React, { Component } from 'react'
 class MemberPage extends Component {
     render() {
         return (
+            <div>
+            <div className='home-page-divider' />
             
             <div className="container single-page about-page">
-            <div className='home-page-divider'>
-            </div>
+       
         
             <div className="welcome-wrap">
                 <div className="container">
@@ -33,6 +34,9 @@ class MemberPage extends Component {
                     </div>
                 </div>
             </div>
+
+            </div>
+            <div className='home-page-divider' />
 
             </div>
         )

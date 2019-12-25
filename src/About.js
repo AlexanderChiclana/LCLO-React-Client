@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Team from './Team'
 import scrollToComponent from 'react-scroll-to-component'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 class About extends Component {
@@ -9,16 +9,6 @@ class About extends Component {
         return (
             <div className="single-page about-page">
             
-                
-    {/* <div className="page-header">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <h1>About Us</h1>
-                </div>
-            </div>
-        </div>
-    </div> */}
 
 
     <div className="welcome-wrap">
@@ -35,7 +25,7 @@ class About extends Component {
                         </div>
 
                         <div className="entry-footer mt-5">
-                            <button onClick={ () => scrollToComponent(this.Team, { offset: 0, align: 'top', duration: 1000 }) } className="btn gradient-bg mr-2">Meet the Team</button>
+                            <button onClick={ () => scrollToComponent(this.Team, { offset: 0, align: 'top', duration: 1000 }) } className="btn gradient-bg mr-2" style={{ borderRadius: '24px' }}>Meet the Team</button>
                         </div>
                     </div>
                 </div>
@@ -50,7 +40,7 @@ class About extends Component {
     {/* <div className='home-page-divider' /> */}
 
 
-    <section id="team" className="Team" style={{ paddingTop: '100px', paddingBottom: '100px' }}
+    <section id="team" className="Team" style={{ paddingTop: '150px', paddingBottom: '150px' }}
             
     ref={(section) => { this.Team = section }}>
 
@@ -58,57 +48,8 @@ class About extends Component {
     </section>
 
 
-    <div className="about-stats">
-        <div className="container">
-            <div className="row">
-                <div className="col-12 col-sm-4 col-lg-4">
-                    <div className="circular-progress-bar">
-                        <div className="circle" id="loader_1">
-                            <strong className="d-flex justify-content-center">
-                            <FontAwesomeIcon icon={'mail'} />
 
-                            </strong>
-                            
-                        </div>
-
-                        <h3 className="entry-title">Capacity Building</h3>
-                    </div>
-                </div>
-
-                <div className="col-12 col-sm-4 col-lg-4">
-                    <div className="circular-progress-bar">
-                        <div className="circle" id="loader_2">
-                            <strong className="d-flex justify-content-center"></strong>
-                        </div>
-
-                        <h3 className="entry-title">Training</h3>
-                    </div>
-                </div>
-
-                <div className="col-12 col-sm-4 col-lg-4">
-                    <div className="circular-progress-bar">
-                        <div className="circle" id="loader_3">
-                            <strong className="d-flex justify-content-center"></strong>
-                        </div>
-
-                        <h3 className="entry-title">Entrepreneurship</h3>
-                    </div>
-                </div>
-
-                {/* <div className="col-12 col-sm-6 col-lg-3">
-                    <div className="circular-progress-bar">
-                        <div className="circle" id="loader_4">
-                            <strong className="d-flex justify-content-center"></strong>
-                        </div>
-
-                        <h3 className="entry-title">Good Decisions</h3>
-                    </div>
-                </div> */}
-            </div>
-        </div>
-    </div>
-
-  <div className="help-us">
+  <div className="help-us" style={{ backgroundColor: '#272521', paddingTop: '140px' }}>
         <div className="container">
             <div className="row">
                 <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">

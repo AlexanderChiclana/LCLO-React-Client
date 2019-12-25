@@ -83,9 +83,8 @@ a:hover, a:focus, a:active {
     border-bottom: 3px solid $base-orange; 
 }
 
-.activeMobileNavLink {
+.active-icon {
     color: $base-orange !important;
-    background-color: #007b5e;
 }
 
 .nav-link.active{
@@ -538,6 +537,10 @@ a.dropdown-item:focus {
 /*
 # Button
 ----------------------------------*/
+button.btn:hover{
+  cursor: pointer;
+}
+
 .btn {
     padding: 18px 40px;
     border: 2px solid #262626;

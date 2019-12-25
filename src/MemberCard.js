@@ -8,7 +8,7 @@ class MemberCard extends Component {
             <div className="image-flip" ontouchstart="this.classList.toggle('hover');">
                 <div className="mainflip">
                     <div className="frontside">
-                        <div className="card">
+                        <div className="card" style={{ borderRadius: '24px' }}>
                             <div className="card-body text-center">
                                 <p><img className=" img-fluid" src="https://www.wiareport.com/wordpress/wp-content/uploads/2017/04/Liza-Cariaga-Lo_0.jpg" alt="card image" /></p>
                                 <h4 className="card-title">{this.props.name.toLowerCase()}</h4>
@@ -17,11 +17,11 @@ class MemberCard extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="backside">
-                        <div className="card">
-                            <div className="card-body text-center mt-4">
+                    <div className="backside" style={{ borderRadius: '24px' }}>
+                        <div className="card" style={{ borderRadius: '24px' }}>
+                            <div className="card-body text-center mt-4" >
                                 <h4 className="card-title">{this.props.name}</h4>
-                                <p className="card-text"> {this.props.description} </p>
+                                <p className="card-text" style={{ width: '215px' }}> {this.props.description} </p>
                                 <ul className="list-inline">
                                     <li className="list-inline-item">
                                         <a className="social-icon text-xs-center" target="_blank" href="#">
@@ -45,7 +45,7 @@ class MemberCard extends Component {
                                     </Link> */}
                                     
                                     <Link to={'/about/' + this.props.member}>
-                                         <button className="btn btn-default"> More About Liza </button>
+                                         <button className="btn btn-default" style={{ borderRadius: '24px' }}> More About {this.props.name.split(' ')[0]} </button>
                                     </Link>
 
 

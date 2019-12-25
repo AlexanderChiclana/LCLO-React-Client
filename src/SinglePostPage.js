@@ -146,7 +146,7 @@ class SinglePostPage extends Component {
                               icon='arrow-left'
                               className='footer-icon'
                             />
-                            Back to {this.state.page}
+                            Back to { this.state.page }
                           </Link>
                         </li>
                       </ul>

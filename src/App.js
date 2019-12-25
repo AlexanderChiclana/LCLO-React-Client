@@ -14,8 +14,8 @@ import BootstrapNav from './BootstrapNav'
 import MemberPage from './MemberPage'
 
 import skyscrapers from './images/skyscrapers.JPG'
-import cityscape from './images/cityscape.JPG'
-import laptop from './images/laptop.jpg'
+import coaching from './images/coaching.jpg'
+import farmer from './images/farmer.jpg'
 import cafe from './images/cafe.jpg'
 import lunch from './images/lunch.jpg'
 import newspaper from './images/newspaper.jpg'
@@ -44,12 +44,11 @@ const App = () => (
       <Route exact path='/' render={() => (<Home />)} /> 
       <Route exact path='/about' render={() => (<About />)} /> 
       <Route exact path='/about/:member' render={() => (<MemberPage />)} /> 
-      {/* <Route exact path='/about/:member' render={({ match }) => (<SinglePostPage key={match.params.id} id={match.params.id} teamMember={true} />)} />  */}
 
       
-      <Route exact path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} heroImage={cityscape}/>)} /> 
+      <Route exact path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
       <Route exact path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding} heroImage={skyscrapers}/>)} /> 
-      <Route exact path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'} banner={'./images/business.png'} description={pageDecriptions.entrepreneurship} heroImage={laptop}/>)} /> 
+      <Route exact path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'} banner={'./images/business.png'} description={pageDecriptions.entrepreneurship} heroImage={farmer}/>)} /> 
       <Route exact path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageName={'Points of Encounter'} description={pageDecriptions.poe} heroImage={lunch} />)} /> 
       <Route exact path='/news' render={() => (<FeedPage page={'news'} pageName={'News'} description={pageDecriptions.news} heroImage={newspaper}/>)} /> 
       <Route exact path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'} description={pageDecriptions.resources} heroImage={cafe}/>)} /> 
@@ -57,6 +56,8 @@ const App = () => (
 
 
       <Route path='/posts/:id' render={({ match }) => (<SinglePostPage key={match.params.id} id={match.params.id} text={'dummy text'} heading={'dummy heading'} />)} />
+
+      <Route exact path='/search' render={() => (<SearchPage empty={true} />)} />
 
       <Route path='/search/:id' render={({ match }) => (<SearchPage key={match.params.id} id={match.params.id} />)} />
 

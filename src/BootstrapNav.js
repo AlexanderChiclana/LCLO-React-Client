@@ -11,9 +11,9 @@ import { withRouter } from 'react-router'
 
 const NavIcon = props => (
   <div className='col-4 p-0 d-flex justify-content-center'>
-    <div >
-      <div className='mobile-icon'>
-        <FontAwesomeIcon icon={props.icon} />
+    <div>
+      <div className={props.isCurrentRoute ? 'mobile-icon active-icon' : 'mobile-icon'}>
+      <Nav.Link href={props.link}> <FontAwesomeIcon icon={props.icon} /> </Nav.Link>
       </div>
       <Nav.Link href={props.link}>{props.title}</Nav.Link>
     </div>
@@ -80,23 +80,28 @@ class BootstrapNav extends Component {
                 <div className='d-flex' style={{ borderLeft: '1px solid #D3D3D3', paddingLeft: '8px' }}>
                 <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/about') && 'activeNavLink'}` } href='#about' >Team</Nav.Link>
                 <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/contact') && 'activeNavLink'}` } href='#contact' >Contact</Nav.Link>
+                <Nav.Link className={`desktop-nav ${isCurrentRoute(location.pathname, '/search') && 'activeNavLink'}` } href='#search'><FontAwesomeIcon icon='search' /></Nav.Link>
+
                 </div>
 
                 <div className='mobile-nav container-fluid' >
                   <div className='row'>
                     <NavIcon
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/capacity_building')}
                       icon={'seedling'}
                       link={'#capacity_building'}
                       title={'Capacity Building'}
                     />
 
                     <NavIcon
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/training')}
                       icon={'chalkboard-teacher'}
                       link={'#training'}
                       title={'Training'}
                     />
 
                     <NavIcon
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/entrepreneurship')}
                       icon={'lightbulb'}
                       link={'#entrepreneurship'}
                       title={'Entrepreneurship'}
@@ -104,15 +109,22 @@ class BootstrapNav extends Component {
                   </div>
 
                   <div className='row'>
-                    <NavIcon icon={'newspaper'} link={'#news'} title={'News'} />
+
+                    <NavIcon 
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/news')}
+                      icon={'newspaper'} 
+                      link={'#news'} 
+                      title={'News'} />
 
                     <NavIcon
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/resources')}
                       icon={'book'}
                       link={'#resources'}
                       title={'Resources'}
                     />
 
                     <NavIcon
+                      isCurrentRoute={isCurrentRoute(location.pathname, '/points_of_encounter')}
                       icon={'map-marked'}
                       link={'#points_of_encounter'}
                       title={'Encounters'}
@@ -140,7 +152,7 @@ class BootstrapNav extends Component {
                     {/* <SearchIcon /> */}
                     <NavIcon 
                       icon={'search'}
-                      link={'#search/s'}
+                      link={'#search'}
                       title={'Search'}
                     />
 

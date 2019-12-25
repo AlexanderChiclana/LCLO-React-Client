@@ -5,7 +5,7 @@ class Team extends Component {
     render() {
         return (
              <div className="container">
-        <h5 className="section-title h1">Our Team</h5>
+        <h5 className="section-title h1" style={{ color: 'white' }}>Our Team</h5>
         <div className="row">
             <MemberCard description={'CEO, and Founder of LCLO Group'} name={'Liza Cariaga-Lo'} member={'liza'}/>
             <MemberCard description={'Training and Curricular Innovations'} name={'Lynn Hernandez'} member={'lynn'}/>
