@@ -1,8 +1,5 @@
 import React from 'react'
-// import { Route, Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
-
-// import NavBar from './NavBar'
 import About from './About'
 import FeedPage from './FeedPage'
 import Footer from './Footer'
@@ -12,16 +9,13 @@ import SearchPage from './SearchPage'
 import Contact from './Contact'
 import BootstrapNav from './BootstrapNav'
 import MemberPage from './MemberPage'
-
 import skyscrapers from './images/skyscrapers.JPG'
 import coaching from './images/coaching.jpg'
 import farmer from './images/farmer.jpg'
 import cafe from './images/cafe.jpg'
 import lunch from './images/lunch.jpg'
 import newspaper from './images/newspaper.jpg'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch)
@@ -36,24 +30,32 @@ const pageDecriptions = {
 
 
 const App = () => (
+
   <React.Fragment>
+
     <Route path='/' render={() => (< BootstrapNav />)} />
 
       <div style={{ height: '70px' }} />
 
       <Route exact path='/' render={() => (<Home />)} /> 
-      <Route exact path='/about' render={() => (<About />)} /> 
-      <Route exact path='/about/:member' render={() => (<MemberPage />)} /> 
-
       
-      <Route exact path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
-      <Route exact path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding} heroImage={skyscrapers}/>)} /> 
-      <Route exact path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'} banner={'./images/business.png'} description={pageDecriptions.entrepreneurship} heroImage={farmer}/>)} /> 
-      <Route exact path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageName={'Points of Encounter'} description={pageDecriptions.poe} heroImage={lunch} />)} /> 
-      <Route exact path='/news' render={() => (<FeedPage page={'news'} pageName={'News'} description={pageDecriptions.news} heroImage={newspaper}/>)} /> 
-      <Route exact path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'} description={pageDecriptions.resources} heroImage={cafe}/>)} /> 
-      <Route exact path='/contact' render={() => (<Contact/>)} /> 
-
+      <Route exact path='/about' render={() => (<About />)} /> 
+      
+      <Route path='/about/:member' render={() => (<MemberPage />)} /> 
+      
+      <Route path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
+      
+      <Route path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding} heroImage={skyscrapers}/>)} /> 
+      
+      <Route path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageName={'Entrepreneurship'} description={pageDecriptions.entrepreneurship} heroImage={farmer}/>)} /> 
+      
+      <Route path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageName={'Points of Encounter'} description={pageDecriptions.poe} heroImage={lunch} />)} /> 
+      
+      <Route path='/news' render={() => (<FeedPage page={'news'} pageName={'News'} description={pageDecriptions.news} heroImage={newspaper}/>)} /> 
+      
+      <Route path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'} description={pageDecriptions.resources} heroImage={cafe}/>)} /> 
+      
+      <Route path='/contact' render={() => (<Contact/>)} /> 
 
       <Route path='/posts/:id' render={({ match }) => (<SinglePostPage key={match.params.id} id={match.params.id} text={'dummy text'} heading={'dummy heading'} />)} />
 

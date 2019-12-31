@@ -85,13 +85,13 @@ class UpcomingEvents extends Component {
         return (
             <div className="upcoming-events">
             {this.state.upcoming.length !== 0 && <h2>Upcoming Events</h2>}
-
+            <div>
             <ul className="p-0" style={{ listStyleType: 'none' }}>
 
                 <UpcomingList />
 
             </ul>
- 
+            </div>
 
         </div>
         )

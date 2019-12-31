@@ -20,6 +20,7 @@ class FeedHero extends Component {
         return (
             <div className="home-page-welcome mobile-padding-small" 
             // ref={(div) => { this.Mission = div }}
+            style={{ background: `url(${this.props.image}) no-repeat center` }}
             >
             <div className="container">
                 <div className="row">
