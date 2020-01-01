@@ -5,8 +5,11 @@ import UpcomingEvents from './UpcomingEvents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FeedPageTile = (props) => (
+
     <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
-    <div className="icon-box">
+                <Link to={props.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+
+    <div className="icon-box" style={{ width: '100%' }}>
         <figure className="d-flex justify-content-center">
         <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }}/>
 
@@ -22,6 +25,8 @@ const FeedPageTile = (props) => (
             <p>{props.description} </p>
         </div>
     </div>
+    </Link>
+
 </div>
 )
 
@@ -31,8 +36,8 @@ const TileSection = () => (
         <div className="row">
 
             <FeedPageTile title={'News'} link={'/news'} icon={'newspaper'} description={'this is the description'}/>
-            <FeedPageTile title={'Resources'} link={'/news'} icon={'book'} description={'this is the description'}/>
-            <FeedPageTile title={'Points of Encounter'} link={'/news'} icon={'map-marked'} description={'this is the description'}/>
+            <FeedPageTile title={'Resources'} link={'/resources'} icon={'book'} description={'this is the description'}/>
+            <FeedPageTile title={'Points of Encounter'} link={'/points_of_encounter'} icon={'map-marked'} description={'this is the description'}/>
 
         </div>{/* .row */}
     </div>
@@ -213,26 +218,14 @@ class Home extends Component {
                     <Link to={'/contact'} className="btn orange-border roundButton">
                      Join Mailing List
                     </Link>
+                    <div style={{ color: 'black', backgroundColor: 'white', borderRadius: '15px', padding: '15px', marginTop: '90px', width: '100%' }}>                    
+                        <UpcomingEvents home={true} /> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 {/* end mailing */}
-
-        <div className="home-page-events">
-            <div className="container">
-                <div className="row">
-                  
-    
-                
-                    <div className="col-12">
-                       < UpcomingEvents />
-                    </div>{/* .col */}
-                </div>{/* .row */}
-            </div>{/* .container */}
-        </div>{/* .home-page-events */}
-    
-    
       
             </div>
         )

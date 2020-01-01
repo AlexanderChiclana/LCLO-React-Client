@@ -97,7 +97,7 @@ class UpcomingEvents extends Component {
 
         return (
             <div className="popular-posts">
-            {this.state.upcoming.length !== 0 && <h2>Upcoming Events</h2>}
+            {this.state.upcoming.length !== 0 && !this.props.home && <h2>Upcoming Events</h2>}
             
             <ul className="p-0" style={{ listStyleType: 'none' }}>
 

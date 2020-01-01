@@ -13,9 +13,9 @@ const NavIcon = props => (
   <div className='col-4 p-0 d-flex justify-content-center'>
     <div>
       <div className={props.isCurrentRoute ? 'mobile-icon active-icon' : 'mobile-icon'}>
-      <Nav.Link href={props.link}> <FontAwesomeIcon icon={props.icon} /> </Nav.Link>
+      <Nav.Link href={props.link} style={{ color: 'inherit' }}> <FontAwesomeIcon icon={props.icon} /> </Nav.Link>
       </div>
-      <Nav.Link href={props.link}>{props.title}</Nav.Link>
+      <Nav.Link href={props.link} style={{ color: props.isCurrentRoute ? '#ff4800' : 'inherit' }}>{props.title}</Nav.Link>
     </div>
   </div>
 )
