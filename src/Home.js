@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import scrollToComponent from 'react-scroll-to-component'
 import UpcomingEvents from './UpcomingEvents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
+import apiUrl from './apiConfig'
 
 const FeedPageTile = (props) => (
 
@@ -45,6 +47,23 @@ const TileSection = () => (
 )
 
 class Home extends Component {
+    state = {
+        upcoming: []
+    }
+
+    componentDidMount() {
+        this.getUpcomingEvents()
+      }
+
+      getUpcomingEvents = () => {
+        axios.get(`${apiUrl}/upcoming`)
+          .then(res => {
+            this.setState({ 
+                upcoming: res.data.calendar
+            })
+          })
+      }
+
     render() {
         return (
             <div>
@@ -218,9 +237,13 @@ class Home extends Component {
                     <Link to={'/contact'} className="btn orange-border roundButton">
                      Join Mailing List
                     </Link>
+
+                    {
+                        this.state.upcoming.length > 0 &&
                     <div style={{ color: 'black', backgroundColor: 'white', borderRadius: '15px', padding: '15px', marginTop: '90px', width: '100%' }}>                    
                         <UpcomingEvents home={true} /> 
                     </div>
+                    }
                 </div>
             </div>
         </div>

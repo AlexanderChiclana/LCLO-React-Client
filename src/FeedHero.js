@@ -18,7 +18,7 @@ class FeedHero extends Component {
         // const { image } = this.props
 
         return (
-            <div className="home-page-welcome mobile-padding-small" 
+            <div className="home-page-welcome mobile-padding-small tablet-padding-y-medium" 
             // ref={(div) => { this.Mission = div }}
             style={{ background: `url(${this.props.image}) no-repeat center` }}
             >

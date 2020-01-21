@@ -41,7 +41,7 @@ class PopularPosts extends Component {
           )  
 
         return (
-            <div className="popular-posts">
+            <div className="popular-posts tablet-wide tablet-no-margin">
             { this.state.pinned.length > 0 && <h2>Trending Ideas</h2>}
 
             <ul className="p-0">

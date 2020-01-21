@@ -41,7 +41,7 @@ const App = () => (
       
       <Route exact path='/about' render={() => (<About />)} /> 
       
-      <Route path='/about/:member' render={() => (<MemberPage />)} /> 
+      <Route path='/about/:member' render={({ match }) => (<MemberPage member={match.params.member}/>)} /> 
       
       <Route path='/training' render={() => (<FeedPage pageName={'Training'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
       

@@ -78,7 +78,7 @@ class FeedPage extends Component {
             <FeedHero image={this.props.heroImage} pageName={this.props.pageName} description={this.props.description} scrollToBlogpostList={this.scrollToBlogpostList}/>
 
 
-    <div className="news-wrap mobile-padding-small">
+    <div className="news-wrap mobile-padding-none news-wrap-tablet">
         <div className="container">
             <div className="row">
             
@@ -91,7 +91,7 @@ class FeedPage extends Component {
                     </div>
                 </div>{/* .col */}
                 <div className="col-12 col-lg-8" ref={(div) => { this.BlogpostList = div }}>
-                <div className="sidebar desktop-none">
+                <div className="sidebar desktop-none tablet-margin-bottom-small">
 
                 <FeaturedCause page={this.props.page} description={this.props.description} featured={this.state.featured}/>
 </div>
@@ -99,7 +99,7 @@ class FeedPage extends Component {
 
                     <br />
                    { this.state.blogposts.length > this.state.visible ? <div className="btn gradient-bg d-flex justify-content-center" style={{ cursor: 'pointer', borderRadius: '15px' }} onClick={this.loadMore}> Load More Articles... </div> : null}
-                   <div className="sidebar desktop-none">
+                   <div className="sidebar desktop-none tablet-order tablet-no-margin">
                       {/* <SearchWidget /> */}
                       
                       <PopularPosts page={this.props.page}/>

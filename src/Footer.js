@@ -38,7 +38,7 @@ class Footer extends Component {
             <div className="footer-widgets">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 col-lg-4">
+                        <div className="col-12 col-md-8 col-lg-4">
                             <div className="foot-about">
                                 <h2>Mision</h2>
 
@@ -48,7 +48,7 @@ class Footer extends Component {
                             </div>{/* .foot-about */}
                         </div>{/* .col */}
     
-                        <div className="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
+                        <div className="col-12 col-md-4 col-lg-2 mt-5 mt-md-0">
                             <h2>Site Links</h2>
     
                             <ul className="foot-site-links"> 
@@ -61,7 +61,7 @@ class Footer extends Component {
                             </ul>
                         </div>{/* .col */}
     
-                        <div className="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div className="col-12 col-md-8 col-lg-3 mt-5 mt-md-0">
                             <div className="foot-latest-news">
                                 <h2>Latest News</h2>
     
@@ -71,7 +71,7 @@ class Footer extends Component {
                             </div>{/* .foot-latest-news */}
                         </div>{/* .col */}
     
-                        <div className="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div className="col-12 col-md-4 col-lg-3 mt-5 mt-md-0">
                             <div className="foot-contact">
                                 <h2>Contact</h2>
     

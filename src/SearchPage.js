@@ -54,7 +54,7 @@ class SearchPage extends Component {
     </div>{/* .container */}
 </div>{/* .page-header */}
 
-<div className="news-wrap ">
+<div className="news-wrap mobile-padding-small">
     <div className="container">
         <div className="row tablet-col-reverse">
 
@@ -66,7 +66,7 @@ class SearchPage extends Component {
             }
 
             <div className={ this.props.empty ? 'col-12' : 'col-12 col-lg-4'} >
-                <div className="sidebar">
+                <div className="sidebar mobile-margin-y-medium">
 
                 <SearchWidget wide={this.props.empty}/>
                 <UpcomingEvents />

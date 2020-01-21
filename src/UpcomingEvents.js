@@ -60,7 +60,7 @@ class UpcomingEvent extends Component {
     <a className="d-flex"><h3 className="entry-title" style={{ color: '#ff4800', marginRight: '5px' }}>{ this.props.shortDate + ' '}</h3> <h3 className="entry-title">{this.props.heading}</h3></a>
 </div>
 
-{ this.state.open && <div className="single-post-text single-post-preview" style={{ padding: '10px', width: '100%' }}> <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} style={{ padding: '10px', width: '100%', border: '1px solid #E0E0E0' }}></p></div> }                         
+{ this.state.open && <div className="single-post-text single-post-preview" style={{ padding: '10px', width: '100%' }}> <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} style={{ padding: '10px', width: '100%', border: '1px solid #E0E0E0', borderRadius: '10px' }}></p></div> }                         
 
 </li>
         )
@@ -96,10 +96,10 @@ class UpcomingEvents extends Component {
       )  
 
         return (
-            <div className="popular-posts">
+            <div className="popular-posts tablet-wide tablet-no-margin" style={{ marginTop: this.props.home ? '10px' : null }}>
             {this.state.upcoming.length !== 0 && !this.props.home && <h2>Upcoming Events</h2>}
             
-            <ul className="p-0" style={{ listStyleType: 'none' }}>
+            <ul className="p-0" style={{ margin: this.props.home ? '0px' : null }}>
 
                 <UpcomingList />
 

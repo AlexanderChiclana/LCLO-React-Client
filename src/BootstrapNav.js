@@ -15,7 +15,7 @@ const NavIcon = props => (
       <div className={props.isCurrentRoute ? 'mobile-icon active-icon' : 'mobile-icon'}>
       <Nav.Link href={props.link} style={{ color: 'inherit' }}> <FontAwesomeIcon icon={props.icon} /> </Nav.Link>
       </div>
-      <Nav.Link href={props.link} style={{ color: props.isCurrentRoute ? '#ff4800' : 'inherit' }}>{props.title}</Nav.Link>
+      <Nav.Link href={props.link} style={{ color: 'inherit' }}>{props.title}</Nav.Link>
     </div>
   </div>
 )
