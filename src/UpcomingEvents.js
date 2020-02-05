@@ -1,114 +1,152 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import apiUrl from './apiConfig'
-
+import { Link } from 'react-router-dom'
 import DOMPurify from 'dompurify'
 
-
 class UpcomingEvent extends Component {
-    state={
-        open: false
-    }
+  state = {
+    open: false
+  }
 
-    openDescription = () => {
-        this.setState(prevState => ({
-            open: !prevState.open
-        }))
-    }
+  openDescription = () => {
+    this.setState(prevState => ({
+      open: !prevState.open
+    }))
+  }
 
-    render() {
-        return (
-        //     <li className="justify-content-between align-items-center">
-        //     {/* <figure><a href="#"><img src={require('./images/u-1.jpg')} alt="" /></a></figure> */}
-    
+  render() {
+    return (
+      <li
+        className="d-flex flex-wrap align-items-center"
+      >
+        <figure
+          className="d-flex justify-content-center"
+          onClick={this.openDescription}
+          style={{ cursor: 'pointer' }}
+        >
+          <img
+            src={require('./images/LCLO-Icon.png')}
+            style={{ width: '60%' }}
+            alt=""
+          />
+        </figure>
 
-        //     <div className="entry-content" 
-        //                                     style={{ 
-        //                                         overflow: 'hidden', 
-        //                                         marginBottom: '20px'
-        //                                         }}>
-                
-        //        <h6 
-        //             className="entry-title cal-event" 
-        //             onClick={this.openDescription}
-        //             style={{ cursor: 'pointer'
-        //                          }}                    
-                
-        //         >{this.props.heading}</h6>
+        <div
+          className="entry-content d-flex align-items-center"
+          style={{ cursor: 'pointer' }}
+          onClick={this.openDescription}
+        >
+          <a className="d-flex">
+            <h3
+              className="entry-title"
+              style={{
+                color: '#ff4800',
+                marginRight: '5px',
+                fontSize: this.props.home && '20px'
+              }}
+            >
+              {this.props.shortDate + ' '}
+            </h3>{' '}
+            <h3
+              className="entry-title"
+              style={{ fontSize: this.props.home && '20px' }}
+            >
+              {this.props.heading}
+            </h3>
+          </a>
+        </div>
 
-        //     <p>
-        //         {this.props.shortDate}
-        //     </p>
-
-        //         <div className="post-metas d-flex flex-wrap align-items-center">
-
-        //         </div>
-
-        //     { this.state.open && <p className="single-post-text single-post-preview" dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} ></p> }                         
-                
-        //     </div>
- 
-        // </li>
-
-
-// 
-<li className="d-flex flex-wrap align-items-center" onClick={this.openDescription} style={{ cursor: 'pointer' }}>
-
-<figure className="d-flex justify-content-center"><img src={require('./images/LCLO-Icon.png')} style={{ width: '60%' }} alt="" /></figure>
-
-<div className="entry-content d-flex align-items-center">
-    <a className="d-flex"><h3 className="entry-title" style={{ color: '#ff4800', marginRight: '5px' }}>{ this.props.shortDate + ' '}</h3> <h3 className="entry-title">{this.props.heading}</h3></a>
-</div>
-
-{ this.state.open && <div className="single-post-text single-post-preview" style={{ padding: '10px', width: '100%' }}> <p dangerouslySetInnerHTML= {{ __html: DOMPurify.sanitize(this.props.text) }} style={{ padding: '10px', width: '100%', border: '1px solid #E0E0E0', borderRadius: '10px' }}></p></div> }                         
-
-</li>
-        )
-    }
+        {this.state.open && (
+          <div
+            className="single-post-preview"
+            style={{ padding: '10px', width: '100%' }}
+          >
+            {' '}
+            <div
+              style={{
+                padding: '10px',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                width: '100%',
+                border: '1px solid #E0E0E0',
+                borderRadius: '10px'
+              }}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(this.props.text)
+                }}
+              ></div>
+            
+            { this.props.linkedBlogpost &&
+            <Link to={`/posts/${this.props.linkedBlogpost}`}>
+              <div
+                className="btn gradient-bg roundButtonSmall"
+                style={{ color: 'white !important', marginTop: '0px' }}
+              >
+                Learn More
+              </div>
+              </Link>
+            }
+            </div>
+          </div>
+        )}
+      </li>
+    )
+  }
 }
 
-
 class UpcomingEvents extends Component {
-    constructor () {
-        super()
+  constructor() {
+    super()
 
-        this.state = {
-            upcoming: []
-        }
-      }
-
-      componentDidMount() {
-        this.getUpcomingEvents()
-      }
-
-      getUpcomingEvents = () => {
-        axios.get(`${apiUrl}/upcoming`)
-          .then(res => {
-            this.setState({ 
-                upcoming: res.data.calendar
-            })
-          })
-      }
-
-    render() {
-        const UpcomingList = () => this.state.upcoming.map((upcoming, index) => 
-            <UpcomingEvent key={index} shortDate={upcoming.shortDate} heading={upcoming.heading} text={upcoming.text}/>
-      )  
-
-        return (
-            <div className="popular-posts tablet-wide tablet-no-margin" style={{ marginTop: this.props.home ? '10px' : null }}>
-            {this.state.upcoming.length !== 0 && !this.props.home && <h2>Upcoming Events</h2>}
-            
-            <ul className="p-0" style={{ margin: this.props.home ? '0px' : null }}>
-
-                <UpcomingList />
-
-            </ul>
-            
-
-        </div>
-        )
+    this.state = {
+      upcoming: []
     }
+  }
+
+  componentDidMount() {
+    this.getUpcomingEvents()
+  }
+
+  getUpcomingEvents = () => {
+    axios.get(`${apiUrl}/upcoming`).then(res => {
+      this.setState({
+        upcoming: res.data.calendar
+      })
+    })
+  }
+
+  render() {
+    const UpcomingList = () =>
+      this.state.upcoming.map((upcoming, index) => (
+        <UpcomingEvent
+          key={index}
+          home={this.props.home}
+          shortDate={upcoming.shortDate}
+          linkedBlogpost={upcoming.linkedBlogpost}
+          heading={upcoming.heading}
+          text={upcoming.text}
+        />
+      ))
+
+    return (
+      <div
+        className="popular-posts tablet-wide tablet-no-margin"
+        style={{ marginTop: this.props.home ? '10px' : null }}
+      >
+        {this.state.upcoming.length !== 0 && !this.props.home && (
+          <h2>Upcoming Events</h2>
+        )}
+
+        <ul className="p-0" style={{ margin: this.props.home ? '0px' : null }}>
+          <UpcomingList home={this.props.home} />
+        </ul>
+      </div>
+    )
+  }
 }
 
 export default UpcomingEvents

@@ -246,6 +246,8 @@ a:hover, a:active {
 /*
 # Main Menu
 --------------------------------*/
+
+
 .customNav {
     min-height: 70px;
     font-size: 14px;
@@ -258,6 +260,7 @@ a:hover, a:active {
     transition: color .35s;
     font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     background-color: #ffffff;
+
     // background-color: $secondary-orange;
 
     
@@ -1168,7 +1171,7 @@ ul.tabs-nav .tab-nav.active {
 .our-causes {
     position: relative;
     padding: 96px 0;
-    background: url("../images/cause-bg.jpg") no-repeat center;
+    // background: url("../images/cause-bg.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }
@@ -1341,7 +1344,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .about-page .page-header {
-    background: url('../images/about-bg.jpg');
+    // background: url('../images/about-bg.jpg');
 }
 
 .about-page .welcome-wrap {
@@ -1473,7 +1476,7 @@ ul.tabs-nav .tab-nav.active {
 # Causes
 --------------------------------------------------------------*/
 .causes-page .page-header {
-    background: url('../images/causes-bg.jpg') no-repeat center;
+    // background: url('../images/causes-bg.jpg') no-repeat center;
 }
 
 .causes-page .featured-cause {
@@ -1553,7 +1556,7 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------------------------------------*/
 
 .single-cause .page-header {
-    background: url('../images/single-cause-bg.jpg') no-repeat center;
+    // background: url('../images/single-cause-bg.jpg') no-repeat center;
 }
 
 .single-cause .highlighted-cause {
@@ -1710,7 +1713,7 @@ ul.tabs-nav .tab-nav.active {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .page-header {
-    background: url('../images/portfolio-bg.jpg') no-repeat center;
+    // background: url('../images/portfolio-bg.jpg') no-repeat center;
 }
 
 .portfolio-wrap {
@@ -2083,7 +2086,7 @@ ul.tabs-nav .tab-nav.active {
 # Contact Page
 --------------------------------------------------------------*/
 .contact-page .page-header {
-    background: url('../images/contact-bg.jpg') no-repeat center;
+    // background: url('../images/contact-bg.jpg') no-repeat center;
 }
 
 .contact-page-wrap {
@@ -2194,7 +2197,7 @@ ul.tabs-nav .tab-nav.active {
 # Contact Page
 --------------------------------------------------------------*/
 .elements-page .page-header {
-    background: url('../images/elements-bg.jpg') no-repeat center;
+    // background: url('../images/elements-bg.jpg') no-repeat center;
 }
 
 /*--------------------------------------------------------------
@@ -2416,6 +2419,16 @@ section .section-title {
     transition: 1s;
     transform-style: preserve-3d;
     position: relative;
+}
+
+.frontside-no-flip {
+    margin-bottom: 30px;
+}
+
+.frontside-no-flip .card .card-body img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
 }
 
 .frontside {
@@ -2641,7 +2654,18 @@ $line-height-medium: 1.7;
     .tablet-margin-bottom-small{
         margin-bottom: 40px;
     }
+    .tablet-homepage-panel{
+        padding: 40px 0px 100px;
+    }
 }
+
+@media (min-width: 991.98px) {
+    // .navBuffer {
+    //     display: none;
+    // }
+}
+
+
 // mobile nav
 
 

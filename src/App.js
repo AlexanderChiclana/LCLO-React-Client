@@ -17,6 +17,7 @@ import lunch from './images/lunch.jpg'
 import newspaper from './images/newspaper.jpg'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
+import createHistory from 'history/createBrowserHistory'
 
 library.add(faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch)
 
@@ -29,13 +30,19 @@ const pageDecriptions = {
 }
 
 
+export const history = createHistory()
+
+history.listen((location, action) => {
+    window.scrollTo(0, 0)
+})
+
 const App = () => (
 
   <React.Fragment>
 
     <Route path='/' render={() => (< BootstrapNav />)} />
 
-      <div style={{ height: '70px' }} />
+      <div style={{ height: '70px' }} className="navBuffer"/>
 
       <Route exact path='/' render={() => (<Home />)} /> 
       

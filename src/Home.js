@@ -8,15 +8,13 @@ import apiUrl from './apiConfig'
 
 const FeedPageTile = (props) => (
 
-    <div className="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+    <div className="col-12 col-md-4 col-lg-4 mt-4 mt-lg-0">
                 <Link to={props.link} style={{ textDecoration: 'none', color: 'inherit' }}>
 
     <div className="icon-box" style={{ width: '100%' }}>
         <figure className="d-flex justify-content-center">
         <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }}/>
 
-            {/* <img src={require('./images/hands-gray.png')} alt="" /> */}
-            {/* <img src={require('./images/hands-white.png')} alt="" /> */}
         </figure>
 
         <header className="entry-header">
@@ -67,7 +65,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-            <div className="swiper-container hero-slider mobile-none">
+            <div className="swiper-container hero-slider mobile-none tablet-none">
             <div className="swiper-wrapper">
                 <div className="swiper-slide hero-content-wrap">
 
@@ -134,9 +132,9 @@ class Home extends Component {
 
 <Team />
 </section> */}
-        <div className="home-page-divider mobile-none"></div>
+        <div className="home-page-divider mobile-none tablet-none"></div>
 
-        <div className="home-page-welcome mobile-padding-small" ref={(div) => { this.Mission = div }}>
+        <div className="home-page-welcome mobile-padding-small tablet-homepage-panel" ref={(div) => { this.Mission = div }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -166,7 +164,7 @@ class Home extends Component {
 
         <div className="home-page-divider mobile-none"></div>
 
-        <div className="home-page-welcome mobile-padding-small" id="home-page-alt">
+        <div className="home-page-welcome mobile-padding-small tablet-homepage-panel" id="home-page-alt">
             <div className="container">
                 <div className="row tablet-col-reverse">
                     <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
@@ -198,7 +196,7 @@ class Home extends Component {
         <div className="home-page-divider mobile-none"></div>
         {/* third section */}
 
-        <div className="home-page-welcome mobile-padding-small">
+        <div className="home-page-welcome mobile-padding-small tablet-homepage-panel">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -223,6 +221,7 @@ class Home extends Component {
                 </div>{/* .row */}
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
+        <div className="home-page-divider mobile-none"></div>
 
         {/* end section  */}
         <TileSection />
