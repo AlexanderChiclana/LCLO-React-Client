@@ -49,7 +49,7 @@ class BootstrapNav extends Component {
             >
               <img
                 src={require('./images/LCLO-Icon.png')}
-                style={{ width: '20px', marginRight: '10px' }}
+                style={{ width: '20px', marginRight: '10px', maxHeight: '24px' }}
               ></img>
               <div>LCLO Group</div>
             </Navbar.Brand>
