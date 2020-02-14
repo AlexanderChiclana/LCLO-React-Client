@@ -26,6 +26,7 @@ class UpcomingEvent extends Component {
           style={{ cursor: 'pointer' }}
         >
           <img
+            className="LCLO-Icon"
             src={require('./images/LCLO-Icon.png')}
             style={{ width: '60%' }}
             alt=""

@@ -22,7 +22,7 @@ const FeedPageTile = (props) => (
         </header>
 
         <div className="entry-content">
-            <p>{props.description} </p>
+            {/* <p>{props.description} </p> */}
         </div>
     </div>
     </Link>

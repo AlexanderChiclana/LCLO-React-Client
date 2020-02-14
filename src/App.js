@@ -16,10 +16,11 @@ import cafe from './images/cafe.jpg'
 import lunch from './images/lunch.jpg'
 import newspaper from './images/newspaper.jpg'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch } from '@fortawesome/free-solid-svg-icons'
 import createHistory from 'history/createBrowserHistory'
+import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faTwitter, faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch)
+library.add(faFacebook, faTwitter, faPhone, faEnvelope, faMarker, faArrowLeft, faArrowRight, faSeedling, faChalkboardTeacher, faNewspaper, faLightbulb, faBook, faMapMarked, faInfoCircle, faSearch)
 
 const pageDecriptions = {
   capacityBuilding: 'The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. The Group draws on many years of collective work at highly selective higher education institutions in the United States. Our goal is not merely to share effective practices and policies from these institutions, but we work closely with leaders and institutions to thoughtfully craft culturally- and regionally-relevant approaches to capacity building in emergent higher education environments in the ASEAN region.',

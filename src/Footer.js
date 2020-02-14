@@ -121,16 +121,16 @@ class Footer extends Component {
                     
 
                               
-                  {/* <li>
-                      <a href="">
-                        <FontAwesomeIcon icon="facebook" className="footer-icon" />
+                  <li>
+                      <a onClick={ () => { window.alert('facebook page will be avaliable shortly!') }}>
+                        <FontAwesomeIcon icon={['fab', 'facebook']} className="footer-icon" />
                         <span>Facebook</span>
                       </a>
-                    </li> */}
+                    </li>
 
                   <li>
-                      <a href="">
-                        <FontAwesomeIcon icon="twitter" className="footer-icon" />
+                  <a onClick={ () => { window.alert('twitter page will be avaliable shortly!') }}>
+                      <FontAwesomeIcon icon={['fab', 'twitter']} className="footer-icon"/>
                         <span>Twitter</span>
                       </a>
                     </li>

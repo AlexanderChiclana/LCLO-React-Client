@@ -33,6 +33,9 @@ class Contact extends Component {
                     </p>
 
                     <ul className="contact-info p-0">
+                                                
+          
+
                       <li>
                         <a
                           href="tel:1-617-770-6583"
@@ -65,6 +68,20 @@ class Contact extends Component {
                         />
                         <span>208 Narragansett Pkwy Warwick, RI 02888</span>
                       </li>
+
+                      <li>
+                      <a onClick={ () => { window.alert('facebook page will be avaliable shortly!') }}>
+                        <FontAwesomeIcon icon={['fab', 'facebook']} className="footer-icon" />
+                        <span>Facebook</span>
+                      </a>
+                    </li>
+
+                  <li>
+                  <a onClick={ () => { window.alert('twitter page will be avaliable shortly!') }}>
+                      <FontAwesomeIcon icon={['fab', 'twitter']} className="footer-icon"/>
+                        <span>Twitter</span>
+                      </a>
+                    </li>
                     </ul>
                   </div>
                 </div>
