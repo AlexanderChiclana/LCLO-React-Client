@@ -86,16 +86,64 @@ class MemberPage extends Component {
           <div className="welcome-wrap">
             <div className="container">
               <div className="row">
-                <div className="col-12 col-lg-6 order-2 order-lg-1">
+                <div className="col-12 col-lg-8 order-2 order-lg-1">
                   <div className="welcome-content">
                     <header className="entry-header">
                       <h2 className="entry-title">
-                        {capitalCase(member)} {memberData[member].lastName}
+                       {capitalCase(member)} {memberData[member].lastName}
                       </h2>
                     </header>
 
-                    <div className="entry-content mt-5">
-                      <p>{memberData[member].bio}</p>
+                    <div className="mt-5">
+                      {/* <p>{memberData[member].bio}</p> */}
+
+                      <div className="col-12 col-lg-12 order-1 order-lg-2">
+                  {/* <img src={require('./images/bridge.JPG')} alt="welcome" /> */}
+                  <div
+                    className="image-flip"
+                    // ontouchstart="this.classList.toggle('hover');"
+                  >
+                    <div>
+                      <div className="frontside-no-flip">
+                        <div className="card" style={{ borderRadius: '24px' }}>
+                          <div className="card-body text-center">
+                            <p
+                              style={{
+                                display: 'flex',
+                                justifyContent: 'center'
+                              }}
+                            >
+                              <img
+                                className=" img-fluid"
+                                src={JenPic}
+                                alt="card image"
+                                style={{ objectFit: 'cover' }}
+                              />
+                            </p>
+                            <h5 className="card-title">
+                              {/* {capitalCase(member)}{' '}
+                              {memberData[member].lastName} */}
+                              Team Role
+                            </h5>
+                            <p
+                              className="card-text"
+                              style={{ textAlign: 'left' }}
+                            >
+                              {memberData[member].bio}
+                            </p>
+                            <a
+                              href="#"
+                              className="btn btn-primary btn-sm templateOrange"
+                              style={{ border: 'none' }}
+                            >
+                              <i className="fa fa-plus"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                     </div>
 
                     <div className="entry-footer mt-5">
@@ -125,42 +173,8 @@ class MemberPage extends Component {
                   </div>
                 </div>
 
-                <div className="col-12 col-lg-6 order-1 order-lg-2">
-                  {/* <img src={require('./images/bridge.JPG')} alt="welcome" /> */}
-                  <div
-                    className="image-flip"
-                    // ontouchstart="this.classList.toggle('hover');"
-                  >
-                    <div className="">
-                      <div className="frontside-no-flip">
-                        <div className="card" style={{ borderRadius: '24px' }}>
-                          <div className="card-body text-center">
-                            <p style={{ display: 'flex', justifyContent: 'center' }}>
-                              <img
-                                className=" img-fluid"
-                                src={JenPic}
-                                alt="card image"
-                                style={{ objectFit: 'cover' }}
-                              />
-                            </p>
-                            <h4 className="card-title">{capitalCase(member)} {memberData[member].lastName}
-</h4>
-                            <p className="card-text" style={{ textAlign: 'left' }}>
-                              {memberData[member].bio}
-                            </p>
-                            <a
-                              href="#"
-                              className="btn btn-primary btn-sm templateOrange"
-                              style={{ border: 'none' }}
-                            >
-                              <i className="fa fa-plus"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+     
+
               </div>
             </div>
           </div>
