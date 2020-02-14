@@ -181,7 +181,7 @@ class Home extends Component {
                             </header>{/* .entry-header */}
     
                             <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium">
-                                <p className="mobile-margin-none">The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
+                                <p className="mobile-margin-none">The LCLO Group provides opportunities for individuals to participate in professionally relevant and essential training and leadership development in preparation for meaningful and impactful work as strategists and specialists across different fields and sectors, essential to jobs in the Fourth Industrial Revolution.</p>
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
@@ -206,7 +206,7 @@ class Home extends Component {
                             </header>{/* .entry-header */}
     
                             <div className="entry-content mt-4 mt-md-5  mobile-line-medium">
-                                <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
+                                <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
                             </div>{/* .entry-content */}
     
                             <div className="entry-footer my-4 mt-md-5">
