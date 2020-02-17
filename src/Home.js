@@ -134,7 +134,7 @@ class Home extends Component {
 </section> */}
         <div className="home-page-divider mobile-none tablet-none"></div>
 
-        <div className="home-page-welcome mobile-padding-small tablet-homepage-panel" ref={(div) => { this.Mission = div }}>
+        <div className="home-page-welcome cp-background mobile-padding-small tablet-homepage-panel" ref={(div) => { this.Mission = div }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -196,7 +196,7 @@ class Home extends Component {
         <div className="home-page-divider mobile-none"></div>
         {/* third section */}
 
-        <div className="home-page-welcome mobile-padding-small tablet-homepage-panel">
+        <div className="home-page-welcome cb-background mobile-padding-small tablet-homepage-panel">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1">

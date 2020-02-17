@@ -13,8 +13,13 @@ class MemberCard extends Component {
                                 <p><img className=" img-fluid" src={this.props.headshot} alt="card image" style={{ objectFit: 'cover' }}/></p>
                                 <h4 className="card-title">{this.props.name}</h4>
                                 <p className="card-text">{this.props.description}</p>
-                                <a href="#" className="btn btn-primary btn-sm templateOrange" style={{ border: 'none' }}><i className="fa fa-plus"></i></a>
-                            </div>
+                                <div className="d-flex justify-content-center">
+                            <div
+                              className="templateOrange"
+                              style={{ borderRadius: '20px', display: 'block', width: '10px', height: '5px' }}
+                            >
+                              </div>
+                            </div>                            </div>
                         </div>
                     </div>
                     <div className="backside" style={{ borderRadius: '24px' }}>
@@ -45,7 +50,14 @@ class MemberCard extends Component {
                                     </Link> */}
                                     
                                     <Link to={'/about/' + this.props.member}>
-                                         <button className="btn btn-default" style={{ borderRadius: '24px' }}> More About {this.props.name.split(' ')[0]} </button>
+                                         <button className="btn btn-default" 
+                                                style={{ 
+                                                        borderRadius: '24px',
+                                                        border: 'none',
+                                                        padding: '15px',
+                                                        fontSize: '16px'  
+                                          
+                                          }}> More About {this.props.name.split(' ')[0]} </button>
                                     </Link>
 
 

@@ -15,8 +15,8 @@ class FeedHero extends Component {
   render() {
     return (
       <div
-        className="home-page-welcome mobile-padding-small tablet-padding-y-medium"
-        style={{ background: `url(${this.props.image}) no-repeat center` }}
+        className={'home-page-welcome mobile-padding-small tablet-padding-y-medium ' + this.props.pageInitial}
+        // style={{ background: `url(${this.props.image}) no-repeat center` }}
       >
         <div className="container">
           <div className="row">

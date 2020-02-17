@@ -78,6 +78,7 @@ class FeedPage extends Component {
       <div className="single-page news-page">
         <FeedHero
           image={this.props.heroImage}
+          pageInitial={this.props.pageInitial}
           pageName={this.props.pageName}
           description={this.props.description}
           scrollToBlogpostList={this.scrollToBlogpostList}

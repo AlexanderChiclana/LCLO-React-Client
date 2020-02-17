@@ -939,6 +939,44 @@ ul.tabs-nav .tab-nav.active {
     z-index: 99;
 }
 
+.home-page-welcome.cp-background {
+   background: url("../images/train.jpg") no-repeat center;
+}
+
+
+.home-page-welcome.cb-background {
+    background: url("../images/skyscrapers.JPG") no-repeat center;
+    background-size: cover;
+ }
+
+ 
+.home-page-welcome.poe-background {
+    background: url("../images/lunch.jpg") no-repeat center;
+    // background-size: cover;
+ }
+ 
+
+ .home-page-welcome.re-background {
+    background: url("../images/cafe.jpg") no-repeat center;
+    // background-size: cover;
+ }
+
+ .home-page-welcome.tr-background {
+    background: url("../images/coaching.jpg") no-repeat center;
+    // background-size: cover;
+ }
+
+ .home-page-welcome.en-background {
+    background: url("../images/farmer.jpg") no-repeat center;
+    // background-size: cover;
+ }
+
+ .home-page-welcome.ne-background {
+    background: url("../images/newspaper.jpg") no-repeat center;
+    // background-size: cover;
+ }
+
+
 .home-page-welcome::after {
     content: '';
     position: absolute;
@@ -2565,6 +2603,7 @@ $line-height-medium: 1.7;
 
 @media (max-width: 767.98px) {
 
+
 .mobile-none {
     display: none;
 }    
@@ -2575,6 +2614,11 @@ $line-height-medium: 1.7;
 
 .mobile-padding-small{
     padding: $padding-small !important;
+}
+
+
+.mobile-padding-y-medium{
+    padding: 24px 0px !important;
 }
 
 .mobile-padding-bottom-small{

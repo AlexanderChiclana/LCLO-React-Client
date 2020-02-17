@@ -17,7 +17,7 @@ const NavIcon = props => (
           <FontAwesomeIcon icon={props.icon} />{' '}
         </Nav.Link>
       </div>
-      <Nav.Link href={props.link} style={{ color: 'inherit' }}>
+      <Nav.Link href={props.link} style={{ color: 'inherit', textAlign: 'center' }}>
         {props.title}
       </Nav.Link>
     </div>
