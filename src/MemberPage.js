@@ -182,12 +182,12 @@ class MemberPage extends Component {
                         <span style={{ marginRight: '10px' }}>
                           <FontAwesomeIcon icon="arrow-left" />
                         </span>
-                        Back to Team
+                        Team
                       </Link>
                     </div>
                     <div>
                       <Link to={'/about/' + nextMember}>
-                        Next Member {capitalCase(nextMember)}
+                        About {capitalCase(nextMember)}
                         <span style={{ marginLeft: '10px' }}>
                           <FontAwesomeIcon icon="arrow-right" />
                         </span>

@@ -7,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <div className="single-page about-page">
-        <div className="welcome-wrap">
+        <div className="welcome-wrap mobile-padding-top-small">
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-6 order-2 order-lg-1">
@@ -20,8 +20,8 @@ class About extends Component {
                     <p>
                       The LCLO Group is a collection of industry leading
                       professionals and academics aiming to grow the economy in
-                      southeast asia. We include members form harvard, yale, and
-                      brown university.{' '}
+                      Southeast Asia. We include members form Harvard, Yale, and
+                      Brown University.{' '}
                     </p>
                   </div>
 
@@ -71,7 +71,7 @@ class About extends Component {
                 <h2>Stay up to date with the latest from LCLO</h2>
 
                 <Link to={'/contact'}>
-                  <a className="btn orange-border roundButton" href="#">
+                  <a className="btn orange-border orange-gradient roundButton" href="#">
                     Join Mailing List
                   </a>
                 </Link>

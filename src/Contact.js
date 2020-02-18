@@ -70,14 +70,14 @@ class Contact extends Component {
                       </li>
 
                       <li>
-                      <a onClick={ () => { window.alert('facebook page will be avaliable shortly!') }}>
+                      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LCLOGroup/?__tn__=%2Cd%2CP-R&eid=ARBHoooeqsSFMV1-0moN7FR1DT4q7fMmr0UyQkkjqFGFR59kNk6ZmhAx6uzUfiaq74tmGY8d-yL-iwEI">
                         <FontAwesomeIcon icon={['fab', 'facebook']} className="footer-icon" />
                         <span>Facebook</span>
                       </a>
                     </li>
 
                   <li>
-                  <a onClick={ () => { window.alert('twitter page will be avaliable shortly!') }}>
+                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/LCLOGroup">
                       <FontAwesomeIcon icon={['fab', 'twitter']} className="footer-icon"/>
                         <span>Twitter</span>
                       </a>

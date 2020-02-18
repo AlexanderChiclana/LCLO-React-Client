@@ -202,7 +202,7 @@ class Home extends Component {
                     <div className="col-12 col-lg-6 order-2 order-lg-1">
                         <div className="welcome-content">
                             <header className="entry-header">
-                                <h2 className="entry-title mobile-heading">Capcity Building for Entrepreneurs</h2>
+                                <h2 className="entry-title mobile-heading">Capacity Building for Entrepreneurs</h2>
                             </header>{/* .entry-header */}
     
                             <div className="entry-content mt-4 mt-md-5  mobile-line-medium">
