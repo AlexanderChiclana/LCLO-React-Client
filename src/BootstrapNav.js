@@ -39,7 +39,7 @@ class BootstrapNav extends Component {
           collapseOnSelect
           expand="lg"
           className="nav-bar fixed-top customNav"
-          style={{ borderBottom: '1px solid #E0E0E0' }}
+          style={{ borderBottom: '1px solid #E0E0E0', fontFamily: 'Montserrat, sans-serif', fontSize: '12px' }}
         >
           <div className="container">
             <Navbar.Brand
