@@ -247,6 +247,17 @@ a:hover, a:active {
 # Main Menu
 --------------------------------*/
 
+.default-nav {
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    transition: top 0.6s;
+  }
+  
+  .hidden-nav {
+    top: -50px;
+  }
 
 .customNav {
     min-height: 70px;
@@ -2739,6 +2750,8 @@ $line-height-medium: 1.7;
 .navbar-toggler{
     border: none !important;
 }
+
+
 
 // deployment adjustments
 

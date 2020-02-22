@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { withRouter } from 'react-router'
 
 const NavIcon = props => (
-  <div className="col-4 p-0 d-flex justify-content-center">
+  <div className='col-4 p-0 d-flex justify-content-center'>
     <div>
       <div
         className={
@@ -25,6 +25,42 @@ const NavIcon = props => (
 )
 
 class BootstrapNav extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      prevScrollpos: window.pageYOffset,
+      visible: true
+    }
+    this.showRef = React.createRef()
+  }
+
+    // Adds an event listener when the component is mount.
+    componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  
+    // Remove the event listener when the component is unmount.
+    componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
+  
+    // Hide or show the menu.
+    handleScroll = () => {
+      const { prevScrollpos } = this.state
+  
+      const currentScrollPos = window.pageYOffset
+
+      const isExpanded = this.showRef.current.getAttribute('class').includes('show')
+
+      const visible = prevScrollpos > currentScrollPos || currentScrollPos < 150 || isExpanded
+  
+      this.setState({
+        prevScrollpos: currentScrollPos,
+        visible
+      })
+    }
+
   render() {
     const { location } = this.props
 
@@ -33,19 +69,25 @@ class BootstrapNav extends Component {
     }
 
     return (
-      <header className="site-header">
-        {console.log(location)}
         <Navbar
           collapseOnSelect
-          expand="lg"
-          className="nav-bar fixed-top customNav"
-          style={{ borderBottom: '1px solid #E0E0E0', fontFamily: 'Montserrat, sans-serif', fontSize: '12px' }}
+          expand='lg'
+          className='nav-bar fixed-top customNav'
+          style={{ 
+            borderBottom: '1px solid #E0E0E0', 
+            fontFamily: 'Montserrat, sans-serif', 
+            fontSize: '12px',
+            transition: 'top 300ms, opacity 200ms',
+            // opacity: this.state.visible ? 1 : 0,
+            top: this.state.visible ? '0px' : '-80px'
+
+          }}
         >
-          <div className="container">
+          <div className='container'>
             <Navbar.Brand
-              href="#"
+              href='#'
               style={{ fontSize: '24px', display: 'flex' }}
-              className="LCLO-Button"
+              className='LCLO-Button'
             >
               <img
                 src={require('./images/LCLO-Icon.png')}
@@ -53,16 +95,16 @@ class BootstrapNav extends Component {
               ></img>
               <div>LCLO Group</div>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="mr-auto"></Nav>
-              <Nav className="site-navigation">
+            <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+            <Navbar.Collapse id='responsive-navbar-nav' ref={this.showRef}>
+              <Nav className='mr-auto'></Nav>
+              <Nav className='site-navigation'>
                 <Nav.Link
                   className={`desktop-nav ${isCurrentRoute(
                     location.pathname,
                     '/capacity_building'
                   ) && 'activeNavLink'}`}
-                  href="#capacity_building"
+                  href='#capacity_building'
                 >
                   Capacity Building
                 </Nav.Link>
@@ -71,7 +113,7 @@ class BootstrapNav extends Component {
                     location.pathname,
                     '/training'
                   ) && 'activeNavLink'}`}
-                  href="#training"
+                  href='#training'
                 >
                   Training
                 </Nav.Link>
@@ -80,7 +122,7 @@ class BootstrapNav extends Component {
                     location.pathname,
                     '/entrepreneurship'
                   ) && 'activeNavLink'}`}
-                  href="#entrepreneurship"
+                  href='#entrepreneurship'
                 >
                   Entrepreneurship
                 </Nav.Link>
@@ -89,7 +131,7 @@ class BootstrapNav extends Component {
                     location.pathname,
                     '/news'
                   ) && 'activeNavLink'}`}
-                  href="#news"
+                  href='#news'
                 >
                   News
                 </Nav.Link>
@@ -98,7 +140,7 @@ class BootstrapNav extends Component {
                     location.pathname,
                     '/resources'
                   ) && 'activeNavLink'}`}
-                  href="#resources"
+                  href='#resources'
                 >
                   Resources
                 </Nav.Link>
@@ -107,13 +149,13 @@ class BootstrapNav extends Component {
                     location.pathname,
                     '/points_of_encounter'
                   ) && 'activeNavLink'}`}
-                  href="#points_of_encounter"
+                  href='#points_of_encounter'
                   style={{ marginRight: '8px' }}
                 >
                   Points Of Encounter
                 </Nav.Link>
                 <div
-                  className="d-flex"
+                  className='d-flex'
                   style={{
                     borderLeft: '1px solid #D3D3D3',
                     paddingLeft: '8px'
@@ -124,7 +166,7 @@ class BootstrapNav extends Component {
                       location.pathname,
                       '/about'
                     ) && 'activeNavLink'}`}
-                    href="#about"
+                    href='#about'
                   >
                     Team
                   </Nav.Link>
@@ -133,7 +175,7 @@ class BootstrapNav extends Component {
                       location.pathname,
                       '/contact'
                     ) && 'activeNavLink'}`}
-                    href="#contact"
+                    href='#contact'
                   >
                     Contact
                   </Nav.Link>
@@ -142,14 +184,14 @@ class BootstrapNav extends Component {
                       location.pathname,
                       '/search'
                     ) && 'activeNavLink'}`}
-                    href="#search"
+                    href='#search'
                   >
-                    <FontAwesomeIcon icon="search" />
+                    <FontAwesomeIcon icon='search' />
                   </Nav.Link>
                 </div>
 
-                <div className="mobile-nav container-fluid">
-                  <div className="row">
+                <div className='mobile-nav container-fluid'>
+                  <div className='row'>
                     <NavIcon
                       isCurrentRoute={isCurrentRoute(
                         location.pathname,
@@ -181,7 +223,7 @@ class BootstrapNav extends Component {
                     />
                   </div>
 
-                  <div className="row">
+                  <div className='row'>
                     <NavIcon
                       isCurrentRoute={isCurrentRoute(
                         location.pathname,
@@ -222,7 +264,7 @@ class BootstrapNav extends Component {
                     }}
                   />
 
-                  <div className="row">
+                  <div className='row'>
                     <NavIcon
                       icon={'search'}
                       link={'#search'}
@@ -245,7 +287,7 @@ class BootstrapNav extends Component {
             </Navbar.Collapse>
           </div>
         </Navbar>
-      </header>
+        
     )
   }
 }

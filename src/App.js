@@ -43,7 +43,7 @@ const App = () => (
 
     <Route path='/' render={() => (< BootstrapNav />)} />
 
-      <div style={{ height: '70px' }} className="navBuffer"/>
+      <div style={{ height: '70px', backgroundColor: '#2C2C2C' }} className="navBuffer"/>
 
       <Route exact path='/' render={() => (<Home />)} /> 
       
@@ -51,17 +51,17 @@ const App = () => (
       
       <Route path='/about/:member' render={({ match }) => (<MemberPage member={match.params.member}/>)} /> 
       
-      <Route path='/training' render={() => (<FeedPage pageName={'Training'} pageInitial={'tr-background'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
+      <Route path='/training' render={() => (<FeedPage icon={'chalkboard-teacher'} pageName={'Training'} pageInitial={'tr-background'} page={'training'} description={pageDecriptions.training} heroImage={coaching}/>)} /> 
       
-      <Route path='/capacity_building' render={() => (<FeedPage page={'capacity_building'} pageInitial={'cb-background'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding} heroImage={skyscrapers}/>)} /> 
+      <Route path='/capacity_building' render={() => (<FeedPage icon={'seedling'} page={'capacity_building'} pageInitial={'cb-background'} pageName={'Capacity Building'} description={pageDecriptions.capacityBuilding} heroImage={skyscrapers}/>)} /> 
       
-      <Route path='/entrepreneurship' render={() => (<FeedPage page={'entrepreneurship'} pageInitial={'en-background'} pageName={'Entrepreneurship'} description={pageDecriptions.entrepreneurship} heroImage={farmer}/>)} /> 
+      <Route path='/entrepreneurship' render={() => (<FeedPage icon={'lightbulb'} page={'entrepreneurship'} pageInitial={'en-background'} pageName={'Entrepreneurship'} description={pageDecriptions.entrepreneurship} heroImage={farmer}/>)} /> 
       
-      <Route path='/points_of_encounter' render={() => (<FeedPage page={'points_of_encounter'} pageInitial={'poe-background'} pageName={'Points of Encounter'} description={pageDecriptions.poe} heroImage={lunch} />)} /> 
+      <Route path='/points_of_encounter' render={() => (<FeedPage icon={'map-marked'} page={'points_of_encounter'} pageInitial={'poe-background'} pageName={'Points of Encounter'} description={pageDecriptions.poe} heroImage={lunch} />)} /> 
       
-      <Route path='/news' render={() => (<FeedPage page={'news'} pageName={'News'} pageInitial={'ne-background'} description={pageDecriptions.news} heroImage={newspaper}/>)} /> 
+      <Route path='/news' render={() => (<FeedPage icon={'newspaper'} page={'news'} pageName={'News'} pageInitial={'ne-background'} description={pageDecriptions.news} heroImage={newspaper}/>)} /> 
       
-      <Route path='/resources' render={() => (<FeedPage page={'resources'} pageName={'Resources'} pageInitial={'re-background'} description={pageDecriptions.resources} heroImage={cafe}/>)} /> 
+      <Route path='/resources' render={() => (<FeedPage icon={'book'} page={'resources'} pageName={'Resources'} pageInitial={'re-background'} description={pageDecriptions.resources} heroImage={cafe}/>)} /> 
       
       <Route path='/contact' render={() => (<Contact/>)} /> 
 

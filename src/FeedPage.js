@@ -93,6 +93,7 @@ class FeedPage extends Component {
                     page={this.props.page}
                     description={this.props.description}
                     featured={this.state.featured}
+                    icon={this.props.icon}
                   />
                   <PopularPosts page={this.props.page} />
                   <UpcomingEvents />
@@ -110,6 +111,7 @@ class FeedPage extends Component {
                     page={this.props.page}
                     description={this.props.description}
                     featured={this.state.featured}
+                    icon={this.props.icon}
                   />
                 </div>
                 <BlogpostList />
