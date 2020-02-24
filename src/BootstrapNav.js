@@ -87,7 +87,7 @@ class BootstrapNav extends Component {
             <Navbar.Brand
               href='#'
               style={{ fontSize: '24px', display: 'flex' }}
-              className='LCLO-Button'
+              className='LCLO-Button tablet-center'
             >
               <img
                 src={require('./images/LCLO-Icon.png')}

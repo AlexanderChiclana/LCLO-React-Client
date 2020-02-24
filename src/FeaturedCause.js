@@ -38,7 +38,7 @@ class FeaturedCause extends Component {
             <div
               className="m-0 position-relative"
               style={{
-                backgroundColor: 'orange',
+                backgroundColor: '#FFA539',
                 height: '200px',
                 display: 'flex',
                 alignItems: 'center',
@@ -70,7 +70,6 @@ class FeaturedCause extends Component {
                   className="entry-title w-100 m-0 mobile-heading"
                   style={{ fontSize: '24px' }}
                 >
-                  dummy header
                   {this.state.featured && this.state.featured.heading}
                 </h3>
               </header>
@@ -85,16 +84,6 @@ class FeaturedCause extends Component {
                     )
                   }}
                 />
-                Talent and the entrepreneurial spirit are abundant in the ASEAN
-                region—makers, artisans, budding technology idea builders, and
-                community development leaders who are eager to harness their
-                talents to form viable economic opportunities for themselves and
-                for their communities. The LCLO Group works intentionally with
-                promising entrepreneurs and their communities to provide
-                mentorship, training, network development, and infrastructure
-                building to support the development of innovative products that
-                can eventually be produced, marketed, and sold locally and
-                globally.
               </div>
               {/* .entry-content */}
             </div>

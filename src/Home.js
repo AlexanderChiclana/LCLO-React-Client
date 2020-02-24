@@ -46,11 +46,13 @@ const TileSection = () => (
 
 class Home extends Component {
     state = {
+        loaded: false,
         upcoming: []
     }
 
     componentDidMount() {
         this.getUpcomingEvents()
+        this.setState({ loaded: true })
       }
 
       getUpcomingEvents = () => {
@@ -67,7 +69,7 @@ class Home extends Component {
             <div>
             <div className="swiper-container hero-slider mobile-none tablet-none">
             <div className="swiper-wrapper">
-                <div className="swiper-slide hero-content-wrap">
+                <div className="swiper-slide hero-content-wrap" style={{ maxHeight: '95vh', minHeight: '400px' }}>
 
                 {/* <img src={require('./images/temple.jpg')} /> */}
                 
@@ -79,22 +81,23 @@ class Home extends Component {
                     {/* <img src={require('./images/skyscrapers.JPG')} alt="welcome" /> */}
 
     
-                    <div className="hero-content-overlay position-absolute w-100 h-100">
+                    <div className="hero-content-overlay position-absolute w-100 h-100" style={{ maxHeight: '95vh', minHeight: '400px' }}>
                         <div className="container h-100">
                             <div className="row h-100">
                                 <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                    <header className="entry-header">
+                                    <header className="entry-header sliding" 
+                                            >
                                         <h1>LCLO Group</h1>
                                         {/* <h4>4 a better world</h4> */}
                                     </header>{/* .entry-header */}
     
-                                    <div className="entry-content mt-4">
+                                    <div className="entry-content mt-4 sliding-slow">
                                         <p>Cultivating Talent and Innovating Solutions to the Future of Work in Southeast Asia
     
                                         </p>
                                     </div>{/* .entry-content */}
     
-                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5" style={{ zIndex: 20 }}>
+                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5 fade-in" style={{ zIndex: 20 }}>
                                         <Link to={'/contact'} href="#" className="btn gradient-bg mr-2 roundButton">Contact Us</Link>
                                         <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'middle', duration: 500 }) } className="btn orange-border text-white roundButton" style={{ cursor: 'pointer', zIndex: 20 }}>Our Mission</div>
 
@@ -132,12 +135,14 @@ class Home extends Component {
 
 <Team />
 </section> */}
-        <div className="home-page-divider mobile-none tablet-none"></div>
+        {/* <div className="home-page-divider mobile-none tablet-none"></div> */}
 
         <div className="home-page-welcome cp-background mobile-padding-small tablet-homepage-panel" ref={(div) => { this.Mission = div }}>
+        <div className="home-page-divider mobile-none tablet-none" style={{ position: 'absolute', top: '-5px' }}></div>
+
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1" >
                         <div className="welcome-content">
                             <header className="entry-header">
                                 <h2 className="entry-title mobile-heading">Welcome to the LCLO Group</h2>
@@ -162,7 +167,7 @@ class Home extends Component {
     
         {/* section for next intro, reverse  */}
 
-        <div className="home-page-divider mobile-none"></div>
+        {/* <div className="home-page-divider mobile-none"></div> */}
 
         <div className="home-page-welcome mobile-padding-small tablet-homepage-panel" id="home-page-alt">
             <div className="container">
@@ -193,7 +198,7 @@ class Home extends Component {
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
 
-        <div className="home-page-divider mobile-none"></div>
+        {/* <div className="home-page-divider mobile-none"></div> */}
         {/* third section */}
 
         <div className="home-page-welcome cb-background mobile-padding-small tablet-homepage-panel">
@@ -221,7 +226,7 @@ class Home extends Component {
                 </div>{/* .row */}
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
-        <div className="home-page-divider mobile-none"></div>
+        {/* <div className="home-page-divider mobile-none"></div> */}
 
         {/* end section  */}
         <TileSection />

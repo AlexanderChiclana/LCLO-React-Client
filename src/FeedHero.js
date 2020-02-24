@@ -30,7 +30,7 @@ class FeedHero extends Component {
                 {/* .entry-header */}
 
                 <div className="entry-content mt-sm-5">
-                  <p className="mobile-margin-none mobile-line-medium">
+                  <p className="mobile-margin-none mobile-line-medium fade-in-full" style={{ fontSize: '15px' }}>
                     {this.props.description}
                   </p>
                 </div>
@@ -39,7 +39,7 @@ class FeedHero extends Component {
                 <div className="entry-footer my-4 mt-sm-5">
                   <div
                     onClick={this.props.scrollToBlogpostList}
-                    className="btn gradient-bg mr-2 roundButton"
+                    className="btn gradient-bg mr-2 roundButton fade-in"
                     style={{ cursor: 'pointer' }}
                   >
                     New In {this.props.pageName}
