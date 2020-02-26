@@ -15,7 +15,7 @@ class FeedHero extends Component {
   render() {
     return (
       <div
-        className={'home-page-welcome mobile-padding-small tablet-padding-y-medium ' + this.props.pageInitial}
+        className={'home-page-welcome feed-hero mobile-padding-small tablet-padding-y-medium ' + this.props.pageInitial}
         // style={{ background: `url(${this.props.image}) no-repeat center` }}
       >
         <div className="container">
@@ -30,7 +30,7 @@ class FeedHero extends Component {
                 {/* .entry-header */}
 
                 <div className="entry-content mt-sm-5">
-                  <p className="mobile-margin-none mobile-line-medium fade-in-full" style={{ fontSize: '15px' }}>
+                  <p className="mobile-margin-none mobile-line-medium" style={{ fontSize: '15px' }}>
                     {this.props.description}
                   </p>
                 </div>
@@ -55,8 +55,10 @@ class FeedHero extends Component {
               <img
                 src={this.props.image}
                 className="mobile-margin-none"
-                alt="welcome"
+                alt={this.props.image}
               />
+         
+
             </div>
             {/* .col */}
           </div>

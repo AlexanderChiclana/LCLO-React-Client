@@ -148,7 +148,7 @@ class Footer extends Component {
                           icon="envelope"
                           className="footer-icon"
                         />
-                        <span>lclogroup@lclo.com</span>
+                        <span>lclogroup@lclogroup.com</span>
                       </a>
                     </li>
                     <li>

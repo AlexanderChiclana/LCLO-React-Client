@@ -84,14 +84,14 @@ class Home extends Component {
                     <div className="hero-content-overlay position-absolute w-100 h-100" style={{ maxHeight: '95vh', minHeight: '400px' }}>
                         <div className="container h-100">
                             <div className="row h-100">
-                                <div className="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                    <header className="entry-header sliding" 
+                                <div className="col-12  d-flex flex-column justify-content-center align-items-start">
+                                    <header className="entry-header fade-in-full" 
                                             >
                                         <h1>LCLO Group</h1>
                                         {/* <h4>4 a better world</h4> */}
                                     </header>{/* .entry-header */}
     
-                                    <div className="entry-content mt-4 sliding-slow">
+                                    <div className="entry-content mt-4 fade-in medium-header">
                                         <p>Cultivating Talent and Innovating Solutions to the Future of Work in Southeast Asia
     
                                         </p>
@@ -148,7 +148,7 @@ class Home extends Component {
                                 <h2 className="entry-title mobile-heading">Welcome to the LCLO Group</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-4 mt-md-5 mobile-line-medium">
+                            <div className="entry-content mt-4 mt-md-5 mobile-line-medium small-font">
                                 <p>The LCLO Group, LLC operates collaboratively with public-private partners (higher education experts, corporate leaders, and public and non-profit agencies) to develop and implement solutions to more equitable global workforce development, talent cultivation, and training opportunities and resources within the context of emerging regional economies of Southeast Asia (ASEAN region).</p>
                             </div>{/* .entry-content */}
     
@@ -185,7 +185,7 @@ class Home extends Component {
                                 <h2 className="entry-title dark-font mobile-heading">Training the Workforce of Tomorrow</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium">
+                            <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
                                 <p className="mobile-margin-none">The LCLO Group provides opportunities for individuals to participate in professionally relevant and essential training and leadership development in preparation for meaningful and impactful work as strategists and specialists across different fields and sectors, essential to jobs in the Fourth Industrial Revolution.</p>
                             </div>{/* .entry-content */}
     
@@ -210,7 +210,7 @@ class Home extends Component {
                                 <h2 className="entry-title mobile-heading">Capacity Building for Entrepreneurs</h2>
                             </header>{/* .entry-header */}
     
-                            <div className="entry-content mt-4 mt-md-5  mobile-line-medium">
+                            <div className="entry-content mt-4 mt-md-5  mobile-line-medium small-font">
                                 <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
                             </div>{/* .entry-content */}
     

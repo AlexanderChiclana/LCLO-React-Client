@@ -75,7 +75,7 @@ class BootstrapNav extends Component {
           className='nav-bar fixed-top customNav'
           style={{ 
             borderBottom: '1px solid #E0E0E0', 
-            fontFamily: 'Montserrat, sans-serif', 
+            fontFamily: 'raleway, sans-serif', 
             fontSize: '12px',
             transition: 'top 300ms, opacity 200ms',
             // opacity: this.state.visible ? 1 : 0,
@@ -86,15 +86,16 @@ class BootstrapNav extends Component {
           <div className='container'>
             <Navbar.Brand
               href='#'
-              style={{ fontSize: '24px', display: 'flex' }}
+              style={{ fontSize: '24px', display: 'flex', alignItems: 'center' }}
               className='LCLO-Button tablet-center'
             >
               <img
                 src={require('./images/LCLO-Icon.png')}
-                style={{ width: '20px', marginRight: '10px', maxHeight: '24px' }}
+                style={{ width: 'auto', marginRight: '10px', maxHeight: '20px' }}
               ></img>
-              <div>LCLO Group</div>
+              <div className="LCLO-title">LCLO GROUP</div>
             </Navbar.Brand>
+
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav' ref={this.showRef}>
               <Nav className='mr-auto'></Nav>
