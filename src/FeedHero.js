@@ -52,12 +52,12 @@ class FeedHero extends Component {
             {/* .col */}
 
             <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex align-items-center mobile-padding-small">
+
               <img
-                src={this.props.image}
+               src={this.props.image}
                 className="mobile-margin-none"
                 alt={this.props.image}
               />
-         
 
             </div>
             {/* .col */}
