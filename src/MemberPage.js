@@ -66,9 +66,8 @@ const memberData = {
   },
   myra: {
     lastName: 'O. Liwanag',
-    pic: MyraPic,
-    bio:
-      'Myra O. Liwanag is a seasoned consultant, coach, facilitator, and administrator with over twenty-five years of experience in organization development, human resources, non-profit management, and talent development. As a consultant, Myra approaches engagements with a diversity, equity and inclusion lens. She works primarily with non-governmental organizations who provide education and needed services, uplift communities, and fight for justice. Myra currently serves as Executive Director of Iskwelahang Pilipino, the oldest Filipino cultural school in the U.S.A and recipient of the Philippines’ prestigious Presidential Banaag Award. Experienced in the non-profit, higher education and corporate arenas, Myra has worked throughout her career to strengthen diverse communities and amplify voices that might otherwise remain unheard. In her previous role at Brown University, Myra spent over a decade managing affinity programs that celebrate the diversity of Brown alumni, coaching and deploying hundreds of volunteer leaders, as well as overseeing the regional engagement strategy for alumni clubs, associations and faculty programming around the world. Myra also spent several years working with community-based organizations who champion social justice issues in New York City. Her past professional roles include management consulting with Segal and Community Resource Exchange in New York, where she was instrumental in establishing practices in organizational effectiveness, higher education, human resources, executive search, and leadership development. She began her career in human resources at MetLife in the areas of Equal Employment Opportunity and workforce diversity. Myra studied American civilization at Brown University and holds an M.A. in organizational psychology from Columbia University Teachers College. '
+    bio: 'Myra O. Liwanag is a versatile consultant, coach, facilitator, and administrator with over twenty-five years of experience in organization development, human resources, non-profit management, and talent development. As a consultant, Myra approaches engagements with a diversity, equity and inclusion lens. She works primarily with nonprofit organizations who provide education and needed services, uplift communities, and fight for justice. Myra serves as Executive Director of Iskwelahang Pilipino, the oldest Filipino cultural school in the U.S.A. and recipient of the Philippines’ prestigious Presidential Banaag Award. Experienced in the non-profit, higher education and corporate arenas, Myra has worked throughout her career to strengthen diverse communities and amplify voices that might otherwise remain unheard. At Brown University, Myra spent over a decade directing alumni affinity programs that increase community engagement. Responsible for the regional engagement strategy for alumni associations around the world, her work involved spearheading alumni diversity initiatives, establishing student-alumni partnerships, coaching leaders, and deploying hundreds of volunteers and faculty for events and programs. Myra also spent several years working with community-based organizations who champion social justice issues in New York City. Her past professional roles include management consulting with Segal and Community Resource Exchange in New York, where she was instrumental in establishing practices in organizational effectiveness, higher education, human resources, executive search, and leadership development. She began her career at MetLife in the areas of Equal Employment Opportunity and workforce diversity. Myra studied American civilization at Brown University and holds an M.A. in organizational psychology from Columbia University Teachers College. ',
+    pic: MyraPic
   },
   maria: {
     lastName: 'Paula Garcia Mosquera',
@@ -113,7 +112,7 @@ class MemberPage extends Component {
                   <div className="welcome-content">
                     <header className="entry-header">
                       <h2 className="entry-title mobile-margin-none">
-                       {capitalCase(member)} {memberData[member].lastName}
+                        {capitalCase(member)} {memberData[member].lastName}
                       </h2>
                     </header>
 
@@ -121,52 +120,59 @@ class MemberPage extends Component {
                       {/* <p>{memberData[member].bio}</p> */}
 
                       <div className="col-12 col-lg-12 order-1 order-lg-2 mobile-padding-none">
-                  {/* <img src={require('./images/bridge.JPG')} alt="welcome" /> */}
-                  <div
-                    className="image-flip"
-                    // ontouchstart="this.classList.toggle('hover');"
-                  >
-                    <div>
-                      <div className="frontside-no-flip">
-                        <div className="card" style={{ borderRadius: '24px' }}>
-                          <div className="card-body text-center mobile-padding-small">
-                            <p
-                              style={{
-                                display: 'flex',
-                                justifyContent: 'center'
-                              }}
-                            >
-                              <img
-                                className=" img-fluid"
-                                src={memberData[member].pic}
-                                alt="card image"
-                                style={{ objectFit: 'cover' }}
-                              />
-                            </p>
-                            <h5 className="card-title">
-                              {/* {capitalCase(member)}{' '}
+                        {/* <img src={require('./images/bridge.JPG')} alt="welcome" /> */}
+                        <div
+                          className="image-flip"
+                          // ontouchstart="this.classList.toggle('hover');"
+                        >
+                          <div>
+                            <div className="frontside-no-flip">
+                              <div
+                                className="card"
+                                style={{ borderRadius: '24px' }}
+                              >
+                                <div className="card-body text-center mobile-padding-small">
+                                  <p
+                                    style={{
+                                      display: 'flex',
+                                      justifyContent: 'center'
+                                    }}
+                                  >
+                                    <img
+                                      className=" img-fluid"
+                                      src={memberData[member].pic}
+                                      alt="card image"
+                                      style={{ objectFit: 'cover' }}
+                                    />
+                                  </p>
+                                  <h5 className="card-title">
+                                    {/* {capitalCase(member)}{' '}
                               {memberData[member].lastName} */}
-                              {memberData[member].role}
-                            </h5>
-                            <p
-                              className="card-text"
-                              style={{ textAlign: 'left' }}
-                            >
-                              {memberData[member].bio}
-                            </p>
-                            <div className="d-flex justify-content-center">
-                            <div
-                              className="templateOrange"
-                              style={{ borderRadius: '10px', display: 'block', width: '40px', height: '5px' }}
-                            >
+                                    {memberData[member].role}
+                                  </h5>
+                                  <p
+                                    className="card-text"
+                                    style={{ textAlign: 'left' }}
+                                  >
+                                    {memberData[member].bio}
+                                  </p>
+                                  <div className="d-flex justify-content-center">
+                                    <div
+                                      className="templateOrange"
+                                      style={{
+                                        borderRadius: '10px',
+                                        display: 'block',
+                                        width: '40px',
+                                        height: '5px'
+                                      }}
+                                    ></div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
                     </div>
 
                     <div className="entry-footer mt-5">
@@ -195,9 +201,6 @@ class MemberPage extends Component {
                     </div>
                   </div>
                 </div>
-
-     
-
               </div>
             </div>
           </div>
