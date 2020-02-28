@@ -74,7 +74,8 @@ class BootstrapNav extends Component {
           expand='lg'
           className='nav-bar fixed-top customNav'
           style={{ 
-            borderBottom: '1px solid #E0E0E0', 
+            // borderBottom: '1px solid #E0E0E0', 
+            boxShadow: '0 2px 4px -1px rgba(0,0,0,0.2)',
             fontFamily: 'raleway, sans-serif', 
             fontSize: '12px',
             transition: 'top 300ms, opacity 200ms',

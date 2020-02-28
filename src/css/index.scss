@@ -2719,6 +2719,8 @@ $line-height-medium: 1.7;
 }
 
 .roundButton{
+    font-size: 14px !important;
+    font-weight: 400 !important;
     padding: 10px 20px !important; 
     border-radius: 24px !important;
 }
@@ -2839,7 +2841,21 @@ $line-height-medium: 1.7;
     opacity: 1;
     animation:ease-in 1;
     animation-name: fade-in;
-    animation-duration: 2s;
+    animation-duration: 1.8s;
+}
+
+.fade-in-2 {
+    opacity: 1;
+    animation:ease-in 1;
+    animation-name: fade-in;
+    animation-duration: 2.8s;
+}
+
+.fade-in-3 {
+    opacity: 1;
+    animation:ease-in 1;
+    animation-name: fade-in;
+    animation-duration: 3.6s;
 }
 
 .fade-in-full {

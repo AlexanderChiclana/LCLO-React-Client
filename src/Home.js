@@ -97,9 +97,9 @@ class Home extends Component {
                                         </p>
                                     </div>{/* .entry-content */}
     
-                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5 fade-in" style={{ zIndex: 20 }}>
-                                        <Link to={'/contact'} href="#" className="btn gradient-bg mr-2 roundButton">Contact Us</Link>
-                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'middle', duration: 500 }) } className="btn orange-border text-white roundButton" style={{ cursor: 'pointer', zIndex: 20 }}>Our Mission</div>
+                                    <footer className="entry-footer d-flex flex-wrap align-items-center mt-5" style={{ zIndex: 20 }}>
+                                        <Link to={'/contact'} href="#" className="btn gradient-bg mr-2 roundButton fade-in-2">Contact Us</Link>
+                                        <div onClick={ () => scrollToComponent(this.Mission, { offset: 0, align: 'middle', duration: 500 }) } className="btn orange-border text-white roundButton fade-in-3" style={{ cursor: 'pointer', zIndex: 20 }}>Our Mission</div>
 
                                         {/* <a href="#" className="btn orange-border">Our Mission</a> */}
                                     </footer>{/* .entry-footer */}
