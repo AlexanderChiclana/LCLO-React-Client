@@ -3,6 +3,7 @@ import DOMPurify from 'dompurify'
 import { Link } from 'react-router-dom'
 import YouTube from 'react-youtube'
 import TagBar from './TagBar'
+import Image from './Image.js'
 
 class Blogpost extends Component {
   constructor() {
@@ -69,12 +70,13 @@ class Blogpost extends Component {
           )}
 
           {this.props.image && (
-            <img
-              src={this.props.image}
-              alt=""
-              className="single-post-image"
-              style={{ paddingBottom: '30px' }}
-            />
+            // <img
+            //   src={this.props.image}
+            //   alt=""
+            //   className="single-post-image"
+            //   style={{ paddingBottom: '30px' }}
+            // />
+            <Image imageURL={this.props.image} className={'single-post-image'} paddingBottom={'30px'}/>
           )}
         </div>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
-import apiUrl from './apiConfig'
+// import apiUrl from './apiConfig'
 import { Link } from 'react-router-dom'
 
 class Footer extends Component {
@@ -19,20 +19,20 @@ class Footer extends Component {
 
   getAllNewsPosts = () => {
     axios
-      .get(`${apiUrl}/news/recent`)
+      .get('https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=news&limit=3&order=sys.createdAt')
 
       .then(res => {
-        this.setState({ newsPosts: res.data.blogposts })
+        this.setState({ newsPosts: res.data.items })
       })
   }
 
   render() {
-    const recentNews = this.state.newsPosts.map(newsPost => (
-      <li key={newsPost._id}>
+    const recentNews = this.state.newsPosts.map((newsPost, i) => (
+      <li key={i}>
         <h3>
-          <Link to={'/posts/' + newsPost._id}> {newsPost.heading}</Link>{' '}
+          <Link to={'/posts/' + newsPost.sys.id}> {newsPost.fields.heading}</Link>{' '}
         </h3>
-        <div className="posted-date">{newsPost.date}</div>
+        <div className="posted-date">{newsPost.sys.createdAt}</div>
       </li>
     ))
 

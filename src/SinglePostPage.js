@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import YouTube from 'react-youtube'
 
+import Image from './Image.js'
+
 class SinglePostPage extends Component {
   constructor() {
     super()
@@ -30,16 +32,16 @@ class SinglePostPage extends Component {
 
   getBlogPost = () => {
     axios
-      .get(`${apiUrl}/blogposts/${this.props.id}`)
+      .get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries/${this.props.id}?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM`)
 
       .then(res => {
         console.log(res)
         this.setState({
-          text: res.data.blogpost.text,
-          heading: res.data.blogpost.heading,
-          image: res.data.blogpost.image,
-          page: res.data.blogpost.page,
-          video: res.data.blogpost.video
+          text: res.data.fields.text.content[0].content[0].value,
+          heading: res.data.fields.heading,
+          image: res.data.fields.image.sys.id,
+          page: res.data.fields.page,
+          video: res.data.fields.video
         })
       })
   }
@@ -95,7 +97,7 @@ class SinglePostPage extends Component {
             </div>
             }
 
-{ this.state.image && <img src={this.state.image} alt='' className='single-post-image' style={{ paddingBottom: '30px' }}/> }
+{ this.state.image && <Image imageURL={this.state.image} alt='' className='single-post-image' style={{ paddingBottom: '30px' }}/> }
 
                 
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>

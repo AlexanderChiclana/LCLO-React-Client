@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Blogpost from './Blogpost'
 import PopularPosts from './PopularPosts'
 import axios from 'axios'
-import apiUrl from './apiConfig'
+// import apiUrl from './apiConfig'
 import UpcomingEvents from './UpcomingEvents'
 import FeaturedCause from './FeaturedCause'
 import FeedHero from './FeedHero'
@@ -24,21 +24,23 @@ class FeedPage extends Component {
 
   getAllBlogPosts = () => {
     axios
-      .get(`${apiUrl}/${this.props.page}`)
-
+      // .get(`${apiUrl}/${this.props.page}`)
+      .get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=${this.props.page}`)
+    
       .then(res => {
-        this.setState({ blogposts: res.data.blogposts })
+        console.log(res.data.items) 
+        res.data.items && this.setState({ blogposts: res.data.items })
       })
   }
 
-  getFeatured = () => {
-    axios.get(`${apiUrl}/featured?page=${this.props.page}`).then(res => {
-      console.log(res)
-      this.setState({
-        featured: res.data.blogposts[0]
-      })
-    })
-  }
+  // getFeatured = () => {
+  //   axios.get('https://api.themoviedb.org/3/search/movie?api_key=99ce69454e34b0db7b2beff3ca748d65&language=en-US&page=1&include_adult=false&query=matrix').then(res => {
+  //     console.log(res)
+  //     this.setState({
+  //       featured: res.data.results
+  //     })
+  //   })
+  // }
 
   loadMore = () => {
     this.setState(prev => {
@@ -60,14 +62,14 @@ class FeedPage extends Component {
         .map((blogpost, index) => (
           <div key={blogpost._id}>
             <Blogpost
-              video={blogpost.video}
-              heading={blogpost.heading}
-              text={blogpost.text}
-              image={blogpost.image}
-              id={blogpost._id}
-              date={blogpost.date}
-              tags={blogpost.tags}
-              page={blogpost.page}
+              video={blogpost.fields.video}
+              heading={blogpost.fields.heading}
+              text={blogpost.fields.text.content[0].content[0].value}
+              image={blogpost.fields.image.sys.id}
+              id={blogpost.sys.id}
+              date={blogpost.fields.date}   
+              tags={blogpost.fields.tags}
+              page={blogpost.fields.page}
               prevBlogpost={this.state.blogposts[index - 1]}
               nextBlogpost={this.state.blogposts[index + 1]}
             />
@@ -114,8 +116,9 @@ class FeedPage extends Component {
                     icon={this.props.icon}
                   />
                 </div>
-                <BlogpostList />
-
+                {
+                this.state.blogposts.length > 0 && <BlogpostList />
+                }
                 <br />
                 {this.state.blogposts.length > this.state.visible ? (
                   <div

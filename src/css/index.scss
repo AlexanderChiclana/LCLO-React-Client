@@ -5,6 +5,8 @@
 $base-orange: #ff5a00;
 $secondary-orange: #ff4800;
 
+$base-white: #FFFAFA;
+
 $large-font: 36px;
 $medium-font: 20px;
 $small-font: 14px;
@@ -155,7 +157,7 @@ a:hover, a:active {
 --------------------------------*/
 .top-header-bar {
     background: $secondary-orange;
-    color: #fff;
+    color: $base-white;
 }
 
 /*
@@ -172,7 +174,7 @@ a:hover, a:active {
 .header-bar-email a,
 .header-bar-text span {
     text-transform: lowercase;
-    color: #fff;
+    color: $base-white;
     text-decoration: none;
 }
 
@@ -196,7 +198,7 @@ a:hover, a:active {
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
-    color: #fff;
+    color: $base-white;
     text-decoration: navajowhite;
     background: #262222;
 }
@@ -303,7 +305,7 @@ a:hover, a:active {
     text-decoration: none;
     transition: color .35s;
     font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    background-color: #ffffff;
+    background-color: $base-white;
 
     // background-color: $secondary-orange;
 
@@ -358,7 +360,7 @@ a.dropdown-item:focus {
     height: 100%;
     padding: 30px 15px;
     margin: 0;
-    background: #fff;
+    background: $base-white;
     list-style: none;
     overflow-x: scroll;
     transition: all 0.35s;
@@ -421,7 +423,7 @@ a.dropdown-item:focus {
 }
 
 .header-bar-cart a {
-    color: #fff;
+    color: $base-white;
     text-decoration: none;
 }
 
@@ -436,7 +438,7 @@ a.dropdown-item:focus {
 
 .hero-content-wrap {
     position: relative;
-    color: #fff;
+    color: $base-white;
 }
 
 .hero-content-overlay {
@@ -472,7 +474,7 @@ a.dropdown-item:focus {
 }
 
 .hero-content-overlay .entry-footer a.btn {
-    color: #fff;
+    color: $base-white;
 }
 
 .hero-slider .pagination-wrap {
@@ -489,7 +491,7 @@ a.dropdown-item:focus {
     margin-right: 6px;
     border-radius: 0;
     font-size: 12px;
-    color: #fff;
+    color: $base-white;
     background: transparent;
     opacity: 1;
 }
@@ -532,7 +534,7 @@ a.dropdown-item:focus {
 
 .hero-slider .swiper-button-next path,
 .hero-slider .swiper-button-prev path {
-    fill: #fff;
+    fill: $base-white;
 }
 
 .hero-slider .swiper-button-next.swiper-button-disabled,
@@ -636,7 +638,7 @@ button.btn:hover{
     background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-orange', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
-    color: #fff;
+    color: $base-white;
 }
 
 .orange-gradient {
@@ -648,7 +650,7 @@ button.btn:hover{
     background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-orange', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
-    color: #fff;
+    color: $base-white;
 }
 /*
 # Accordion
@@ -681,7 +683,7 @@ button.btn:hover{
     background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-orange', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
-    color: #fff;
+    color: $base-white;
 }
 
 .accordion-wrap .entry-title .arrow-r::before,
@@ -740,7 +742,7 @@ ul.tabs-nav .tab-nav.active {
     background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-orange', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
-    color: #fff;
+    color: $base-white;
 }
 
 .tabs .tab-nav {
@@ -856,7 +858,7 @@ ul.tabs-nav .tab-nav.active {
 //     background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
 //     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
 //     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$base-orange', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
-//     color: #fff;
+//     color: $base-white;
 // }
 
 .icon-box figure img:nth-of-type(1) {
@@ -888,7 +890,7 @@ ul.tabs-nav .tab-nav.active {
 .icon-box:hover .entry-title,
 .icon-box.active .entry-title {
     transition: all .35s;
-    color: #fff;
+    color: $base-white;
 }
 
 .icon-box .entry-content {
@@ -903,7 +905,7 @@ ul.tabs-nav .tab-nav.active {
 
 .icon-box:hover .entry-content p,
 .icon-box.active .entry-content p {
-    color: #fff;
+    color: $base-white;
 }
 
 /*
@@ -945,7 +947,7 @@ ul.tabs-nav .tab-nav.active {
     line-height: 1;
     text-align: center;
     background: $base-orange;
-    color: #fff;
+    color: $base-white;
 }
 
 /*--------------------------------------------------------------
@@ -1062,7 +1064,7 @@ ul.tabs-nav .tab-nav.active {
     padding-bottom: 24px;
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
+    color: $base-white;
 }
 
 .welcome-content .entry-title::before {
@@ -1315,7 +1317,7 @@ ul.tabs-nav .tab-nav.active {
 
 .our-causes .cause-content-wrap {
     padding: 32px;
-    background: #fff;
+    background: $base-white;
 }
 
 .our-causes .cause-content-wrap .entry-content {
@@ -1360,7 +1362,7 @@ ul.tabs-nav .tab-nav.active {
 
 .our-causes .swiper-button-next path,
 .our-causes .swiper-button-prev path {
-    fill: #fff;
+    fill: $base-white;
 }
 
 .our-causes .swiper-button-next.swiper-button-disabled,
@@ -1432,7 +1434,7 @@ ul.tabs-nav .tab-nav.active {
     padding-bottom: 24px;
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
+    color: $base-white;
 }
 
 .single-page .page-header h1::before {
@@ -1480,7 +1482,7 @@ ul.tabs-nav .tab-nav.active {
 
 .about-stats .circular-progress-bar .circle strong,
 .about-stats .circular-progress-bar .entry-title {
-    color: #fff;
+    color: $base-white;
 }
 
 .about-testimonial {
@@ -1562,7 +1564,7 @@ ul.tabs-nav .tab-nav.active {
     margin-top: 36px;
     font-size: 36px;
     font-weight: 600;
-    color: #fff;
+    color: $base-white;
 }
 
 .help-us .btn {
@@ -1571,8 +1573,8 @@ ul.tabs-nav .tab-nav.active {
 
 .help-us .btn,
 .help-us .btn:hover {
-    border-color: #fff;
-    color: #fff;
+    border-color: $base-white;
+    color: $base-white;
 }
 
 /*--------------------------------------------------------------
@@ -1614,7 +1616,7 @@ ul.tabs-nav .tab-nav.active {
     padding-right: 24px;
     margin-top: 60px;
     line-height: 1.6;
-    color: #fff;
+    color: $base-white;
 }
 
 .causes-page .highlighted-cause .entry-title::before {
@@ -1738,7 +1740,7 @@ ul.tabs-nav .tab-nav.active {
     font-size: 30px;
     line-height: 1;
     font-weight: 500;
-    background: #fff;
+    background: $base-white;
 }
 
 .donation-form .radio-label:nth-last-of-type(1) > input + .donate-amount {
@@ -1769,7 +1771,7 @@ ul.tabs-nav .tab-nav.active {
     margin-right: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 50%;
-    background: #fff;
+    background: $base-white;
     cursor: pointer;
 }
 
@@ -1875,6 +1877,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .news-wrap {
+    background-color: $base-white;
     padding: 96px 0;
 }
 
@@ -2013,7 +2016,7 @@ ul.tabs-nav .tab-nav.active {
     font-size: 14px;
     font-weight: 500;
     background: $base-orange;
-    color: #fff;
+    color: $base-white;
     cursor: pointer;
     outline: none;
 }
@@ -2338,7 +2341,7 @@ ul.tabs-nav .tab-nav.active {
 .footer-widgets h2 {
     margin-bottom: 40px;
     font-size: 18px;
-    color: #fff;
+    color: $base-white;
 }
 
 .footer-widgets ul {
@@ -2374,7 +2377,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .foot-about ul li a {
-    color: #fff;
+    color: $base-white;
 }
 
 .foot-latest-news ul li {
@@ -2423,7 +2426,7 @@ ul.tabs-nav .tab-nav.active {
     border: 0;
     font-size: 12px;
     line-height: 1;
-    background: #fff;
+    background: $base-white;
     color: #131212;
     outline: none;
 }
@@ -2441,7 +2444,7 @@ ul.tabs-nav .tab-nav.active {
     line-height: 1;
     text-transform: uppercase;
     background: $base-orange;
-    color: #fff;
+    color: $base-white;
     cursor: pointer;
     outline: none;
 }
@@ -2472,7 +2475,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .btn-primary {
-    color: #fff;
+    color: $base-white;
     background-color: #007b5e;
     border-color: #007b5e;
 }
@@ -2491,7 +2494,7 @@ section .section-title {
 
 #team .card {
     border: none;
-    background: #ffffff;
+    background: $base-white;
 }
 
 .image-flip:hover .backside,
