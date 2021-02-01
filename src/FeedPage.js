@@ -33,14 +33,14 @@ class FeedPage extends Component {
       })
   }
 
-  // getFeatured = () => {
-  //   axios.get('https://api.themoviedb.org/3/search/movie?api_key=99ce69454e34b0db7b2beff3ca748d65&language=en-US&page=1&include_adult=false&query=matrix').then(res => {
-  //     console.log(res)
-  //     this.setState({
-  //       featured: res.data.results
-  //     })
-  //   })
-  // }
+  getFeatured = () => {
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=99ce69454e34b0db7b2beff3ca748d65&language=en-US&page=1&include_adult=false&query=matrix').then(res => {
+      console.log(res)
+      this.setState({
+        featured: res.data.results
+      })
+    })
+  }
 
   loadMore = () => {
     this.setState(prev => {
@@ -60,12 +60,12 @@ class FeedPage extends Component {
       this.state.blogposts
         .slice(0, this.state.visible)
         .map((blogpost, index) => (
-          <div key={blogpost._id}>
+          <div key={index}>
             <Blogpost
               video={blogpost.fields.video}
               heading={blogpost.fields.heading}
               text={blogpost.fields.text.content[0].content[0].value}
-              image={blogpost.fields.image.sys.id}
+              image={blogpost.fields.image && blogpost.fields.image.sys.id}
               id={blogpost.sys.id}
               date={blogpost.fields.date}   
               tags={blogpost.fields.tags}

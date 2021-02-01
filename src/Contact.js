@@ -38,14 +38,14 @@ class Contact extends Component {
 
                       <li>
                         <a
-                          href="tel:1-617-770-6583"
+                          href="tel:1-401-302-4024"
                           style={{ color: 'rgb(155, 154, 154)' }}
                         >
                           <FontAwesomeIcon
                             icon="phone"
                             className="footer-icon"
                           />
-                          <span>1-617-770-6583</span>
+                          <span>1-401-302-4024</span>
                         </a>
                       </li>
                       <li>

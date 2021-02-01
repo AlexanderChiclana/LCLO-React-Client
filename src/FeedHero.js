@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class FeedHero extends Component {
   state = {
@@ -15,7 +16,10 @@ class FeedHero extends Component {
   render() {
     return (
       <div
-        className={'home-page-welcome feed-hero mobile-padding-small tablet-padding-y-medium ' + this.props.pageInitial}
+        className={
+          'home-page-welcome feed-hero mobile-padding-small tablet-padding-y-medium ' +
+          this.props.pageInitial
+        }
         // style={{ background: `url(${this.props.image}) no-repeat center` }}
       >
         <div className="container">
@@ -30,13 +34,18 @@ class FeedHero extends Component {
                 {/* .entry-header */}
 
                 <div className="entry-content mt-sm-5">
-                  <p className="mobile-margin-none mobile-line-medium" style={{ fontSize: '15px' }}>
+                  <p
+                    className="mobile-margin-none mobile-line-medium"
+                    style={{ fontSize: '15px' }}
+                  >
                     {this.props.description}
                   </p>
                 </div>
                 {/* .entry-content */}
 
                 <div className="entry-footer my-4 mt-sm-5">
+                {this.props.pageName !== 'Training' && (
+
                   <div
                     onClick={this.props.scrollToBlogpostList}
                     className="btn gradient-bg mr-2 roundButton fade-in"
@@ -44,6 +53,26 @@ class FeedHero extends Component {
                   >
                     New In {this.props.pageName}
                   </div>
+                )}
+
+                  {/* {this.props.pageName === 'Training' && (
+                    <React.Fragment>
+                      <div
+                        onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg mr-2 roundButton fade-in"
+                        style={{ cursor: 'pointer' }}
+                      >
+                        Global Entrepreneurs Leadership<br /> Development Program
+                      </div>
+                      <div
+                        onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg mt-2 roundButton fade-in"
+                        style={{ cursor: 'pointer' }}
+                      >
+                         (SEA) Future of Work Institute <br /> Fellows Program
+                      </div>
+                    </React.Fragment>
+                  )} */}
                 </div>
                 {/* .entry-footer */}
               </div>
@@ -51,13 +80,35 @@ class FeedHero extends Component {
             </div>
             {/* .col */}
 
-            <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex align-items-center mobile-padding-small">
-
+            <div className="col-12 col-lg-6 order-1 order-lg-2 d-flex flex-wrap align-items-center mobile-padding-small">
               <img
-               src={this.props.image}
+                src={this.props.image}
                 className="mobile-margin-none"
                 alt={this.props.image}
               />
+
+{this.props.pageName === 'Training' && (
+                    <React.Fragment>
+                      <Link to={'/training/gsep'}>
+                      <div
+                        // onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg mr-2 roundButton fade-in"
+                        style={{ cursor: 'pointer' }}
+                      >
+                        Global Entrepreneurs Leadership Development Program
+                      </div>
+                      </Link>
+                      <Link to={'/training/sea-future-of-work'}>
+                      <div
+                        // onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg roundButton fade-in"
+                        style={{ cursor: 'pointer' }}
+                      >
+                         (SEA) Future of Work Institute Fellows Program
+                      </div>
+                      </Link>
+                    </React.Fragment>
+                  )}
 
             </div>
             {/* .col */}

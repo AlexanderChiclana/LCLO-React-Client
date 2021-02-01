@@ -6,12 +6,12 @@ import JenPic from '../src//images/Jennifer-Nazareno.jpg'
 import LizaPic from '../src/images/Liza-Cariaga-Lo.jpg'
 import LynnPic from '../src/images/Lynn_Hernandez.jpg'
 import YenPic from '../src/images/Yen.jpg'
-import JahnviPic from '../src/images/Jahnvi.jpg'
+import GregoryPic from '../src/images/gregory.jpg'
 import JuliePic from '../src/images/Julie_Lee.jpg'
 import TeresaPic from '../src/images/Teresa.jpg'
 import DonPic from '../src/images/Don Operario.jpg'
 import MyraPic from '../src/images/myra.jpg'
-import MariaPic from '../src/images/Maria.jpg'
+// import MariaPic from '../src/images/Maria.jpg'
 import AlexanderPic from '../src/images/Alexander_Chiclana.jpg'
 import YishiuanPic from '../src/images/yishiuan-chin.jpg'
 
@@ -37,15 +37,13 @@ const memberData = {
   yen: {
     lastName: 'Tran',
     pic: YenPic,
-    bio:
-      'Yen Tran grew up in Southern California, and attended Brown University, where he graduated Phi Beta Kappa and magna cum laude with a degree in Ethnic Studies (2014). At Brown, he led workshops and coordinated conferences on intersectional issues of identities and social change. After graduation, he worked as a Research Assistant at the Office of Diversity and Inclusion at Brown and also as a Research Coordinator for clinical trials in a neurorehabilitation laboratory at Warren Alpert Medical School at Brown University and the RI VA Hospital. For the past three years, he has been working as an Investment Associate, through which he helps advise and construct investment portfolios for universities and foundations’ endowments and also completes due diligences on new venture and private equity firms. '
+    bio: 'Yen grew up in Southern California. He completed his undergraduate at Brown University, graduating Phi Beta Kappa and magna cum laude with a degree in Ethnic Studies (2014). At Brown, he led workshops and coordinated events on intersectional issues of identities and social change. After graduation, he worked as a Research Assistant at the Office of Diversity and Inclusion at Brown and also as a Research Coordinator for clinical trials in a neurorehabilitation lab at Warren Alpert Medical School at Brown University and the Providence VA Medical Center. He then spent five years at investment management firm Cambridge Associates, eventually becoming an Associate Investment Director and Private Investment Specialist, working for the Boston, Singapore, and London offices. He crafted investment portfolios for mainly universities and foundations with ESG and mission-related mandates and completed due diligence on private equity and venture capital funds. He is currently pursuing his MBA at Yale University.'
   },
-  jahnvi: {
-    lastName: 'Singh',
-    pic: JahnviPic,
-    bio:
-      'Jahnvi Singh is a learning experience designer with hands-on experience in the field of crafts & making, enquiry-based & experiential education, and human-centred design. She designs & facilitates experiences and methods that transform real-world resources, cultural traditions and spaces, and local art practices into tools for learning. Her work with educators across South Asia and the United States helps learners develop the skills of creativity, curiosity, critical thinking, collaboration, and community mindedness-skills essential for the complex & ever-changing world of the 21st century. Jahnvi has a B. Des in Textile Design from NIFT, Delhi, and a MSc. International Management & Design Innovation from University of Glasgow & Glasgow School of Art with a focus on design-led user-centred research. She currently works as Project Manager with Cultural Agents (an NGO and Harvard Initiative) and the Engagement Lab at Emerson College, managing the development and facilitation of culturally relevant teaching pedagogies and curricula.'
-  },
+  gregory: {
+    lastName: 'Llacer',
+    pic: GregoryPic,
+    bio: 'Gregory Llacer is the director of the Harvard College Office of Undergraduate Research and Fellowships. Greg also has been the director of the Harvard College Program for Research in Science and Engineering (PRISE) since its inception in 2005. In addition to his Harvard responsibilities, Greg is editorial chair of the national Mellon-Mays Undergraduate Research Journal and director of the Global Program Office for Amgen Scholars, a consortium of 24 international undergraduate summer research programs focused on biotechnology. Greg has served in several administrative roles at Harvard University, including institutional director of postdoctoral affairs and interim chief of staff for the vice provost of research (in the Office of the President and Provost). Before arriving at Harvard in 2004, he managed educational initiatives and academic enrichment programs for the Harvard-MIT Division of Health Sciences and Technology. Greg spent the first 16 years of his administrative career in the academic planning unit of the Office of Graduate Studies and Research at the University of California, San Diego (UCSD), where he was senior research analyst for the vice chancellor for research.  Following an AB degree from San Diego State University (SDSU) in liberal studies, Greg conducted postgraduate study at UCSD and SDSU focused on policy studies in language and cross-cultural education.'
+    },
   julie: {
     lastName: 'Lee',
     pic: JuliePic,
@@ -69,12 +67,12 @@ const memberData = {
     bio: 'Myra O. Liwanag is a versatile consultant, coach, facilitator, and administrator with over twenty-five years of experience in organization development, human resources, non-profit management, and talent development. As a consultant, Myra approaches engagements with a diversity, equity and inclusion lens. She works primarily with nonprofit organizations who provide education and needed services, uplift communities, and fight for justice. Myra serves as Executive Director of Iskwelahang Pilipino, the oldest Filipino cultural school in the U.S.A. and recipient of the Philippines’ prestigious Presidential Banaag Award. Experienced in the non-profit, higher education and corporate arenas, Myra has worked throughout her career to strengthen diverse communities and amplify voices that might otherwise remain unheard. At Brown University, Myra spent over a decade directing alumni affinity programs that increase community engagement. Responsible for the regional engagement strategy for alumni associations around the world, her work involved spearheading alumni diversity initiatives, establishing student-alumni partnerships, coaching leaders, and deploying hundreds of volunteers and faculty for events and programs. Myra also spent several years working with community-based organizations who champion social justice issues in New York City. Her past professional roles include management consulting with Segal and Community Resource Exchange in New York, where she was instrumental in establishing practices in organizational effectiveness, higher education, human resources, executive search, and leadership development. She began her career at MetLife in the areas of Equal Employment Opportunity and workforce diversity. Myra studied American civilization at Brown University and holds an M.A. in organizational psychology from Columbia University Teachers College. ',
     pic: MyraPic
   },
-  maria: {
-    lastName: 'Paula Garcia Mosquera',
-    pic: MariaPic,
-    bio:
-      'Maria Paula Garcia Mosquera is a public humanist/cultural administrator interested in exploring ways to narrow the gap that exists between institutions working with cultural heritage and a broader public. This interest has taken her to work in a range of cultural organizations and government institutions, such as the Colombian National Public Radio, the Bogotá’s Office of Culture, Recreation and Sports, and the Museums of the Central Bank of Colombia. Maria Paula holds a BA in History from the Universidad de los Andes (Bogotá, Colombia) and an M.A. in Public Humanities at Brown University. Her work is located at the intersection of informal education on cultural heritage, communications, and cultural management.'
-  },
+  // maria: {
+  //   lastName: 'Paula Garcia Mosquera',
+  //   pic: MariaPic,
+  //   bio:
+  //     'Maria Paula Garcia Mosquera is a public humanist/cultural administrator interested in exploring ways to narrow the gap that exists between institutions working with cultural heritage and a broader public. This interest has taken her to work in a range of cultural organizations and government institutions, such as the Colombian National Public Radio, the Bogotá’s Office of Culture, Recreation and Sports, and the Museums of the Central Bank of Colombia. Maria Paula holds a BA in History from the Universidad de los Andes (Bogotá, Colombia) and an M.A. in Public Humanities at Brown University. Her work is located at the intersection of informal education on cultural heritage, communications, and cultural management.'
+  // },
   alexander: {
     lastName: 'Chiclana',
     pic: AlexanderPic,
@@ -84,8 +82,7 @@ const memberData = {
   yishiuan: {
     lastName: 'Chin',
     pic: YishiuanPic,
-    bio:
-      'Yishiuan Chin, Ph.D., is an administrator at Harvard University and an adjunct professor in the International Higher Education and Intercultural Relations master’s degree program and the Social Sciences undergraduate division at Lesley University. She was born and raised in Malaysia and moved to the U.S. in the late 1980s. Her areas of interest include identity and belonging, intercultural relations, higher education and non-profit management, and leadership.'
+    bio: 'Yishiuan Chin, Ph.D., is an academic and dissertation coach, an executive function coach, an adjunct professor at Lesley University, and a Pilates instructor. Formerly, she was an administrator at Harvard University, where she managed the administrative operations of Harvard’s center for academic and personal development. She completed the Harvard Administrative Fellowship Program and later served as a peer coach and a sponsor. She was an active member of the Association of Harvard Asian and Asian American Faculty and Staff and served on its steering committee. Yishiuan was born and raised in Malaysia, and moved to the U.S. in the late 1980s. Before settling in Boston, MA, she lived in Hawaii and worked as a mental health therapist and social service coordinator. She holds a Ph.D. in higher education, an M.S. in Counseling Psychology, and a B.S. in Business Administration and International Studies. Her dissertation focuses on the issues of voice and silence in academia. Her areas of interest include identity and belonging, intercultural relations, access to education, and organizational leadership and management. She holds a Certificate in Teaching English to Speakers of Other Languages (CELTA) from the University of Cambridge and has served as an ESL tutor, counselor, and board member at Project Literacy in Watertown, MA.'
   }
 }
 

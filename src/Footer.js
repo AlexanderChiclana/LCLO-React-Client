@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 // import apiUrl from './apiConfig'
 import { Link } from 'react-router-dom'
+import format from 'date-format'
 
 class Footer extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class Footer extends Component {
 
   getAllNewsPosts = () => {
     axios
-      .get('https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=news&limit=3&order=sys.createdAt')
+      .get('https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=news&limit=3&order=-sys.createdAt')
 
       .then(res => {
         this.setState({ newsPosts: res.data.items })
@@ -32,7 +33,7 @@ class Footer extends Component {
         <h3>
           <Link to={'/posts/' + newsPost.sys.id}> {newsPost.fields.heading}</Link>{' '}
         </h3>
-        <div className="posted-date">{newsPost.sys.createdAt}</div>
+        <div className="posted-date">{format(newsPost.sys.createdAt, new Date())}</div>
       </li>
     ))
 

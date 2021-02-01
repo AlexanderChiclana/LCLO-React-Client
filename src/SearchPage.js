@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import apiUrl from './apiConfig'
+// import apiUrl from './apiConfig'
 import Blogpost from './Blogpost'
 import SearchWidget from './SearchWidget'
 import UpcomingEvents from './UpcomingEvents'
@@ -21,25 +21,25 @@ class SearchPage extends Component {
 
   getSearchResults = () => {
     axios
-      .get(`${apiUrl}/search/${this.props.id}`)
+      .get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&query=${this.props.id}`)
 
       .then(res => {
-        console.log(res)
-        this.setState({ blogposts: res.data.blogposts })
+        console.log(res.data.items)
+        this.setState({ blogposts: res.data.items })
       })
   }
 
   render() {
     const BlogpostList = () =>
-      this.state.blogposts.map(blogpost => (
-        <div key={blogpost._id}>
+      this.state.blogposts.map((blogpost, index) => (
+        <div key={index}>
           {this.state.blogposts.length !== 0 ? (
             <Blogpost
-              heading={blogpost.heading}
-              text={blogpost.text}
-              id={blogpost._id}
-              date={blogpost.date}
-              tags={blogpost.tags}
+              heading={blogpost.fields.heading}
+              text={blogpost.fields.text.content[0].content[0].value}
+              id={blogpost.sys.id}
+              date={blogpost.fields.date}   
+              tags={blogpost.fields.tags}
             />
           ) : (
             <h2>No Results</h2>

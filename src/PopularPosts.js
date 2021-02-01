@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import apiUrl from './apiConfig'
+// import apiUrl from './apiConfig'
 import { Link } from 'react-router-dom'
 
 class PopularPosts extends Component {
@@ -17,18 +17,18 @@ class PopularPosts extends Component {
   }
 
   getAllPinnedPosts = () => {
-    axios.get(`${apiUrl}/pinned?page=${this.props.page}`).then(res => {
+    axios.get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=${this.props.page}&fields.pinned=true`).then(res => {
       console.log(res)
       this.setState({
-        pinned: res.data.blogposts
+        pinned: res.data.items
       })
     })
   }
 
   render() {
     const PinnedList = () =>
-      this.state.pinned.map(pinned => (
-        <li key={pinned._id} className="d-flex flex-wrap align-items-center">
+      this.state.pinned.map((pinned, index) => (
+        <li key={index} className="d-flex flex-wrap align-items-center">
           <figure className="d-flex justify-content-center">
             <img
               className="LCLO-Icon"
@@ -41,7 +41,7 @@ class PopularPosts extends Component {
           <div className="entry-content d-flex align-items-center">
             <a>
               <h3 className="entry-title" style={{ color: '#262626' }}>
-                <Link to={'/posts/' + pinned._id}>{pinned.heading}</Link>
+                <Link to={'/posts/' + pinned.sys.id}>{pinned.fields.heading}</Link>
               </h3>
             </a>
           </div>

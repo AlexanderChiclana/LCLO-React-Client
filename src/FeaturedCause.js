@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import apiUrl from './apiConfig'
 import axios from 'axios'
-import DOMPurify from 'dompurify'
+// import DOMPurify from 'dompurify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class FeaturedCause extends Component {
@@ -83,14 +83,15 @@ class FeaturedCause extends Component {
               {/* .entry-header */}
 
               <div className="entry-content">
-                <p
+                {/* <p
                   className="m-0 single-post-text single-post-preview"
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(
                       this.state.text && this.state.text
                     )
                   }}
-                />
+                /> */}
+                {this.state.text}
               </div>
               {/* .entry-content */}
             </div>
