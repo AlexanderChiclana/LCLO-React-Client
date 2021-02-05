@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 // import apiUrl from './apiConfig'
 import { Link } from 'react-router-dom'
-import format from 'date-format'
+// import format from 'date-format'
+import dateFormat from 'dateformat'
 
 class Footer extends Component {
   constructor() {
@@ -33,7 +34,11 @@ class Footer extends Component {
         <h3>
           <Link to={'/posts/' + newsPost.sys.id}> {newsPost.fields.heading}</Link>{' '}
         </h3>
-        <div className="posted-date">{format(newsPost.sys.createdAt, new Date())}</div>
+        <div className="posted-date">
+        {/* {newsPost.sys.createdAt} */}
+        {dateFormat(newsPost.sys.createdAt, 'mediumDate')}
+        </div>
+        {console.log(dateFormat)}
       </li>
     ))
 

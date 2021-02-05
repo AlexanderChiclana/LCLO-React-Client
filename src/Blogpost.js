@@ -4,6 +4,32 @@ import { Link } from 'react-router-dom'
 import YouTube from 'react-youtube'
 import TagBar from './TagBar'
 import Image from './Image.js'
+import dateFormat from 'dateformat'
+
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+
+const Bold = ({ children }) => <p className="bold">{children}</p>
+ 
+const Text = ({ children }) => <p className="align-center">{children}</p>
+ 
+const options = {
+  container: '',
+  renderMark: {
+    [MARKS.BOLD]: text => <Bold>{text}</Bold>
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>
+  },
+  renderText: text => {
+    console.log('the text is ' + text)
+    this.container += text
+    console.log(this.container)
+    return text
+  }
+}
+ 
+ 
 
 class Blogpost extends Component {
   constructor() {
@@ -17,14 +43,25 @@ class Blogpost extends Component {
   }
 
   componentDidMount() {
+
+    let fullText = ''
+
+    this.props.text.content.forEach((node) => {
+      if (node.nodeType === 'paragraph') {
+        fullText += node.content[0].value + '<br /> <br />'
+      }
+    })
+
+    // console.log(previewString)
+
     let trimmedString = ''
 
-    if (this.props.text.length > this.state.length) {
+    if (fullText.length > this.state.length) {
       trimmedString =
-        this.props.text.substring(0, this.state.length - 3) + '...'
+        fullText.substring(0, this.state.length - 3) + '...'
       this.setState({ overflow: true })
     } else {
-      trimmedString = this.props.text
+      trimmedString = fullText
     }
 
     this.setState({ trimmedString: trimmedString })
@@ -48,7 +85,7 @@ class Blogpost extends Component {
       <div className="news-content">
         <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
           <div className="header-elements">
-            <div className="posted-date">{this.props.date}</div>
+            <div className="posted-date">{dateFormat(this.props.dateFormat, 'mediumDate')}</div>
 
             <h2 className="entry-title mobile-heading">
               <Link to={'/posts/' + this.props.id}>{this.props.heading}</Link>
@@ -86,7 +123,9 @@ class Blogpost extends Component {
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(this.state.trimmedString)
             }}
-          ></p>
+          >
+            {/* {documentToReactComponents(this.props.text, options)} */}
+          </p>
         </div>
 
         <footer className=" d-flex justify-content-end">

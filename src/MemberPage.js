@@ -77,7 +77,7 @@ const memberData = {
     lastName: 'Chiclana',
     pic: AlexanderPic,
     bio:
-      'Alexander Chiclana is a web developer based in providence RI. He is a graduate of Brown Unviersity, and a former instructor at General Assembly. He joined LCLO as a technical advisor and is working as the front end lead developer at polyPodia.'
+      'Alexander Chiclana is a web developer based in providence RI. He is a graduate of Brown Unviersity, and a former instructor at General Assembly. He joined LCLO as a technical advisor and is working as a freelance developer'
   },
   yishiuan: {
     lastName: 'Chin',

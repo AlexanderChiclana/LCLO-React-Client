@@ -64,10 +64,10 @@ class FeedPage extends Component {
             <Blogpost
               video={blogpost.fields.video}
               heading={blogpost.fields.heading}
-              text={blogpost.fields.text.content[0].content[0].value}
+              text={blogpost.fields.text}
               image={blogpost.fields.image && blogpost.fields.image.sys.id}
               id={blogpost.sys.id}
-              date={blogpost.fields.date}   
+              date={blogpost.sys.createdAt}   
               tags={blogpost.fields.tags}
               page={blogpost.fields.page}
               prevBlogpost={this.state.blogposts[index - 1]}

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 // import DOMPurify from 'dompurify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 class FeaturedCause extends Component {
   constructor() {
@@ -29,7 +30,7 @@ class FeaturedCause extends Component {
         console.log(res)
         this.setState({
           heading: res.data.items[0].fields.heading,
-          text: res.data.items[0].fields.text.content[0].content[0].value
+          text: res.data.items[0].fields.text
         })
       })
     // axios.get(`${apiUrl}/featured?page=${this.props.page}`).then(res => {
@@ -91,7 +92,7 @@ class FeaturedCause extends Component {
                     )
                   }}
                 /> */}
-                {this.state.text}
+                {documentToReactComponents(this.state.text)}
               </div>
               {/* .entry-content */}
             </div>

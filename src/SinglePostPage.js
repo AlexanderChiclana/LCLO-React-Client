@@ -3,12 +3,14 @@ import SearchWidget from './SearchWidget'
 import PopularPosts from './PopularPosts'
 // import UpcomingEvents from './UpcomingEvents'
 // import FeaturedCause from './FeaturedCause'
-import DOMPurify from 'dompurify'
+// import DOMPurify from 'dompurify'
 import apiUrl from './apiConfig'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import YouTube from 'react-youtube'
+
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Image from './Image.js'
 
@@ -32,14 +34,16 @@ class SinglePostPage extends Component {
 
   getBlogPost = () => {
     axios
-      .get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries/${this.props.id}?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM`)
+      .get(
+        `https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries/${this.props.id}?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM`
+      )
 
       .then(res => {
         console.log(res)
         this.setState({
-          text: res.data.fields.text.content[0].content[0].value,
+          text: res.data.fields.text,
           heading: res.data.fields.heading,
-          image: res.data.fields.image.sys.id,
+          image: res.data.fields.image && res.data.fields.image.sys.id,
           page: res.data.fields.page,
           video: res.data.fields.video
         })
@@ -60,19 +64,19 @@ class SinglePostPage extends Component {
     const opts = {
       height: '410',
       width: '100%',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
         autoplay: 0,
         rel: 0
       }
     }
 
-
     return (
-      <div className='single-page news-page'>
-        <div className='page-header'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-12'>
+      <div className="single-page news-page">
+        <div className="page-header">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
                 <h1> {this.state.heading} </h1>{' '}
               </div>{' '}
               {/* .col */}{' '}
@@ -82,24 +86,31 @@ class SinglePostPage extends Component {
           {/* .container */}{' '}
         </div>{' '}
         {/* .page-header */}
-        <div className='news-wrap'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-12 col-lg-8'>
-                <div className='news-content'>
-    { this.state.video &&
-                <div style={{ paddingBottom: '30px' }}>
-                <YouTube
-                videoId={this.state.video.split('https://youtu.be/').pop()}
-                opts={opts}
-                onReady={this._onReady}
-            /> 
-            </div>
-            }
+        <div className="news-wrap">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-lg-8">
+                <div className="news-content">
+                  {this.state.video && (
+                    <div style={{ paddingBottom: '30px' }}>
+                      <YouTube
+                        videoId={this.state.video
+                          .split('https://youtu.be/')
+                          .pop()}
+                        opts={opts}
+                        onReady={this._onReady}
+                      />
+                    </div>
+                  )}
 
-{ this.state.image && <Image imageURL={this.state.image} alt='' className='single-post-image' style={{ paddingBottom: '30px' }}/> }
-
-                
+                  {this.state.image && (
+                    <Image
+                      imageURL={this.state.image}
+                      alt=""
+                      className="single-post-image"
+                      style={{ paddingBottom: '30px' }}
+                    />
+                  )}
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
                             <div className='header-elements'>
                               <div className='posted-date'>March 12, 2018</div>
@@ -125,52 +136,47 @@ class SinglePostPage extends Component {
                               </a>
                             </div>
                           </header> */}
-                  <div className='entry-content'>
-                    <p
-                      className='single-post-text'
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(this.state.text)
-                      }}
-                    />{' '}
+                  <div className="entry-content">
+                    <p className="single-post-text">
+                      {documentToReactComponents(this.state.text)}
+                    </p>
                   </div>
-                  <footer className='entry-footer'>
+                  <footer className="entry-footer">
                     {' '}
                     {/* <a href='#' className='btn gradient-bg'>Read More</a> */}{' '}
                   </footer>{' '}
                 </div>
 
                 <div className="d-flex flex-wrap justify-content-between">
-                       
-                      <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-                        <li className='active next-button'>
-                          <Link to={'/' + this.state.page}>
-                            <FontAwesomeIcon
-                              icon='arrow-left'
-                              className='footer-icon'
-                            />
-                            Back to { this.state.page }
-                          </Link>
-                        </li>
-                      </ul>
-                
-                    <div> 
-                    {this.state.nextId ? (
+                  <ul className="pagination d-flex flex-wrap align-items-center p-0">
+                    <li className="active next-button">
 
-                      <ul className='pagination d-flex flex-wrap align-items-center p-0'>
-                        <li className='active next-button'>
+                      <Link to={'/' + this.state.page}>
+                        <FontAwesomeIcon
+                          icon="arrow-left"
+                          className="footer-icon"
+                        />
+                        Back to {this.state.page}
+                      </Link>
+                    </li>
+                  </ul>
+
+                  <div>
+                    {this.state.nextId ? (
+                      <ul className="pagination d-flex flex-wrap align-items-center p-0">
+                        <li className="active next-button">
                           <Link to={'/posts/' + this.state.nextId}>
-                      
-                            Next: {this.state.nextHeading + ' '} 
+                            Next: {this.state.nextHeading + ' '}
                             <FontAwesomeIcon
-                              icon='arrow-right'
-                              className='footer-icon'
+                              icon="arrow-right"
+                              className="footer-icon"
                             />
                           </Link>
                         </li>
                       </ul>
-                      ) : null}
-                      </div>
+                    ) : null}
                   </div>
+                </div>
 
                 {/* <ul className='pagination d-flex flex-wrap align-items-center p-0'>
                   <li className='active'>
@@ -201,13 +207,12 @@ class SinglePostPage extends Component {
 
 
                 ) : null} */}
-
               </div>
-              <div className='col-12 col-lg-4'>
-                <div className='sidebar'>
-                  <SearchWidget mobileNone={true}/>{' '}
-                  { this.state.page && <PopularPosts page={this.state.page} />}
-                          {/* <UpcomingEvents />
+              <div className="col-12 col-lg-4">
+                <div className="sidebar">
+                  <SearchWidget mobileNone={true} />{' '}
+                  {this.state.page && <PopularPosts page={this.state.page} />}
+                  {/* <UpcomingEvents />
                           <FeaturedCause />{' '} */}
                 </div>{' '}
                 {/* .sidebar */}{' '}

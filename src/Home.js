@@ -162,6 +162,33 @@ class Home extends Component {
                         <img src={require('./images/train.jpg')} className="mobile-margin-none" alt="welcome" />
                     </div>{/* .col */}
                 </div>{/* .row */}
+
+                    
+
+                {/* <div className="row">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                        <div className="welcome-content">
+                            <header className="entry-header">
+                                <h2 className="entry-title mobile-heading">Capacity Building for Entrepreneurs</h2>
+                            </header>
+    
+                            <div className="entry-content mt-4 mt-md-5  mobile-line-medium small-font">
+                                <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
+                            </div>
+    
+                            <div className="entry-footer my-4 mt-md-5">
+                              <Link to="/capacity_building">    <div className="btn gradient-bg mr-2 roundButton" >Capacity Building</div> </Link>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
+                        <img src={require('./images/skyscrapers.JPG')} className="mobile-margin-none" alt="welcome" />
+                    </div>
+                </div> */}
+            
+
+
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
     
@@ -172,81 +199,108 @@ class Home extends Component {
         <div className="home-page-welcome mobile-padding-small tablet-homepage-panel" id="home-page-alt">
             <div className="container">
 
-
+            <div className="row mt-5 tablet-col-reverse">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                        <div className="welcome-content">
+                            <header className="entry-header">
+                                <h2 className="entry-title dark-font mobile-heading">Training Programs for the Workforce of Tomorrow</h2>
+                            </header>{/* .entry-header */}
+    
+                            <div className="entry-content mt-4 mt-md-5 dark-font mobile-line-medium small-font">
+                                <p>The LCLO Group provides opportunities for individuals to participate in professionally relevant and essential training and leadership development in preparation for meaningful and impactful work as strategists and specialists across different fields and sectors, essential to jobs in the Fourth Industrial Revolution.</p>
+                          </div>{/* .entry-content */}
+    
+                            {/* <div className="entry-footer my-4 mt-md-5">
+                              <Link to="/training/gsep">    <div className="btn gradient-bg mr-2 roundButton" >More About GSEP</div> </Link>
+                            </div> */}
+                        </div>{/* .welcome-content */}
+                    </div>{/* .col */}
+    
+                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
+                    <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
+                    </div>{/* .col */}
+                </div>{/* .row */}
                 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
                     <img src={require('./images/cityscape.JPG')} className="mobile-margin-none" alt="welcome" />
 
-                    </div>{/* .col */}
-    
+                    </div>
                     <div className="col-12 col-lg-6 order-1 order-lg-2">
 
                         <div className="welcome-content">
                             
                             <header className="entry-header ">
                                 <h2 className="entry-title dark-font mobile-heading">Training Programs for the Workforce of Tomorrow</h2>
-                            </header>{/* .entry-header */}
+                            </header>
     
                             <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
                                 <p className="mobile-margin-none">The LCLO Group provides opportunities for individuals to participate in professionally relevant and essential training and leadership development in preparation for meaningful and impactful work as strategists and specialists across different fields and sectors, essential to jobs in the Fourth Industrial Revolution.</p>
-                            </div>{/* .entry-content */}
+                            </div>
     
-                            {/* <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
+                            <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
                               <Link to="/training"><div className="btn gradient-bg mr-2 roundButton">All Programs</div> </Link>
-                            </div> */}
-                        </div>{/* .welcome-content */}
-                    </div>{/* .col */}
-                </div>{/* .row */}
-                <div className="row mt-5 tablet-col-reverse">
-                    <div className="col-12 col-lg-6 order-2 order-lg-1">
-                        <div className="welcome-content">
-                            <header className="entry-header">
-                                <h2 className="entry-title dark-font mobile-heading">Global Science Education Pathways (GSEP)</h2>
-                            </header>{/* .entry-header */}
-    
-                            <div className="entry-content mt-4 mt-md-5 dark-font mobile-line-medium small-font">
-                                <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
-                            </div>{/* .entry-content */}
-    
-                            <div className="entry-footer my-4 mt-md-5">
-                              <Link to="/training/gsep">    <div className="btn gradient-bg mr-2 roundButton" >More About GSEP</div> </Link>
-                            </div>{/* .entry-footer */}
-                        </div>{/* .welcome-content */}
-                    </div>{/* .col */}
-    
-                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
-                        <img src={require('./images/skyscrapers.JPG')} className="mobile-margin-none" alt="welcome" />
-                    </div>{/* .col */}
-                </div>{/* .row */}
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+                
+                              <div className="row inner-welcome">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
+                    <img src={require('./images/stem.jpg')} className="mobile-margin-none" alt="welcome" />
 
-                <div className="row mt-5">
-                    <div className="col-12 col-lg-6 order-2 order-lg-1">
+                    </div>
+                    <div className="col-12 col-lg-6 order-1 order-lg-2">
+
                         <div className="welcome-content">
-                            <header className="entry-header">
+                            
+                            <header className="entry-header ">
                                 <h2 className="entry-title dark-font mobile-heading">Global Science Education Pathways (GSEP)</h2>
-                            </header>{/* .entry-header */}
+                            </header>
     
-                            <div className="entry-content mt-4 mt-md-5 dark-font mobile-line-medium small-font">
-                                <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
-                            </div>{/* .entry-content */}
+                            <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
+                                <p className="mobile-margin-none">The Global Science Education Pathways (GSEP) Program is a learner-focused, inquiry based and interdisciplinary approach to science, technology, engineering and mathematics (STEM) learning. This innovative program will bring together a cohort of highly talented high school students (current 10th and 11th graders prior to summer year of participation) to engage them in learning STEM through the lenses of Fourth Industrial Revolution (4IR) technological advances, within a problem-based learning (PBL) curriculum environment.</p>
+                            </div>
     
-                            <div className="entry-footer my-4 mt-md-5">
-                              <Link to="/training/gsep">    <div className="btn gradient-bg mr-2 roundButton" >More About GSEP</div> </Link>
-                            </div>{/* .entry-footer */}
-                        </div>{/* .welcome-content */}
-                    </div>{/* .col */}
+                            <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
+                              <Link to="/training/gsep"><div className="btn gradient-bg mr-2 roundButton">More about GSEP program</div> </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                                
+                <div className="row">
+                    <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
+                    <img src={require('./images/working.jpg')} className="mobile-margin-none" alt="welcome" />
+
+                    </div>
+                    <div className="col-12 col-lg-6 order-1 order-lg-2">
+
+                        <div className="welcome-content">
+                            
+                            <header className="entry-header ">
+                                <h2 className="entry-title dark-font mobile-heading">Southeast Asia Future of Work Institute Fellows Program</h2>
+                            </header>
     
-                    <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
-                        <img src={require('./images/skyscrapers.JPG')} className="mobile-margin-none" alt="welcome" />
-                    </div>{/* .col */}
-                </div>{/* .row */}
+                            <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
+                                <p className="mobile-margin-none">Individuals may apply to participate in the one-year intensive Southeast Asia (SEA) Future of Work Institute Fellows Program or in the one-week intensive Future of Global Entrepreneurs Leadership Development Program. </p>
+                            </div>
+    
+                            <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
+                              <Link to="/training/sea-future-of-work"><div className="btn gradient-bg mr-2 roundButton">Learn more and apply</div> </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+                
             </div>{/* .container */}
         </div>{/* .home-page-icon-boxes */}
 
         {/* <div className="home-page-divider mobile-none"></div> */}
         {/* third section */}
-
+{/* 
         <div className="home-page-welcome cb-background mobile-padding-small tablet-homepage-panel">
             <div className="container">
                 <div className="row">
@@ -254,25 +308,25 @@ class Home extends Component {
                         <div className="welcome-content">
                             <header className="entry-header">
                                 <h2 className="entry-title mobile-heading">Capacity Building for Entrepreneurs</h2>
-                            </header>{/* .entry-header */}
+                            </header>
     
                             <div className="entry-content mt-4 mt-md-5  mobile-line-medium small-font">
                                 <p>The LCLO Group offers hands-on, one-on-one coaching and group consultations to higher education leaders and institutions seeking to build, expand and/or innovate in the areas of student recruitment and talent development, faculty development, curricular reform, research infrastructure, pipeline programs, and evaluation/metrics. </p>
-                            </div>{/* .entry-content */}
+                            </div>
     
                             <div className="entry-footer my-4 mt-md-5">
                               <Link to="/capacity_building">    <div className="btn gradient-bg mr-2 roundButton" >Capacity Building</div> </Link>
-                            </div>{/* .entry-footer */}
-                        </div>{/* .welcome-content */}
-                    </div>{/* .col */}
+                            </div>
+                        </div>
+                    </div>
     
                     <div className="col-12 col-lg-6 order-1 order-lg-2 mobile-padding-small">
                         <img src={require('./images/skyscrapers.JPG')} className="mobile-margin-none" alt="welcome" />
-                    </div>{/* .col */}
-                </div>{/* .row */}
-            </div>{/* .container */}
-        </div>{/* .home-page-icon-boxes */}
-        {/* <div className="home-page-divider mobile-none"></div> */}
+                    </div>
+                </div>
+            </div>
+        </div>
+     */}
 
         {/* end section  */}
         <TileSection />
