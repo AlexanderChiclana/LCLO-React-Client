@@ -49,8 +49,8 @@ class PopularPosts extends Component {
       ))
 
     return (
-      <div className="popular-posts tablet-wide tablet-no-margin">
-        {this.state.pinned.length > 0 && <h2>Trending Ideas</h2>}
+      <div className="popular-posts tablet-wide tablet-no-margin mobile-margin-none">
+        {this.state.pinned.length > 0 && <h2>Spotlight</h2>}
 
         <ul className="p-0">
           <PinnedList />

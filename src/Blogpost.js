@@ -5,31 +5,9 @@ import YouTube from 'react-youtube'
 import TagBar from './TagBar'
 import Image from './Image.js'
 import dateFormat from 'dateformat'
-
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 
-const Bold = ({ children }) => <p className="bold">{children}</p>
- 
-const Text = ({ children }) => <p className="align-center">{children}</p>
- 
-const options = {
-  container: '',
-  renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>
-  },
-  renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>
-  },
-  renderText: text => {
-    console.log('the text is ' + text)
-    this.container += text
-    console.log(this.container)
-    return text
-  }
-}
- 
- 
+
 
 class Blogpost extends Component {
   constructor() {
@@ -44,27 +22,36 @@ class Blogpost extends Component {
 
   componentDidMount() {
 
-    let fullText = ''
-
-    this.props.text.content.forEach((node) => {
-      if (node.nodeType === 'paragraph') {
-        fullText += node.content[0].value + '<br /> <br />'
-      }
+    const element = this.element
+    // Things involving accessing DOM properties on element
+    // In the case of what this question actually asks:
+    const hasOverflowingChildren = element.offsetHeight < element.scrollHeight 
+    this.setState({
+      overflow: hasOverflowingChildren
     })
+
+
+    // let fullText = ''
+
+    // this.props.text.content.forEach((node) => {
+    //   if (node.nodeType === 'paragraph') {
+    //     fullText += node.content[0].value + '<br /> <br />'
+    //   }
+    // })
 
     // console.log(previewString)
 
-    let trimmedString = ''
+    // let trimmedString = ''
 
-    if (fullText.length > this.state.length) {
-      trimmedString =
-        fullText.substring(0, this.state.length - 3) + '...'
-      this.setState({ overflow: true })
-    } else {
-      trimmedString = fullText
-    }
+    // if (fullText.length > this.state.length) {
+    //   trimmedString =
+    //     fullText.substring(0, this.state.length - 3) + '...'
+    //   this.setState({ overflow: true })
+    // } else {
+    //   trimmedString = fullText
+    // }
 
-    this.setState({ trimmedString: trimmedString })
+    // this.setState({ trimmedString: trimmedString })
   }
 
   _onReady(event) {
@@ -120,12 +107,18 @@ class Blogpost extends Component {
         <div className="entry-content">
           <p
             className="single-post-text single-post-preview"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(this.state.trimmedString)
+            // dangerouslySetInnerHTML={{
+            //   __html: DOMPurify.sanitize(this.state.trimmedString)
+            // }}
+            style={{
+              maxHeight: '400px',
+              overflow: 'hidden'
             }}
+            ref={(el) => { this.element = el }}
           >
-            {/* {documentToReactComponents(this.props.text, options)} */}
+            {documentToReactComponents(this.props.text)}
           </p>
+          {this.state.overflow && <div className="fadeout" />}
         </div>
 
         <footer className=" d-flex justify-content-end">

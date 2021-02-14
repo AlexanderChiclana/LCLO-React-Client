@@ -33,9 +33,6 @@ class Contact extends Component {
                     </p>
 
                     <ul className="contact-info p-0">
-                                                
-          
-
                       <li>
                         <a
                           href="tel:1-401-302-4024"
@@ -70,18 +67,51 @@ class Contact extends Component {
                       </li>
 
                       <li>
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LCLOGroup/?__tn__=%2Cd%2CP-R&eid=ARBHoooeqsSFMV1-0moN7FR1DT4q7fMmr0UyQkkjqFGFR59kNk6ZmhAx6uzUfiaq74tmGY8d-yL-iwEI">
-                        <FontAwesomeIcon icon={['fab', 'facebook']} className="footer-icon" />
-                        <span>Facebook</span>
-                      </a>
-                    </li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'rgb(155, 154, 154)' }}
+                          href="https://www.facebook.com/LCLOGroup/?__tn__=%2Cd%2CP-R&eid=ARBHoooeqsSFMV1-0moN7FR1DT4q7fMmr0UyQkkjqFGFR59kNk6ZmhAx6uzUfiaq74tmGY8d-yL-iwEI"
+                        >
+                          <FontAwesomeIcon
+                            icon={['fab', 'facebook']}
+                            className="footer-icon"
+                          />
+                          <span>Facebook</span>
+                        </a>
+                      </li>
 
-                  <li>
-                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/LCLOGroup">
-                      <FontAwesomeIcon icon={['fab', 'twitter']} className="footer-icon"/>
-                        <span>Twitter</span>
-                      </a>
-                    </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'rgb(155, 154, 154)' }}
+                          href="https://twitter.com/LCLOGroup"
+                        >
+                          <FontAwesomeIcon
+                            icon={['fab', 'twitter']}
+                            className="footer-icon"
+                          />
+                          <span>Twitter</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'rgb(155, 154, 154)' }}
+                          href="https://www.linkedin.com/company/lclo-group/about/"
+                        >
+                          <FontAwesomeIcon
+                            icon={['fab', 'linkedin']}
+                            className="footer-icon"
+                          />
+                          <span>Linked In</span>
+                        </a>
+                      </li>
+
+
                     </ul>
                   </div>
                 </div>

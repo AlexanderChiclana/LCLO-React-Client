@@ -102,14 +102,16 @@ class SinglePostPage extends Component {
                       />
                     </div>
                   )}
-
                   {this.state.image && (
-                    <Image
-                      imageURL={this.state.image}
-                      alt=""
-                      className="single-post-image"
-                      style={{ paddingBottom: '30px' }}
-                    />
+                    <React.Fragment>
+                      <Image
+                        imageURL={this.state.image}
+                        alt=""
+                        className="single-post-image"
+                        style={{ paddingBottom: '30px' }}
+                      />
+                      <br />
+                    </React.Fragment>
                   )}
                   {/* <header className='entry-header d-flex flex-wrap justify-content-between align-items-center'>
                             <div className='header-elements'>
@@ -150,14 +152,23 @@ class SinglePostPage extends Component {
                 <div className="d-flex flex-wrap justify-content-between">
                   <ul className="pagination d-flex flex-wrap align-items-center p-0">
                     <li className="active next-button">
-
-                      <Link to={'/' + this.state.page}>
-                        <FontAwesomeIcon
-                          icon="arrow-left"
-                          className="footer-icon"
-                        />
-                        Back to {this.state.page}
-                      </Link>
+                      {this.state.page === 'sea_fow' ? (
+                        <Link to={'/sea-future-of-work'}>
+                          <FontAwesomeIcon
+                            icon="arrow-left"
+                            className="footer-icon"
+                          />
+                          Back to SEA Future of Work
+                        </Link>
+                      ) : (
+                        <Link to={'/' + this.state.page}>
+                          <FontAwesomeIcon
+                            icon="arrow-left"
+                            className="footer-icon"
+                          />
+                          Back to {this.state.page}
+                        </Link>
+                      )}
                     </li>
                   </ul>
 

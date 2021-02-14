@@ -21,7 +21,9 @@ class Footer extends Component {
 
   getAllNewsPosts = () => {
     axios
-      .get('https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=news&limit=3&order=-sys.createdAt')
+      .get(
+        'https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=blogpost&fields.page[all]=news&limit=3&order=-sys.createdAt'
+      )
 
       .then(res => {
         this.setState({ newsPosts: res.data.items })
@@ -32,11 +34,14 @@ class Footer extends Component {
     const recentNews = this.state.newsPosts.map((newsPost, i) => (
       <li key={i}>
         <h3>
-          <Link to={'/posts/' + newsPost.sys.id}> {newsPost.fields.heading}</Link>{' '}
+          <Link to={'/posts/' + newsPost.sys.id}>
+            {' '}
+            {newsPost.fields.heading}
+          </Link>{' '}
         </h3>
         <div className="posted-date">
-        {/* {newsPost.sys.createdAt} */}
-        {dateFormat(newsPost.sys.createdAt, 'mediumDate')}
+          {/* {newsPost.sys.createdAt} */}
+          {dateFormat(newsPost.sys.createdAt, 'mediumDate')}
         </div>
         {console.log(dateFormat)}
       </li>
@@ -96,13 +101,15 @@ class Footer extends Component {
                   <h3>
                     {' '}
                     <li>
-                      <Link to="/resources">Resources</Link>
+                      <Link to="/gsep">GSEP</Link>
                     </li>
                   </h3>
                   <h3>
                     {' '}
                     <li>
-                      <Link to="/points_of_encounter">Points of Encounter</Link>
+                      <Link to="/sea-future-of-work">
+                        SEA Future of Work Fellowship
+                      </Link>
                     </li>
                   </h3>
                 </ul>
@@ -124,27 +131,52 @@ class Footer extends Component {
                   <h2>Contact</h2>
 
                   <ul>
-                    
-
-                              
-                  <li>
-                      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LCLOGroup/?__tn__=%2Cd%2CP-R&eid=ARBHoooeqsSFMV1-0moN7FR1DT4q7fMmr0UyQkkjqFGFR59kNk6ZmhAx6uzUfiaq74tmGY8d-yL-iwEI">
-                        <FontAwesomeIcon icon={['fab', 'facebook']} className="footer-icon" />
+                    <li>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.facebook.com/LCLOGroup/?__tn__=%2Cd%2CP-R&eid=ARBHoooeqsSFMV1-0moN7FR1DT4q7fMmr0UyQkkjqFGFR59kNk6ZmhAx6uzUfiaq74tmGY8d-yL-iwEI"
+                      >
+                        <FontAwesomeIcon
+                          icon={['fab', 'facebook']}
+                          className="footer-icon"
+                        />
                         <span>Facebook</span>
                       </a>
                     </li>
 
-                  <li>
-                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/LCLOGroup">
-                      <FontAwesomeIcon icon={['fab', 'twitter']} className="footer-icon"/>
+                    <li>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/LCLOGroup"
+                      >
+                        <FontAwesomeIcon
+                          icon={['fab', 'twitter']}
+                          className="footer-icon"
+                        />
                         <span>Twitter</span>
                       </a>
                     </li>
 
                     <li>
-                      <a href="tel:1-617-770-6583">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/company/lclo-group/"
+                      >
+                        <FontAwesomeIcon
+                          icon={['fab', 'linkedin']}
+                          className="footer-icon"
+                        />
+                        <span>Linked In</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="tel:1-401-302-4024">
                         <FontAwesomeIcon icon="phone" className="footer-icon" />
-                        <span>1-617-770-6583</span>
+                        <span>1-401-302-4024</span>
                       </a>
                     </li>
 

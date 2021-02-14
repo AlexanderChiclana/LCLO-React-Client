@@ -40,6 +40,30 @@ class FeedHero extends Component {
                   >
                     {this.props.description}
                   </p>
+
+                  <div className="desktop-none">
+
+                      <Link to={'/gsep'}>
+                      <div
+                        // onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg mr-2 roundButton fade-in"
+                        style={{ marginTop: '20px', cursor: 'pointer' }}
+                      >
+                        Global Entrepreneurs Leadership 
+                        <br /> Development Program
+                      </div>
+                      </Link>
+                      <Link to={'/sea-future-of-work'}>
+                      <div
+                        // onClick={this.props.scrollToBlogpostList}
+                        className="btn gradient-bg roundButton fade-in"
+                        style={{ marginTop: '20px', cursor: 'pointer' }}
+
+                      >
+                         (SEA) Future of Work Institute <br /> Fellows Program
+                      </div>
+                      </Link>
+                    </div>
                 </div>
                 {/* .entry-content */}
 
@@ -88,17 +112,17 @@ class FeedHero extends Component {
               />
 
 {this.props.pageName === 'Training' && (
-                    <React.Fragment>
-                      <Link to={'/training/gsep'}>
+                      <div className="tablet-none">
+                      <Link to={'/gsep'}>
                       <div
                         // onClick={this.props.scrollToBlogpostList}
-                        className="btn gradient-bg mr-2 roundButton fade-in"
-                        style={{ cursor: 'pointer' }}
+                        className="btn gradient-bg mr-2 mb-2 roundButton fade-in"
+                        style={{ cursor: 'pointer', maxWidth: '100%' }}
                       >
-                        Global Entrepreneurs Leadership Development Program
+                        Global Entrepreneurs Leadership Development
                       </div>
                       </Link>
-                      <Link to={'/training/sea-future-of-work'}>
+                      <Link to={'/sea-future-of-work'}>
                       <div
                         // onClick={this.props.scrollToBlogpostList}
                         className="btn gradient-bg roundButton fade-in"
@@ -107,7 +131,7 @@ class FeedHero extends Component {
                          (SEA) Future of Work Institute Fellows Program
                       </div>
                       </Link>
-                    </React.Fragment>
+                      </div>
                   )}
 
             </div>

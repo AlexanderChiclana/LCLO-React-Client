@@ -30,7 +30,7 @@ class Team extends Component {
             <MemberCard headshot={DonPic} description={'Training and Curricular Innovations'} name={'Don Operario'} member={'don'}/>
             <MemberCard headshot={MyraPic} description={'Fellowship Programs and Outreach'} name={'Myra Liwanag'} member={'myra'}/>
             {/* <MemberCard headshot={MariaPic} description={'Research and Outreach'} name={'Maria Paula Garcia Mosquera'} member={'maria'}/> */}
-            <MemberCard headshot={AlexanderPic} description={'Technolgy and Media'} name={'Alexander Chiclana'} member={'alexander'}/>
+            <MemberCard headshot={AlexanderPic} description={'Technology and Media'} name={'Alexander Chiclana'} member={'alexander'}/>
             <MemberCard headshot={YishiuanPic} description={'Fellowship Programs and Training'} name={'Yishiuan Chin'} member={'yishiuan'}/>
             </div>
         </div>

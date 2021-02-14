@@ -120,25 +120,17 @@ class BootstrapNav extends Component {
                 Training
               </Nav.Link> */}
 
-              <NavDropdown title="Training" id="nav-dropdown">
-                <NavDropdown.Item eventKey="4.1">
-                  <Link to={'/training'}>
+              <NavDropdown title="Training" id="nav-dropdown" className="desktop-only">
+                <NavDropdown.Item eventKey="4.1" href="#/training">
                   All Programs
-
-                  </Link>
                   </NavDropdown.Item>
                 <NavDropdown.Divider />
 
-                <NavDropdown.Item eventKey="4.2">
-                <Link to={'/training/gsep'}>
-                  GSEP
-                  </Link>
+                <NavDropdown.Item eventKey="4.2" href="#/gsep">
+                Global Science Education Pathways
                 </NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.3">
-                <Link to={'/training/sea-future-of-work'}>
-
-                  SEA 
-                  </Link>
+                <NavDropdown.Item eventKey="4.3" href="#/sea-future-of-work">
+                  SEA Future of Work Fellowship
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -161,6 +153,7 @@ class BootstrapNav extends Component {
                 Entrepreneurship
               </Nav.Link>
               <Nav.Link
+                style={{ marginRight: '8px' }}
                 className={`desktop-nav ${isCurrentRoute(
                   location.pathname,
                   '/news'
@@ -169,7 +162,7 @@ class BootstrapNav extends Component {
               >
                 News
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 className={`desktop-nav ${isCurrentRoute(
                   location.pathname,
                   '/resources'
@@ -177,7 +170,7 @@ class BootstrapNav extends Component {
                 href="#resources"
               >
                 Resources
-              </Nav.Link>
+              </Nav.Link> */}
               {/* <Nav.Link
                   className={`desktop-nav ${isCurrentRoute(
                     location.pathname,
@@ -229,11 +222,11 @@ class BootstrapNav extends Component {
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
                       location.pathname,
-                      '/capacity_building'
+                      '/gsep'
                     )}
-                    icon={'seedling'}
-                    link={'#capacity_building'}
-                    title={'Capacity Building'}
+                    icon={'chalkboard-teacher'}
+                    link={'#gsep'}
+                    title={'GSEP'}
                   />
 
                   <NavIcon
@@ -249,11 +242,11 @@ class BootstrapNav extends Component {
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
                       location.pathname,
-                      '/entrepreneurship'
+                      '/sea-future-of-work'
                     )}
-                    icon={'lightbulb'}
-                    link={'#entrepreneurship'}
-                    title={'Entrepreneurship'}
+                    icon={'chalkboard-teacher'}
+                    link={'#sea-future-of-work'}
+                    title={'Future of Work Fellows'}
                   />
                 </div>
 
@@ -272,8 +265,8 @@ class BootstrapNav extends Component {
                     )}
                     icon={'book'}
                     link={'#resources'}
-                    title={'Resources'}
-                  />
+                    title={'entrepreneurship'}
+                  /> 
 
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
@@ -282,7 +275,7 @@ class BootstrapNav extends Component {
                     )}
                     icon={'map-marked'}
                     link={'#points_of_encounter'}
-                    title={'Encounters'}
+                    title={'Entrepreneurship'}
                   />
                 </div>
 
@@ -306,7 +299,7 @@ class BootstrapNav extends Component {
                   <NavIcon
                     icon={'envelope'}
                     link={'#contact'}
-                    title={'Contact'}
+                    title={'Contact'}s
                   />
                 </div>
               </div>

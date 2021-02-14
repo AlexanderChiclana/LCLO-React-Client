@@ -29,8 +29,8 @@ class FeaturedCause extends Component {
       .then(res => {
         console.log(res)
         this.setState({
-          heading: res.data.items[0].fields.heading,
-          text: res.data.items[0].fields.text
+          heading: res.data.items[0] && res.data.items[0].fields.heading,
+          text: res.data.items[0] && res.data.items[0].fields.text
         })
       })
     // axios.get(`${apiUrl}/featured?page=${this.props.page}`).then(res => {

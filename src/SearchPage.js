@@ -36,7 +36,7 @@ class SearchPage extends Component {
           {this.state.blogposts.length !== 0 ? (
             <Blogpost
               heading={blogpost.fields.heading}
-              text={blogpost.fields.text.content[0].content[0].value}
+              text={blogpost.fields.text}
               id={blogpost.sys.id}
               date={blogpost.fields.date}   
               tags={blogpost.fields.tags}
