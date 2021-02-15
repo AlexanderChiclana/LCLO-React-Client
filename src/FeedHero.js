@@ -42,42 +42,40 @@ class FeedHero extends Component {
                   </p>
 
                   <div className="desktop-none">
-
-                      <Link to={'/gsep'}>
+                    <Link to={'/sea-future-of-work'}>
                       <div
                         // onClick={this.props.scrollToBlogpostList}
                         className="btn gradient-bg mr-2 roundButton fade-in"
                         style={{ marginTop: '20px', cursor: 'pointer' }}
                       >
-                        Global Entrepreneurs Leadership 
-                        <br /> Development Program
+                        (SEA) Future of Work Institute <br /> Fellows Program
                       </div>
-                      </Link>
-                      <Link to={'/sea-future-of-work'}>
+                    </Link>
+
+                    <Link to={'/gsep'}>
                       <div
                         // onClick={this.props.scrollToBlogpostList}
                         className="btn gradient-bg roundButton fade-in"
                         style={{ marginTop: '20px', cursor: 'pointer' }}
-
                       >
-                         (SEA) Future of Work Institute <br /> Fellows Program
+                        Global Entrepreneurs Leadership
+                        <br /> Development Program
                       </div>
-                      </Link>
-                    </div>
+                    </Link>
+                  </div>
                 </div>
                 {/* .entry-content */}
 
                 <div className="entry-footer my-4 mt-sm-5">
-                {this.props.pageName !== 'Training' && (
-
-                  <div
-                    onClick={this.props.scrollToBlogpostList}
-                    className="btn gradient-bg mr-2 roundButton fade-in"
-                    style={{ cursor: 'pointer' }}
-                  >
-                    New In {this.props.pageName}
-                  </div>
-                )}
+                  {this.props.pageName !== 'Training' && (
+                    <div
+                      onClick={this.props.scrollToBlogpostList}
+                      className="btn gradient-bg mr-2 roundButton fade-in"
+                      style={{ cursor: 'pointer' }}
+                    >
+                      New In {this.props.pageName}
+                    </div>
+                  )}
 
                   {/* {this.props.pageName === 'Training' && (
                     <React.Fragment>
@@ -111,29 +109,28 @@ class FeedHero extends Component {
                 alt={this.props.image}
               />
 
-{this.props.pageName === 'Training' && (
-                      <div className="tablet-none">
-                      <Link to={'/gsep'}>
-                      <div
-                        // onClick={this.props.scrollToBlogpostList}
-                        className="btn gradient-bg mr-2 mb-2 roundButton fade-in"
-                        style={{ cursor: 'pointer', maxWidth: '100%' }}
-                      >
-                        Global Entrepreneurs Leadership Development
-                      </div>
-                      </Link>
-                      <Link to={'/sea-future-of-work'}>
-                      <div
-                        // onClick={this.props.scrollToBlogpostList}
-                        className="btn gradient-bg roundButton fade-in"
-                        style={{ cursor: 'pointer' }}
-                      >
-                         (SEA) Future of Work Institute Fellows Program
-                      </div>
-                      </Link>
-                      </div>
-                  )}
-
+              {this.props.pageName === 'Training' && (
+                <div className="tablet-none">
+                  <Link to={'/sea-future-of-work'}>
+                    <div
+                      // onClick={this.props.scrollToBlogpostList}
+                      className="btn gradient-bg mr-2 mb-2 roundButton fade-in"
+                      style={{ cursor: 'pointer' }}
+                    >
+                      (SEA) Future of Work Institute Fellows Program
+                    </div>
+                  </Link>
+                  <Link to={'/gsep'}>
+                    <div
+                      // onClick={this.props.scrollToBlogpostList}
+                      className="btn gradient-bg roundButton fade-in"
+                      style={{ cursor: 'pointer', maxWidth: '100%' }}
+                    >
+                      Global Entrepreneurs Leadership Development
+                    </div>
+                  </Link>
+                </div>
+              )}
             </div>
             {/* .col */}
           </div>

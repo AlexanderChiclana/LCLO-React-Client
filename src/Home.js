@@ -215,7 +215,7 @@ class Home extends Component {
                       develop and implement solutions to more equitable global
                       workforce development, talent cultivation, and training
                       opportunities and resources within the context of emerging
-                      regional economies of Southeast Asia (ASEAN region).
+                      regional economies.
                     </p>
                   </div>
                   {/* .entry-content */}
@@ -345,6 +345,42 @@ class Home extends Component {
             <div className="row inner-welcome tablet-col-reverse">
               <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
                 <img
+                  src={require('./images/working.jpg')}
+                  className="mobile-margin-none"
+                  alt="welcome"
+                />
+              </div>
+              <div className="col-12 col-lg-6 order-1 order-lg-2">
+                <div className="welcome-content">
+                  <header className="entry-header ">
+                    <h2 className="entry-title dark-font mobile-heading">
+                      Southeast Asia Future of Work Institute Fellows Program
+                    </h2>
+                  </header>
+
+                  <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
+                    <p className="mobile-margin-none">
+                      Individuals may apply to participate in the one-year
+                      intensive Southeast Asia (SEA) Future of Work Institute
+                      Fellows Program or in the one-week intensive Future of
+                      Global Entrepreneurs Leadership Development Program.{' '}
+                    </p>
+                  </div>
+
+                  <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
+                    <Link to="/sea-future-of-work">
+                      <div className="btn gradient-bg mr-2 roundButton">
+                        Learn more and apply
+                      </div>{' '}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="row tablet-col-reverse">
+              <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
+                <img
                   src={require('./images/stem.jpg')}
                   className="mobile-margin-none"
                   alt="welcome"
@@ -377,42 +413,6 @@ class Home extends Component {
                     <Link to="/gsep">
                       <div className="btn gradient-bg mr-2 roundButton">
                         More about GSEP program
-                      </div>{' '}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="row tablet-col-reverse">
-              <div className="col-12 col-lg-6 order-2 order-lg-1 mobile-padding-small">
-                <img
-                  src={require('./images/working.jpg')}
-                  className="mobile-margin-none"
-                  alt="welcome"
-                />
-              </div>
-              <div className="col-12 col-lg-6 order-1 order-lg-2">
-                <div className="welcome-content">
-                  <header className="entry-header ">
-                    <h2 className="entry-title dark-font mobile-heading">
-                      Southeast Asia Future of Work Institute Fellows Program
-                    </h2>
-                  </header>
-
-                  <div className="entry-content  mt-4 mt-md-5  dark-font mobile-line-medium small-font">
-                    <p className="mobile-margin-none">
-                      Individuals may apply to participate in the one-year
-                      intensive Southeast Asia (SEA) Future of Work Institute
-                      Fellows Program or in the one-week intensive Future of
-                      Global Entrepreneurs Leadership Development Program.{' '}
-                    </p>
-                  </div>
-
-                  <div className="entry-footer my-4 mt-md-5 d-flex justify-content-end">
-                    <Link to="/sea-future-of-work">
-                      <div className="btn gradient-bg mr-2 roundButton">
-                        Learn more and apply
                       </div>{' '}
                     </Link>
                   </div>

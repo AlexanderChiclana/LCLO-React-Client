@@ -63,7 +63,7 @@ class Footer extends Component {
                     implement solutions to more equitable global workforce
                     development, talent cultivation, and training opportunities
                     and resources within the context of emerging regional
-                    economies of Southeast Asia (ASEAN region).
+                    economies
                   </p>
                 </div>
                 {/* .foot-about */}
@@ -169,7 +169,7 @@ class Footer extends Component {
                           icon={['fab', 'linkedin']}
                           className="footer-icon"
                         />
-                        <span>Linked In</span>
+                        <span>LinkedIn</span>
                       </a>
                     </li>
 
@@ -210,10 +210,7 @@ class Footer extends Component {
             <div className="row">
               <div className="col-12">
                 <p className="m-0">
-                  Made by LCLO Group 2019
-                  {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                  {/* Copyright &copy<script>document.write(new Date().getFullYear())</script> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> */}
-                  {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                © LCLO Group 2019, developed by Alexander Chiclana
                 </p>
               </div>
               {/* .col-12 */}

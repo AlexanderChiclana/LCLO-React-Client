@@ -107,7 +107,7 @@ class Contact extends Component {
                             icon={['fab', 'linkedin']}
                             className="footer-icon"
                           />
-                          <span>Linked In</span>
+                          <span>LinkedIn</span>
                         </a>
                       </li>
 

@@ -125,13 +125,13 @@ class BootstrapNav extends Component {
                   All Programs
                   </NavDropdown.Item>
                 <NavDropdown.Divider />
-
-                <NavDropdown.Item eventKey="4.2" href="#/gsep">
-                Global Science Education Pathways
-                </NavDropdown.Item>
-                <NavDropdown.Item eventKey="4.3" href="#/sea-future-of-work">
+                <NavDropdown.Item eventKey="4.2" href="#/sea-future-of-work">
                   SEA Future of Work Fellowship
                 </NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.3" href="#/gsep">
+                Global Science Education Pathways
+                </NavDropdown.Item>
+
               </NavDropdown>
 
               <Nav.Link
