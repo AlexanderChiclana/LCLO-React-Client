@@ -20,9 +20,9 @@ class About extends Component {
                     <p>
                       The LCLO Group is a collection of industry leading
                       professionals and academics aiming to grow the economy in
-                      Southeast Asia. We include members form Harvard, Yale, and
+                      Southeast Asia. We include members from Harvard, Yale, and
                       Brown University.{' '}
-                    </p>
+                    </p>  
                   </div>
 
                   <div className="entry-footer mt-5">

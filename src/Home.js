@@ -362,8 +362,7 @@ class Home extends Component {
                     <p className="mobile-margin-none">
                       Individuals may apply to participate in the one-year
                       intensive Southeast Asia (SEA) Future of Work Institute
-                      Fellows Program or in the one-week intensive Future of
-                      Global Entrepreneurs Leadership Development Program.{' '}
+                      Fellows Program.
                     </p>
                   </div>
 
