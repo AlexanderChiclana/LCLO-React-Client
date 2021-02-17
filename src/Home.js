@@ -72,9 +72,9 @@ class Home extends Component {
   }
 
   getUpcomingEvents = () => {
-    axios.get(`${apiUrl}/upcoming`).then(res => {
+    axios.get('https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=event&fields.date[gte]=2021-02-16').then(res => {
       this.setState({
-        upcoming: res.data.calendar
+        upcoming: res.data.items
       })
     })
   }

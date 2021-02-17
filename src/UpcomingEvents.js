@@ -3,6 +3,8 @@ import axios from 'axios'
 import apiUrl from './apiConfig'
 import { Link } from 'react-router-dom'
 import DOMPurify from 'dompurify'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import dateFormat from 'dateformat'
 
 class UpcomingEvent extends Component {
   state = {
@@ -18,8 +20,10 @@ class UpcomingEvent extends Component {
   render() {
     return (
       <li
-        className="d-flex flex-wrap align-items-center"
+        className="d-flex flex-wrap"
       >
+                  { this.props.home &&
+
         <figure
           className="d-flex justify-content-center"
           onClick={this.openDescription}
@@ -31,8 +35,9 @@ class UpcomingEvent extends Component {
             style={{ width: '60%' }}
             alt=""
           />
+          
         </figure>
-
+                  }
         <div
           className="entry-content d-flex align-items-center"
           style={{ cursor: 'pointer' }}
@@ -47,7 +52,7 @@ class UpcomingEvent extends Component {
                 fontSize: this.props.home && '20px'
               }}
             >
-              {this.props.shortDate + ' '}
+              {dateFormat(this.props.date, 'shortDate')}
             </h3>{' '}
             <h3
               className="entry-title"
@@ -61,7 +66,7 @@ class UpcomingEvent extends Component {
         {this.state.open && (
           <div
             className="single-post-preview"
-            style={{ padding: '10px', width: '100%' }}
+            style={{ width: '100%' }}
           >
             {' '}
             <div
@@ -76,13 +81,13 @@ class UpcomingEvent extends Component {
               }}
             >
               <div
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(this.props.text)
-                }}
-              ></div>
+              >
+
+                {documentToReactComponents(this.props.text)}
+              </div>
             
             { this.props.linkedBlogpost &&
-            <Link to={`/posts/${this.props.linkedBlogpost}`}>
+            <Link to={`/posts/${this.props.linkedBlogpost.sys.id}`}>
               <div
                 className="btn gradient-bg roundButtonSmall"
                 style={{ color: 'white !important', marginTop: '0px' }}
@@ -113,33 +118,34 @@ class UpcomingEvents extends Component {
   }
 
   getUpcomingEvents = () => {
-    axios.get(`${apiUrl}/upcoming`).then(res => {
+    console.log('the date is ' + dateFormat(Date.now(), 'mediumDate'))
+    axios.get(`https://cdn.contentful.com/spaces/5babw3v5cb9l/environments/master/entries?access_token=tT0wH4gdjnRMag6VTNIhIQtOw2A0QR-L6iSeekeNuNM&content_type=event&fields.date[gte]=${dateFormat(Date.now(), 'isoDateTime')}`).then(res => {
       this.setState({
-        upcoming: res.data.calendar
+        upcoming: res.data.items
       })
     })
   }
 
   render() {
     const UpcomingList = () =>
-      this.state.upcoming.map((upcoming, index) => (
+      this.state.upcoming.map((event, index) => (
         <UpcomingEvent
           key={index}
           home={this.props.home}
-          shortDate={upcoming.shortDate}
-          linkedBlogpost={upcoming.linkedBlogpost}
-          heading={upcoming.heading}
-          text={upcoming.text}
+          date={event.fields.date}
+          linkedBlogpost={event.fields.linkedBlogpost}
+          heading={event.fields.heading}
+          text={event.fields.text}
         />
       ))
 
     return (
       <div
-        className="popular-posts tablet-wide tablet-no-margin"
+        className="popular-posts tablet-wide tablet-no-margin mb-3"
         style={{ marginTop: this.props.home ? '10px' : null }}
       >
         {this.state.upcoming.length !== 0 && !this.props.home && (
-          <h2>Upcoming Events</h2>
+          <h2>Upcoming</h2>
         )}
 
         <ul className="p-0" style={{ margin: this.props.home ? '0px' : null }}>

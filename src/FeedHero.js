@@ -40,6 +40,7 @@ class FeedHero extends Component {
                   >
                     {this.props.description}
                   </p>
+                  {this.props.pageName === 'Training' && (
 
                   <div className="desktop-none">
                     <Link to={'/sea-future-of-work'}>
@@ -63,6 +64,7 @@ class FeedHero extends Component {
                       </div>
                     </Link>
                   </div>
+                  )}
                 </div>
                 {/* .entry-content */}
 
@@ -114,7 +116,7 @@ class FeedHero extends Component {
                   <Link to={'/sea-future-of-work'}>
                     <div
                       // onClick={this.props.scrollToBlogpostList}
-                      className="btn gradient-bg mr-2 mb-2 roundButton fade-in"
+                      className="btn gradient-bg mr-2 mb-2 mt-2 roundButton fade-in"
                       style={{ cursor: 'pointer' }}
                     >
                       (SEA) Future of Work Institute Fellows Program
