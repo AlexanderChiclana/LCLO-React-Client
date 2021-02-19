@@ -219,6 +219,27 @@ class BootstrapNav extends Component {
 
               <div className="mobile-nav container-fluid">
                 <div className="row">
+
+                <NavIcon
+                    isCurrentRoute={isCurrentRoute(
+                      location.pathname,
+                      '/training'
+                    )}
+                    icon={'chalkboard-teacher'}
+                    link={'#training'}
+                    title={'Training'}
+                  />
+                  
+                <NavIcon
+                    isCurrentRoute={isCurrentRoute(
+                      location.pathname,
+                      '/sea-future-of-work'
+                    )}
+                    icon={'chalkboard-teacher'}
+                    link={'#sea-future-of-work'}
+                    title={'Future of Work Fellows'}
+                  />
+                  
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
                       location.pathname,
@@ -229,25 +250,8 @@ class BootstrapNav extends Component {
                     title={'GSEP'}
                   />
 
-                  <NavIcon
-                    isCurrentRoute={isCurrentRoute(
-                      location.pathname,
-                      '/training'
-                    )}
-                    icon={'chalkboard-teacher'}
-                    link={'#training'}
-                    title={'Training'}
-                  />
 
-                  <NavIcon
-                    isCurrentRoute={isCurrentRoute(
-                      location.pathname,
-                      '/sea-future-of-work'
-                    )}
-                    icon={'chalkboard-teacher'}
-                    link={'#sea-future-of-work'}
-                    title={'Future of Work Fellows'}
-                  />
+         
                 </div>
 
                 <div className="row">
@@ -261,21 +265,21 @@ class BootstrapNav extends Component {
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
                       location.pathname,
-                      '/resources'
+                      '/entrepreneurship'
                     )}
                     icon={'book'}
-                    link={'#resources'}
+                    link={'#entrepreneurship'}
                     title={'entrepreneurship'}
                   /> 
 
                   <NavIcon
                     isCurrentRoute={isCurrentRoute(
                       location.pathname,
-                      '/points_of_encounter'
+                      '/capacity_building'
                     )}
                     icon={'map-marked'}
-                    link={'#points_of_encounter'}
-                    title={'Entrepreneurship'}
+                    link={'#capacity_building'}
+                    title={'Capacity Building'}
                   />
                 </div>
 

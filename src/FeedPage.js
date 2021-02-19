@@ -141,68 +141,69 @@ class FeedPage extends Component {
                 </div>
               </div>
             </div>
-{ (this.props.page !== 'sea_fow' && this.props.page !== 'gsep') &&
-            <div className="row mb-2">
-              <div className="col-12 col-md-6 mt-2">
-                <Link
-                  to={'/gsep'}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                >
-                  <div className="icon-box" style={{ width: '100%' }}>
-                    <figure className="d-flex justify-content-center">
-                      {/* <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }} /> */}
-                    </figure>
+            {this.props.page !== 'sea_fow' && this.props.page !== 'gsep' && (
+              <div className="row mb-2">
+                <div className="col-12 col-md-6 mt-2 mb-2">
+                  <Link
+                    to={'/sea-future-of-work'}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                    <div className="icon-box" style={{ width: '100%' }}>
+                      <figure className="d-flex justify-content-center">
+                        {/* <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }} /> */}
+                      </figure>
 
-                    <header className="entry-header">
-                      <h3 className="entry-title">
-                        Global Science Education Pathways
-                      </h3>
-                    </header>
+                      <header className="entry-header">
+                        <h3 className="entry-title">
+                          {' '}
+                          Southeast Asia Future of Work
+                        </h3>
+                      </header>
 
-                    <div
-                      className="entry-content"
-                      style={{ textAlign: 'center' }}
-                    >
-                      <p>
-                        Interested in science, technology, engineering and
-                        mathematics learning? Learn more about the GSEP program{' '}
-                      </p>
+                      <div
+                        className="entry-content"
+                        style={{ textAlign: 'center' }}
+                      >
+                        <p>
+                          Learn more about the Southeast Asia Future of Work
+                          Institute Fellows Program, now accepting applications{' '}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
+                  </Link>
+                </div>
 
-              <div className="col-12 col-md-6 mt-2 mb-2">
-                <Link
-                  to={'/sea-future-of-work'}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                >
-                  <div className="icon-box" style={{ width: '100%' }}>
-                    <figure className="d-flex justify-content-center">
-                      {/* <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }} /> */}
-                    </figure>
+                <div className="col-12 col-md-6 mt-2">
+                  <Link
+                    to={'/gsep'}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                    <div className="icon-box" style={{ width: '100%' }}>
+                      <figure className="d-flex justify-content-center">
+                        {/* <FontAwesomeIcon icon={props.icon} style={{ fontSize: '50px' }} /> */}
+                      </figure>
 
-                    <header className="entry-header">
-                      <h3 className="entry-title">
-                        {' '}
-                        Southeast Asia Future of Work
-                      </h3>
-                    </header>
+                      <header className="entry-header">
+                        <h3 className="entry-title">
+                          Global Science Education Pathways
+                        </h3>
+                      </header>
 
-                    <div
-                      className="entry-content"
-                      style={{ textAlign: 'center' }}
-                    >
-                      <p>
-                        Learn more about the Southeast Asia Future of Work
-                        Institute Fellows Program, now accepting applications{' '}
-                      </p>
+                      <div
+                        className="entry-content"
+                        style={{ textAlign: 'center' }}
+                      >
+                        <p>
+                          Interested in science, technology, engineering and
+                          mathematics learning? Learn more about the GSEP
+                          program{' '}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               </div>
-            </div>
-            }
+            )}
           </div>
         </div>
 

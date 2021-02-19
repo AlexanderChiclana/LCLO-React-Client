@@ -69,15 +69,35 @@ class FeedHero extends Component {
                 {/* .entry-content */}
 
                 <div className="entry-footer my-4 mt-sm-5">
-                  {this.props.pageName !== 'Training' && (
+                  {
+                    (this.props.pageName !== 'Training' && this.props.pageName !== 'SEA Future of Work') && (
                     <div
                       onClick={this.props.scrollToBlogpostList}
                       className="btn gradient-bg mr-2 roundButton fade-in"
                       style={{ cursor: 'pointer' }}
                     >
-                      New In {this.props.pageName}
+                      More About {this.props.pageName}
                     </div>
                   )}
+
+                  {
+                    this.props.pageName === 'SEA Future of Work' &&   
+                    <a
+                    href="LCLOFutureofWorkApplication2021.pdf"
+                    download
+                    rel="noopener noreferrer"
+                    // className="btn orange-border roundButton"
+                    target="_blank"
+                  >
+                    <div
+                    className="btn gradient-bg mr-2 roundButton fade-in"
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Download Application Form
+                  </div>
+                  </a>
+
+                  }
 
                   {/* {this.props.pageName === 'Training' && (
                     <React.Fragment>
