@@ -231,7 +231,30 @@ class SinglePostPage extends Component {
               {/* .col */}{' '}
             </div>{' '}
           </div>{' '}
-        </div>{' '}
+        </div>
+
+
+        {this.state.page === 'sea_fow' && (
+          <div className="help-us">
+            <div className="container">
+              <div className="row">
+                <div className="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                  <h2>Apply to be a Future of Work Institute Fellow</h2>
+
+                  <a
+                    href="LCLOFutureofWorkApplication2021.pdf"
+                    download
+                    rel="noopener noreferrer"
+                    className="btn orange-border roundButton"
+                    target="_blank"
+                  >
+                    Application Form
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     )
   }
