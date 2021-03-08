@@ -74,7 +74,7 @@ class FeedPage extends Component {
               text={blogpost.fields.text}
               image={blogpost.fields.image && blogpost.fields.image.sys.id}
               id={blogpost.sys.id}
-              date={blogpost.sys.createdAt}
+              date={blogpost.sys.updatedAt}
               tags={blogpost.fields.tags}
               page={blogpost.fields.page}
               prevBlogpost={this.state.blogposts[index - 1]}

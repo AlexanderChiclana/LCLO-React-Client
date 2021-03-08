@@ -72,7 +72,7 @@ class Blogpost extends Component {
       <div className="news-content">
         <header className="entry-header d-flex flex-wrap justify-content-between align-items-center">
           <div className="header-elements">
-            <div className="posted-date">{dateFormat(this.props.dateFormat, 'mediumDate')}</div>
+            <div className="posted-date">{dateFormat(this.props.date, 'mediumDate')}</div>
 
             <h2 className="entry-title mobile-heading">
               <Link to={'/posts/' + this.props.id}>{this.props.heading}</Link>
